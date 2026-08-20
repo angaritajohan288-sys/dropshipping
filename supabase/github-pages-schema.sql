@@ -40,6 +40,14 @@ create table if not exists public.task_attachments (
   created_at timestamptz not null default now()
 );
 
+-- El rol authenticated puede usar la API; RLS restringe cada fila al propietario.
+-- No se concede acceso al rol anon ni se usa service_role en el navegador.
+grant usage on schema public to authenticated;
+grant select, insert, update, delete on table public.user_tracker_settings to authenticated;
+grant select, insert, update, delete on table public.user_task_state to authenticated;
+grant select, insert, update, delete on table public.monthly_metrics to authenticated;
+grant select, insert, update, delete on table public.task_attachments to authenticated;
+
 alter table public.user_tracker_settings enable row level security;
 alter table public.user_task_state enable row level security;
 alter table public.monthly_metrics enable row level security;

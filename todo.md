@@ -83,7 +83,10 @@
 - [x] Documentar la ejecución del esquema Supabase, URL de redirección y secretos de GitHub Pages.
 - [x] Mantener en la versión estática la importación y exportación CSV, filtros mensuales y calendario de vencimientos.
 - [ ] Validar la paridad funcional de checklist, notas, adjuntos, métricas y recordatorios sobre Supabase real.
-- [ ] Confirmar la ejecución del workflow de GitHub Pages y registrar la URL final en las redirecciones de Supabase.
+- [x] Confirmar la ejecución exitosa del workflow de GitHub Pages y la disponibilidad de la URL pública.
+- [ ] Añadir la URL pública de GitHub Pages en las redirecciones de Supabase y validar el login por correo publicado.
+- [x] Preparar privilegios de API para usuarios autenticados sin debilitar las políticas RLS por fila.
+- [ ] Ejecutar la actualización de privilegios en Supabase y confirmar que desaparece el error de permisos.
 - [x] Corregir la incompatibilidad de versión de pnpm detectada en el workflow de GitHub Pages.
 - [x] Eliminar la dependencia operativa de tRPC y Express del entrypoint y de los scripts de la versión estática.
 - [x] Arrancar y compilar por defecto la aplicación en modo estático con Supabase.

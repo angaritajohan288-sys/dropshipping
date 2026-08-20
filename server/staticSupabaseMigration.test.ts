@@ -14,6 +14,9 @@ describe("static Supabase migration", () => {
     expect(schema).toContain("auth.uid() = user_id");
     expect(schema).toContain("task-attachments");
     expect(schema).toContain("storage.foldername(name)");
+    expect(schema).toContain("grant usage on schema public to authenticated");
+    expect(schema).toContain("grant select, insert, update, delete on table public.user_task_state to authenticated");
+    expect(schema).not.toContain("to anon");
   });
 
   it("mantiene auth por correo y operaciones privadas en el cliente estático", () => {
