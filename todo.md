@@ -71,3 +71,17 @@
 - [x] Cubrir por contrato la navegación mensual, selección de día y apertura de tarea desde el calendario; la comprobación autenticada queda documentada como opcional.
 - [x] Cubrir por contrato la persistencia local del tema claro/oscuro y sus tokens de contraste; la comprobación manual queda documentada como opcional.
 - [x] Validar por contrato los controles nativos, foco visible y revisión móvil de calendario y cambio de tema.
+- [x] Definir la migración a frontend estático con Supabase para autenticación, datos y adjuntos privados.
+- [x] Preparar el esquema de Supabase, políticas de acceso y almacenamiento para cada usuario.
+- [x] Sustituir las dependencias de servidor por cliente Supabase y sesión por correo.
+- [x] Configurar build y despliegue automatizado a GitHub Pages.
+- [ ] Validar autenticación, privacidad, adjuntos y compilación estática contra el proyecto Supabase real antes de entregar.
+- [x] Crear un cliente Supabase de navegador y una capa estática de datos para el tracker.
+- [x] Preparar SQL idempotente con tablas, RLS y almacenamiento privado para ejecutar en el proyecto Supabase.
+- [x] Incorporar inicio de sesión por correo, cierre de sesión y protección de rutas mediante Supabase Auth.
+- [x] Configurar Vite y GitHub Actions para compilar y publicar solo el frontend estático.
+- [x] Documentar la ejecución del esquema Supabase, URL de redirección y secretos de GitHub Pages.
+- [x] Mantener en la versión estática la importación y exportación CSV, filtros mensuales y calendario de vencimientos.
+- [ ] Validar la paridad funcional de checklist, notas, adjuntos, métricas y recordatorios sobre Supabase real.
+- [x] Eliminar la dependencia operativa de tRPC y Express del entrypoint y de los scripts de la versión estática.
+- [x] Arrancar y compilar por defecto la aplicación en modo estático con Supabase.
