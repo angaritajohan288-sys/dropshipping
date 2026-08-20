@@ -40,6 +40,14 @@ describe("static Supabase migration", () => {
     expect(staticApp).toContain("Recuperar");
   });
 
+  it("valida la confirmación y permite mostrar u ocultar las contraseñas de registro", () => {
+    expect(staticApp).toContain("const [confirmation, setConfirmation]");
+    expect(staticApp).toContain("password !== confirmation");
+    expect(staticApp).toContain("Mostrar contraseña");
+    expect(staticApp).toContain("Ocultar contraseña");
+    expect(staticApp).toContain("Confirmar contraseña");
+  });
+
   it("detecta la recuperación y permite definir una contraseña nueva", () => {
     expect(staticApp).toContain("StaticPasswordUpdate");
     expect(staticApp).toContain("Actualizar contraseña");
