@@ -82,18 +82,25 @@
 - [x] Configurar Vite y GitHub Actions para compilar y publicar solo el frontend estático.
 - [x] Documentar la ejecución del esquema Supabase, URL de redirección y secretos de GitHub Pages.
 - [x] Mantener en la versión estática la importación y exportación CSV, filtros mensuales y calendario de vencimientos.
-- [ ] Validar la paridad funcional de checklist, notas, adjuntos, métricas y recordatorios sobre Supabase real.
-- [ ] Validar y restaurar una importación CSV, un adjunto privado y una fecha límite temporal en la página publicada.
+- [x] Validar la paridad funcional de checklist, notas, adjuntos, métricas y recordatorios sobre Supabase real.
+- [x] Validar y restaurar una importación CSV, un adjunto privado y una fecha límite temporal en la página publicada.
 - [x] Exponer un selector de adjuntos visible y accesible en la variante estática de Supabase.
 - [x] Confirmar la ejecución exitosa del workflow de GitHub Pages y la disponibilidad de la URL pública.
-- [ ] Añadir la URL pública de GitHub Pages en las redirecciones de Supabase y validar el login por correo publicado.
+- [x] Añadir la URL pública de GitHub Pages en las redirecciones de Supabase y validar el login por correo publicado.
 - [x] Preparar privilegios de API para usuarios autenticados sin debilitar las políticas RLS por fila.
-- [ ] Ejecutar la actualización de privilegios en Supabase y confirmar que desaparece el error de permisos.
+- [x] Ejecutar la actualización de privilegios en Supabase y confirmar que desaparece el error de permisos.
 - [x] Corregir la persistencia de notas privadas mediante estado controlado y un guardado explícito.
-- [ ] Desplegar la corrección de notas y validar en sesión autenticada su guardado, recarga y restauración.
+- [x] Desplegar la corrección de notas y validar en sesión autenticada su guardado, recarga y restauración.
 - [x] Añadir una prueba de contrato para el flujo explícito de guardado de notas de la variante estática.
 - [x] Incluir explícitamente el identificador del usuario autenticado en los upserts privados de Supabase.
-- [ ] Eliminar la condición de carrera entre el borrador local y la recarga de Supabase al guardar notas.
+- [x] Eliminar la condición de carrera entre el borrador local y la recarga de Supabase al guardar notas.
+- [ ] Validar en Supabase real el aislamiento entre dos usuarios autenticados distintos, confirmando que un segundo usuario no puede leer ni modificar los datos del primero.
+- [x] Corregir el error de hora del JWT en la segunda sesión antes de ejecutar la prueba de aislamiento entre cuentas.
+- [ ] Registrar evidencia observable de que una tarea cambiada en la cuenta B no se refleja al recargar la cuenta A.
+- [ ] Registrar evidencia observable de que notas, fechas, métricas y adjuntos de la cuenta A no aparecen en la cuenta B.
+- [x] Mostrar en el encabezado el perfil de sesión activo con correo, estado autenticado y acceso de cierre de sesión.
+- [ ] Desplegar y confirmar el indicador de perfil en la página publicada con una sesión autenticada.
+- [x] Repetir la prueba publicada del adjunto temporal y comprobar tras eliminarlo que desaparece de la tarea después de recargar.
 - [x] Corregir la incompatibilidad de versión de pnpm detectada en el workflow de GitHub Pages.
 - [x] Eliminar la dependencia operativa de tRPC y Express del entrypoint y de los scripts de la versión estática.
 - [x] Arrancar y compilar por defecto la aplicación en modo estático con Supabase.

@@ -41,6 +41,13 @@ describe("static Supabase migration", () => {
     expect(staticApp).toContain("Guardar nota");
   });
 
+  it("muestra el perfil autenticado de la sesión activa en el encabezado", () => {
+    expect(staticApp).toContain("const profileEmail = user.email");
+    expect(staticApp).toContain("Perfil autenticado: ${profileEmail}");
+    expect(staticApp).toContain("sesión activa");
+    expect(staticApp).toContain("BadgeCheck");
+  });
+
   it("prepara un despliegue de Pages con el modo estático activado", () => {
     expect(workflow).toContain("actions/deploy-pages@v4");
     expect(workflow).toContain('VITE_STATIC_SUPABASE: "true"');
