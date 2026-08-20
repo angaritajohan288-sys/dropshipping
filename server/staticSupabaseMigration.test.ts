@@ -26,6 +26,13 @@ describe("static Supabase migration", () => {
     expect(staticApp).toContain("monthly_metrics");
   });
 
+  it("usa un editor de notas controlado con guardado explícito", () => {
+    expect(staticApp).toContain("value={state.note}");
+    expect(staticApp).toContain("onChange={event => setStates(current =>");
+    expect(staticApp).toContain('onClick={() => saveTask(task.id, { note: state.note })}');
+    expect(staticApp).toContain("Guardar nota");
+  });
+
   it("prepara un despliegue de Pages con el modo estático activado", () => {
     expect(workflow).toContain("actions/deploy-pages@v4");
     expect(workflow).toContain('VITE_STATIC_SUPABASE: "true"');

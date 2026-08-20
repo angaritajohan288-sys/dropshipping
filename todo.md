@@ -87,6 +87,9 @@
 - [ ] Añadir la URL pública de GitHub Pages en las redirecciones de Supabase y validar el login por correo publicado.
 - [x] Preparar privilegios de API para usuarios autenticados sin debilitar las políticas RLS por fila.
 - [ ] Ejecutar la actualización de privilegios en Supabase y confirmar que desaparece el error de permisos.
+- [x] Corregir la persistencia de notas privadas mediante estado controlado y un guardado explícito.
+- [ ] Desplegar la corrección de notas y validar en sesión autenticada su guardado, recarga y restauración.
+- [x] Añadir una prueba de contrato para el flujo explícito de guardado de notas de la variante estática.
 - [x] Corregir la incompatibilidad de versión de pnpm detectada en el workflow de GitHub Pages.
 - [x] Eliminar la dependencia operativa de tRPC y Express del entrypoint y de los scripts de la versión estática.
 - [x] Arrancar y compilar por defecto la aplicación en modo estático con Supabase.
