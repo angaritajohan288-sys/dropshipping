@@ -90,6 +90,8 @@ describe("static Supabase migration", () => {
     expect(profilePanel).toContain("Confirmar contraseña");
     expect(profilePanel).toContain("changePassword(currentPassword, newPassword)");
     expect(authContext).toContain("signInWithPassword({ email: user.email, password: currentPassword })");
+    expect(authContext).toContain("La contraseña actual no es correcta.");
+    expect(authContext).toContain("supabase.auth.updateUser({ password: newPassword })");
   });
 
   it("prepara un despliegue de Pages con el modo estático activado", () => {
