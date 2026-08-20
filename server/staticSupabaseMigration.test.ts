@@ -30,10 +30,12 @@ describe("static Supabase migration", () => {
     expect(staticMetrics).toContain("user_id: user?.id");
   });
 
-  it("usa un editor de notas controlado con guardado explícito", () => {
-    expect(staticApp).toContain("value={state.note}");
-    expect(staticApp).toContain("onChange={event => setStates(current =>");
-    expect(staticApp).toContain('onClick={() => saveTask(task.id, { note: state.note })}');
+  it("usa un borrador de notas aislado con guardado explícito", () => {
+    expect(staticApp).toContain("useRef<Record<string, string>>({})");
+    expect(staticApp).toContain("noteDrafts.current[task.id]");
+    expect(staticApp).toContain("onClick={async () =>");
+    expect(staticApp).toContain("await saveTask(task.id, { note })");
+    expect(staticApp).toContain("delete noteDrafts.current[task.id]");
     expect(staticApp).toContain("Guardar nota");
   });
 
