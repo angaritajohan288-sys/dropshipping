@@ -17,4 +17,10 @@ describe("monthly history filters", () => {
     expect(isMonthlyRangeValid("2026-04", "2026-03")).toBe(false);
     expect(filterMonthlyHistory(rows, { currency: "USD", startMonth: "2026-04", endMonth: "2026-03" })).toEqual([]);
   });
+
+  it("devuelve una serie vacía sin alterar la validez cuando no hay meses que coincidan", () => {
+    expect(isMonthlyRangeValid("2026-04", "2026-05")).toBe(true);
+    expect(filterMonthlyHistory(rows, { currency: "USD", startMonth: "2026-04", endMonth: "2026-05" })).toEqual([]);
+    expect(filterMonthlyHistory(rows, { currency: "COP" })).toEqual([]);
+  });
 });
