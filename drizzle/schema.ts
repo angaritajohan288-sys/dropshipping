@@ -1,4 +1,4 @@
-import { int, mysqlEnum, mysqlTable, text, timestamp, varchar } from "drizzle-orm/mysql-core";
+import { boolean, int, mysqlEnum, mysqlTable, text, timestamp, uniqueIndex, varchar } from "drizzle-orm/mysql-core";
 
 /**
  * Core user table backing auth flow.
@@ -25,4 +25,20 @@ export const users = mysqlTable("users", {
 export type User = typeof users.$inferSelect;
 export type InsertUser = typeof users.$inferInsert;
 
-// TODO: Add your tables here
+/** Estado de cada tarea, aislado mediante el identificador interno del usuario autenticado. */
+export const taskProgress = mysqlTable(
+  "taskProgress",
+  {
+    id: int("id").autoincrement().primaryKey(),
+    userId: int("userId").notNull().references(() => users.id, { onDelete: "cascade" }),
+    taskKey: varchar("taskKey", { length: 96 }).notNull(),
+    isCompleted: boolean("isCompleted").notNull().default(false),
+    completedAt: timestamp("completedAt"),
+    createdAt: timestamp("createdAt").notNull().defaultNow(),
+    updatedAt: timestamp("updatedAt").notNull().defaultNow().onUpdateNow(),
+  },
+  table => [uniqueIndex("task_progress_user_task_unique").on(table.userId, table.taskKey)],
+);
+
+export type TaskProgress = typeof taskProgress.$inferSelect;
+export type InsertTaskProgress = typeof taskProgress.$inferInsert;

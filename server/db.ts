@@ -1,6 +1,6 @@
-import { eq } from "drizzle-orm";
+import { and, eq } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/mysql2";
-import { InsertUser, users } from "../drizzle/schema";
+import { InsertUser, taskProgress, users } from "../drizzle/schema";
 import { ENV } from './_core/env';
 
 let _db: ReturnType<typeof drizzle> | null = null;
@@ -89,4 +89,25 @@ export async function getUserByOpenId(openId: string) {
   return result.length > 0 ? result[0] : undefined;
 }
 
-// TODO: add feature queries here as your schema grows.
+export async function getCompletedTaskKeysForUser(userId: number) {
+  const db = await getDb();
+  if (!db) return [];
+
+  const result = await db
+    .select({ taskKey: taskProgress.taskKey })
+    .from(taskProgress)
+    .where(and(eq(taskProgress.userId, userId), eq(taskProgress.isCompleted, true)));
+
+  return result.map(item => item.taskKey);
+}
+
+export async function setTaskProgressForUser(userId: number, taskKey: string, isCompleted: boolean) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+
+  const completedAt = isCompleted ? new Date() : null;
+  await db
+    .insert(taskProgress)
+    .values({ userId, taskKey, isCompleted, completedAt })
+    .onDuplicateKeyUpdate({ set: { isCompleted, completedAt } });
+}
