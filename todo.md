@@ -83,6 +83,8 @@
 - [x] Documentar la ejecución del esquema Supabase, URL de redirección y secretos de GitHub Pages.
 - [x] Mantener en la versión estática la importación y exportación CSV, filtros mensuales y calendario de vencimientos.
 - [ ] Validar la paridad funcional de checklist, notas, adjuntos, métricas y recordatorios sobre Supabase real.
+- [ ] Validar y restaurar una importación CSV, un adjunto privado y una fecha límite temporal en la página publicada.
+- [x] Exponer un selector de adjuntos visible y accesible en la variante estática de Supabase.
 - [x] Confirmar la ejecución exitosa del workflow de GitHub Pages y la disponibilidad de la URL pública.
 - [ ] Añadir la URL pública de GitHub Pages en las redirecciones de Supabase y validar el login por correo publicado.
 - [x] Preparar privilegios de API para usuarios autenticados sin debilitar las políticas RLS por fila.

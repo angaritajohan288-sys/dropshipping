@@ -28,6 +28,8 @@ describe("static Supabase migration", () => {
     expect(staticApp).toContain("upsert({ user_id: user.id, ...previous, ...patch");
     expect(staticApp).toContain("upsert({ user_id: user.id, ...settings }");
     expect(staticMetrics).toContain("user_id: user?.id");
+    expect(staticApp).toContain("aria-label={`Adjuntar archivo a ${task.title}`}");
+    expect(staticApp).toContain('type="file"');
   });
 
   it("usa un borrador de notas aislado con guardado explícito", () => {
