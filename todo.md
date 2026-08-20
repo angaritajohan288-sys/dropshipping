@@ -115,3 +115,11 @@
 - [x] Corregir la incompatibilidad de versión de pnpm detectada en el workflow de GitHub Pages.
 - [x] Eliminar la dependencia operativa de tRPC y Express del entrypoint y de los scripts de la versión estática.
 - [x] Arrancar y compilar por defecto la aplicación en modo estático con Supabase.
+- [x] Añadir una pestaña de perfil privada con los datos de la cuenta activa y un resumen de avance.
+- [x] Incorporar gráficas privadas de progreso por fases y evolución de rentabilidad dentro del perfil.
+- [x] Permitir cambiar la contraseña desde el perfil con contraseña actual, nueva contraseña y confirmación.
+- [ ] Validar accesibilidad, protección de datos, pruebas y diseño responsive de la pestaña de perfil.
+- [ ] Reemplazar la apertura imperativa del perfil por un control React explícito dentro del encabezado del tablero.
+- [ ] Validar en sesión real la navegación al perfil y sus datos, gráficas y resumen de avance privados.
+- [ ] Validar desde el perfil la contraseña actual incorrecta, el cambio exitoso y el posterior acceso con la nueva clave.
+- [ ] Añadir cobertura automatizada de la navegación declarativa de perfil desde la interfaz principal.

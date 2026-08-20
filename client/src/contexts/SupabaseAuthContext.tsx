@@ -10,6 +10,7 @@ type SupabaseAuthState = {
   signUpWithPassword: (email: string, password: string) => Promise<string | null>;
   sendPasswordRecovery: (email: string) => Promise<string | null>;
   updatePassword: (password: string) => Promise<string | null>;
+  changePassword: (currentPassword: string, newPassword: string) => Promise<string | null>;
   signOut: () => Promise<void>;
 };
 
@@ -87,6 +88,13 @@ export function SupabaseAuthProvider({ children }: { children: React.ReactNode }
         clearPasswordRecoveryRedirect();
         setIsRecovery(false);
       }
+      return error?.message ?? null;
+    },
+    async changePassword(currentPassword, newPassword) {
+      if (!user?.email) return "No se encontró el correo de la sesión activa.";
+      const { error: verificationError } = await supabase.auth.signInWithPassword({ email: user.email, password: currentPassword });
+      if (verificationError) return "La contraseña actual no es correcta.";
+      const { error } = await supabase.auth.updateUser({ password: newPassword });
       return error?.message ?? null;
     },
     async signOut() {

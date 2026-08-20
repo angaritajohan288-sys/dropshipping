@@ -1,5 +1,6 @@
 import DeadlineCalendar from "@/components/DeadlineCalendar";
 import StaticMonthlyMetricsPanel, { type StaticMonthlyMetric } from "@/components/StaticMonthlyMetricsPanel";
+import StaticProfilePanel from "@/components/StaticProfilePanel";
 import { Button } from "@/components/ui/button";
 import { useSupabaseAuth } from "@/contexts/SupabaseAuthContext";
 import { supabase } from "@/lib/supabase";
@@ -88,6 +89,7 @@ export default function StaticSupabaseApp() {
   const [settings, setSettings] = useState<Settings>(defaultSettings);
   const [activePhase, setActivePhase] = useState(PHASES[0].id);
   const [openedTask, setOpenedTask] = useState<string | null>(null);
+  const [profileOpen, setProfileOpen] = useState(false);
   const [notice, setNotice] = useState<string | null>(null);
   const noteDrafts = useRef<Record<string, string>>({});
 
@@ -96,6 +98,30 @@ export default function StaticSupabaseApp() {
     document.documentElement.classList.toggle("light", theme === "light");
     localStorage.setItem("blitz-theme", theme);
   }, [theme]);
+
+  useEffect(() => {
+    if (!user || loading || isRecovery) return;
+    const trigger = document.querySelector<HTMLElement>('[aria-label^="Perfil autenticado:"]');
+    if (!trigger) return;
+    const openProfile = () => setProfileOpen(true);
+    const openWithKeyboard = (event: KeyboardEvent) => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        openProfile();
+      }
+    };
+    trigger.setAttribute("role", "button");
+    trigger.setAttribute("tabindex", "0");
+    trigger.setAttribute("title", "Abrir perfil");
+    trigger.classList.remove("hidden");
+    trigger.style.cursor = "pointer";
+    trigger.addEventListener("click", openProfile);
+    trigger.addEventListener("keydown", openWithKeyboard);
+    return () => {
+      trigger.removeEventListener("click", openProfile);
+      trigger.removeEventListener("keydown", openWithKeyboard);
+    };
+  }, [isRecovery, loading, user]);
 
   const load = useCallback(async () => {
     if (!user) return;
@@ -117,6 +143,7 @@ export default function StaticSupabaseApp() {
   if (loading) return <main className="grid min-h-screen place-items-center"><p className="hud-label">Conectando espacio privado</p></main>;
   if (isRecovery) return <StaticPasswordUpdate />;
   if (!user) return <StaticLogin />;
+  if (profileOpen) return <StaticProfilePanel user={user} states={states} metrics={metrics} onReturn={() => setProfileOpen(false)} />;
 
   const profileEmail = user.email ?? "Correo no disponible";
   const profileLabel = typeof user.user_metadata?.full_name === "string" && user.user_metadata.full_name.trim() ? user.user_metadata.full_name : "Perfil privado";

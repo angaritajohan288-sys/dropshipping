@@ -4,6 +4,7 @@ import { describe, expect, it } from "vitest";
 const schema = readFileSync(new URL("../supabase/github-pages-schema.sql", import.meta.url), "utf-8");
 const staticApp = readFileSync(new URL("../client/src/pages/StaticSupabaseApp.tsx", import.meta.url), "utf-8");
 const authContext = readFileSync(new URL("../client/src/contexts/SupabaseAuthContext.tsx", import.meta.url), "utf-8");
+const profilePanel = readFileSync(new URL("../client/src/components/StaticProfilePanel.tsx", import.meta.url), "utf-8");
 const staticMetrics = readFileSync(new URL("../client/src/components/StaticMonthlyMetricsPanel.tsx", import.meta.url), "utf-8");
 const workflow = readFileSync(new URL("../.github/workflows/deploy-github-pages.yml", import.meta.url), "utf-8");
 
@@ -77,6 +78,18 @@ describe("static Supabase migration", () => {
     expect(staticApp).toContain("Perfil autenticado: ${profileEmail}");
     expect(staticApp).toContain("sesión activa");
     expect(staticApp).toContain("BadgeCheck");
+  });
+
+  it("ofrece un perfil privado con gráficas de avance y cambio de contraseña", () => {
+    expect(staticApp).toContain("StaticProfilePanel");
+    expect(staticApp).toContain("setProfileOpen(true)");
+    expect(profilePanel).toContain("Progreso operativo");
+    expect(profilePanel).toContain("Ingresos y beneficio");
+    expect(profilePanel).toContain("Cambiar contraseña");
+    expect(profilePanel).toContain("Contraseña actual");
+    expect(profilePanel).toContain("Confirmar contraseña");
+    expect(profilePanel).toContain("changePassword(currentPassword, newPassword)");
+    expect(authContext).toContain("signInWithPassword({ email: user.email, password: currentPassword })");
   });
 
   it("prepara un despliegue de Pages con el modo estático activado", () => {
