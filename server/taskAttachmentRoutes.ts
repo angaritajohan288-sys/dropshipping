@@ -15,10 +15,33 @@ const ALLOWED_MIME_TYPES = new Set([
   "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
 ]);
 
+const MIME_BY_EXTENSION: Record<string, string> = {
+  pdf: "application/pdf",
+  txt: "text/plain",
+  jpg: "image/jpeg",
+  jpeg: "image/jpeg",
+  png: "image/png",
+  webp: "image/webp",
+  docx: "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+  xlsx: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+};
+
 function safeName(value: unknown) {
   if (typeof value !== "string") return "adjunto";
   const cleaned = value.replace(/[^a-zA-Z0-9._() -]/g, "_").trim().slice(0, 180);
   return cleaned || "adjunto";
+}
+
+function resolveAllowedMimeType(fileName: unknown, receivedMimeType: unknown) {
+  if (typeof fileName !== "string" || typeof receivedMimeType !== "string") return null;
+  const extension = fileName.split(".").pop()?.toLowerCase();
+  const expectedMimeType = extension ? MIME_BY_EXTENSION[extension] : undefined;
+  const normalizedReceivedMimeType = receivedMimeType.split(";")[0]?.trim();
+  if (!expectedMimeType || !ALLOWED_MIME_TYPES.has(expectedMimeType)) return null;
+  if (normalizedReceivedMimeType === expectedMimeType || normalizedReceivedMimeType === "application/octet-stream" || normalizedReceivedMimeType === "") {
+    return expectedMimeType;
+  }
+  return null;
 }
 
 export async function handleTaskAttachmentUpload(req: Request, res: Response) {
@@ -29,7 +52,8 @@ export async function handleTaskAttachmentUpload(req: Request, res: Response) {
     if (typeof taskKey !== "string" || !KNOWN_TASK_KEYS.has(taskKey)) {
       return res.status(400).json({ error: "La tarea indicada no pertenece al plan." });
     }
-    if (typeof mimeType !== "string" || !ALLOWED_MIME_TYPES.has(mimeType)) {
+    const resolvedMimeType = resolveAllowedMimeType(fileName, mimeType);
+    if (!resolvedMimeType) {
       return res.status(400).json({ error: "El tipo de archivo no está permitido." });
     }
     if (typeof base64 !== "string" || base64.length === 0) {
@@ -42,18 +66,18 @@ export async function handleTaskAttachmentUpload(req: Request, res: Response) {
     }
 
     const normalizedName = safeName(fileName);
-    const stored = await storagePut(`task-attachments/${user.id}/${taskKey}/${normalizedName}`, bytes, mimeType);
+    const stored = await storagePut(`task-attachments/${user.id}/${taskKey}/${normalizedName}`, bytes, resolvedMimeType);
     const id = await createTaskAttachmentForUser({
       userId: user.id,
       taskKey,
       storageKey: stored.key,
       fileName: normalizedName,
-      mimeType,
+      mimeType: resolvedMimeType,
       sizeBytes: bytes.length,
     });
 
     return res.status(201).json({
-      attachment: { id, fileName: normalizedName, mimeType, sizeBytes: bytes.length, createdAt: new Date() },
+      attachment: { id, fileName: normalizedName, mimeType: resolvedMimeType, sizeBytes: bytes.length, createdAt: new Date() },
     });
   } catch (error) {
     console.error("[Task attachments] Upload failed:", error);

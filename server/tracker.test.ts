@@ -2,6 +2,8 @@ import { TRPCError } from "@trpc/server";
 import { beforeEach, describe, expect, it, vi } from "vitest";
 
 const dbMocks = vi.hoisted(() => ({
+  clearPlanStartDateForUser: vi.fn(),
+  deleteTaskAttachmentForUser: vi.fn(),
   getCompletedTaskKeysForUser: vi.fn(),
   setTaskProgressForUser: vi.fn(),
   getPlanStartDateForUser: vi.fn(),
@@ -43,6 +45,8 @@ describe("tracker", () => {
   beforeEach(() => {
     vi.clearAllMocks();
     dbMocks.getCompletedTaskKeysForUser.mockResolvedValue(["products-01"]);
+    dbMocks.clearPlanStartDateForUser.mockResolvedValue(undefined);
+    dbMocks.deleteTaskAttachmentForUser.mockResolvedValue(undefined);
     dbMocks.setTaskProgressForUser.mockResolvedValue(undefined);
     dbMocks.getPlanStartDateForUser.mockResolvedValue("2026-08-03");
     dbMocks.setPlanStartDateForUser.mockResolvedValue(undefined);
@@ -101,6 +105,12 @@ describe("tracker", () => {
     expect(dbMocks.saveBusinessMetricsForUser).toHaveBeenCalledWith({ userId: 42, revenueCents: 50000, productCostCents: 18000, adSpendCents: 12000, orders: 10, currency: "USD" });
   });
 
+  it("restablece solo la fecha de inicio del usuario autenticado", async () => {
+    const caller = appRouter.createCaller(createContext(42));
+    await expect(caller.tracker.clearStartDate()).resolves.toEqual({ startDate: null });
+    expect(dbMocks.clearPlanStartDateForUser).toHaveBeenCalledWith(42);
+  });
+
   it("emits a signed attachment URL only after a user-scoped lookup", async () => {
     const caller = appRouter.createCaller(createContext(42));
     const result = await caller.tracker.attachmentDownloadUrl({ attachmentId: 9 });
@@ -108,5 +118,11 @@ describe("tracker", () => {
     expect(dbMocks.getTaskAttachmentForUser).toHaveBeenCalledWith(42, 9);
     expect(storageMocks.storageGetSignedUrl).toHaveBeenCalledWith("private/object.pdf");
     expect(result).toEqual({ url: "https://signed.example/object.pdf", fileName: "brief.pdf" });
+  });
+
+  it("retira un adjunto usando exclusivamente la identidad de la sesión", async () => {
+    const caller = appRouter.createCaller(createContext(42));
+    await expect(caller.tracker.deleteAttachment({ attachmentId: 9 })).resolves.toEqual({ success: true });
+    expect(dbMocks.deleteTaskAttachmentForUser).toHaveBeenCalledWith(42, 9);
   });
 });

@@ -55,4 +55,12 @@ describe("handleTaskAttachmentUpload", () => {
     expect(status).toHaveBeenCalledWith(201);
     expect(json).toHaveBeenCalledWith(expect.objectContaining({ attachment: expect.objectContaining({ id: 7 }) }));
   });
+
+  it("normaliza un tipo genérico del navegador cuando la extensión es permitida", async () => {
+    const { response, status } = responseSpy();
+    await handleTaskAttachmentUpload({ body: { taskKey: "products-01", fileName: "hallazgos.txt", mimeType: "text/plain; charset=utf-8", base64: Buffer.from("nota privada").toString("base64") } } as Request, response);
+
+    expect(mocks.storagePut).toHaveBeenCalledWith("task-attachments/42/products-01/hallazgos.txt", expect.any(Buffer), "text/plain");
+    expect(status).toHaveBeenCalledWith(201);
+  });
 });

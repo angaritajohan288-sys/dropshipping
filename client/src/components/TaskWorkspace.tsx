@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { trpc } from "@/lib/trpc";
-import { Download, FileText, Loader2, Paperclip, Save, Upload, X } from "lucide-react";
-import { ChangeEvent, useEffect, useRef, useState } from "react";
+import { Download, FileText, Loader2, Paperclip, Save, Trash2, X } from "lucide-react";
+import { ChangeEvent, useEffect, useState } from "react";
 import { toast } from "sonner";
 
 type TaskWorkspaceProps = {
@@ -45,7 +45,6 @@ function readFileAsBase64(file: File) {
 
 export default function TaskWorkspace({ taskKey, taskTitle, onClose }: TaskWorkspaceProps) {
   const utils = trpc.useUtils();
-  const fileInputRef = useRef<HTMLInputElement>(null);
   const [note, setNote] = useState("");
   const [isUploading, setIsUploading] = useState(false);
   const workspaceQuery = trpc.tracker.taskWorkspace.useQuery({ taskKey });
@@ -55,6 +54,13 @@ export default function TaskWorkspace({ taskKey, taskTitle, onClose }: TaskWorks
       toast.success("Nota guardada en tu espacio privado.");
     },
     onError: () => toast.error("No se pudo guardar la nota."),
+  });
+  const deleteAttachment = trpc.tracker.deleteAttachment.useMutation({
+    onSuccess: () => {
+      utils.tracker.taskWorkspace.invalidate({ taskKey });
+      toast.success("Adjunto retirado de esta tarea.");
+    },
+    onError: () => toast.error("No se pudo retirar el adjunto."),
   });
 
   useEffect(() => {
@@ -121,9 +127,9 @@ export default function TaskWorkspace({ taskKey, taskTitle, onClose }: TaskWorks
             <div className="mt-3 flex flex-wrap items-center justify-between gap-3"><span className="text-[10px] text-slate-500">{note.length}/5000 caracteres</span><Button onClick={() => saveNote.mutate({ taskKey, content: note })} disabled={saveNote.isPending} className="neon-button rounded-none px-4 text-xs font-bold uppercase tracking-[0.12em]"><Save className="mr-2 size-3.5" />{saveNote.isPending ? "Guardando" : "Guardar nota"}</Button></div>
           </div>
           <div>
-            <div className="flex items-center justify-between gap-3"><p className="hud-label">Adjuntos</p><input ref={fileInputRef} onChange={handleUpload} type="file" className="hidden" accept=".pdf,.txt,.jpg,.jpeg,.png,.webp,.docx,.xlsx" /><Button variant="outline" onClick={() => fileInputRef.current?.click()} disabled={isUploading} className="rounded-none border-fuchsia-300/40 text-fuchsia-100 hover:bg-fuchsia-400/10"><Upload className="mr-2 size-3.5" />{isUploading ? "Cargando" : "Añadir"}</Button></div>
+            <div className="flex flex-col gap-3"><p className="hud-label">Adjuntos</p><input onChange={handleUpload} type="file" disabled={isUploading} accept=".pdf,.txt,.jpg,.jpeg,.png,.webp,.docx,.xlsx" aria-label="Seleccionar adjunto privado" className="w-full cursor-pointer border border-fuchsia-300/35 bg-black/25 px-2 py-1.5 text-[10px] text-slate-300 file:mr-3 file:border-0 file:bg-fuchsia-300/15 file:px-2 file:py-1 file:text-[10px] file:font-bold file:uppercase file:tracking-[0.08em] file:text-fuchsia-100 disabled:cursor-wait disabled:opacity-60" /></div>
             <p className="mt-2 text-xs leading-5 text-slate-500">PDF, imagen, TXT, DOCX o XLSX. Máximo 6 MB. Los enlaces se emiten tras comprobar tu sesión.</p>
-            <div className="mt-4 space-y-2">{workspaceQuery.data?.attachments.length ? workspaceQuery.data.attachments.map(attachment => <div key={attachment.id} className="flex items-center gap-3 border border-white/8 bg-white/[0.025] p-3"><span className="grid size-8 shrink-0 place-items-center border border-cyan-300/25 bg-cyan-300/5 text-cyan-100"><FileText className="size-4" /></span><div className="min-w-0 flex-1"><p className="truncate text-xs font-bold text-white">{attachment.fileName}</p><p className="mt-1 text-[10px] uppercase tracking-wide text-slate-500">{formatBytes(attachment.sizeBytes)} · {attachment.mimeType.split("/").pop()}</p></div><button onClick={() => handleDownload(attachment.id)} className="grid size-8 place-items-center border border-cyan-300/25 text-cyan-100 transition hover:bg-cyan-300/10" aria-label={`Abrir ${attachment.fileName}`}><Download className="size-4" /></button></div>) : <div className="border border-dashed border-slate-600/50 p-5 text-center"><Paperclip className="mx-auto size-4 text-slate-600" /><p className="mt-2 text-xs text-slate-500">Sin adjuntos todavía.</p></div>}</div>
+            <div className="mt-4 space-y-2">{workspaceQuery.data?.attachments.length ? workspaceQuery.data.attachments.map(attachment => <div key={attachment.id} className="flex items-center gap-3 border border-white/8 bg-white/[0.025] p-3"><span className="grid size-8 shrink-0 place-items-center border border-cyan-300/25 bg-cyan-300/5 text-cyan-100"><FileText className="size-4" /></span><div className="min-w-0 flex-1"><p className="truncate text-xs font-bold text-white">{attachment.fileName}</p><p className="mt-1 text-[10px] uppercase tracking-wide text-slate-500">{formatBytes(attachment.sizeBytes)} · {attachment.mimeType.split("/").pop()}</p></div><button onClick={() => handleDownload(attachment.id)} className="grid size-8 place-items-center border border-cyan-300/25 text-cyan-100 transition hover:bg-cyan-300/10" aria-label={`Abrir ${attachment.fileName}`}><Download className="size-4" /></button><button onClick={() => deleteAttachment.mutate({ attachmentId: attachment.id })} disabled={deleteAttachment.isPending} className="grid size-8 place-items-center border border-rose-300/30 text-rose-100 transition hover:bg-rose-400/10 disabled:opacity-50" aria-label={`Retirar ${attachment.fileName}`}><Trash2 className="size-4" /></button></div>) : <div className="border border-dashed border-slate-600/50 p-5 text-center"><Paperclip className="mx-auto size-4 text-slate-600" /><p className="mt-2 text-xs text-slate-500">Sin adjuntos todavía.</p></div>}</div>
           </div>
         </div>
       )}

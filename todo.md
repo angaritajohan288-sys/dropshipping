@@ -21,8 +21,16 @@
 - [x] Incorporar adjuntos privados por tarea con carga segura al almacenamiento y enlaces protegidos.
 - [x] Crear un panel personal para registrar ingresos, coste de producto, pedidos y gasto publicitario.
 - [x] Calcular margen de ganancias, ingresos, coste publicitario y rentabilidad a partir de los registros del usuario.
-- [ ] Validar los nuevos flujos, cálculos y aislamiento de datos con pruebas y revisión visual.
+- [x] Validar los nuevos flujos, cálculos y aislamiento de datos con pruebas y revisión visual.
 - [x] Añadir pruebas de la ruta protegida de adjuntos para sesión, tipo de archivo, tamaño y metadatos.
-- [ ] Validar en sesión autenticada la fecha de inicio, notas, adjuntos y guardado de métricas.
-- [ ] Realizar revisión visual autenticada de los módulos nuevos en escritorio y móvil.
+- [x] Validar en sesión autenticada la fecha de inicio, notas, adjuntos y guardado de métricas.
+- [x] Realizar revisión visual autenticada de los módulos nuevos en escritorio y móvil.
 - [ ] Sincronizar la versión ampliada del tracker con el repositorio de GitHub.
+- [x] Permitir restablecer la fecha de inicio para eliminar datos temporales de validación.
+- [x] Permitir retirar de una tarea los adjuntos privados y sus referencias de almacenamiento.
+- [x] Validar en una sesión autenticada la carga y eliminación de un adjunto temporal sin conservar referencias activas.
+- [x] Validar visualmente los módulos nuevos en sesión autenticada, tanto en escritorio como en viewport móvil.
+- [x] Comprobar desde la UI autenticada la selección, carga y retirada de un adjunto temporal.
+- [x] Corregir la detección de tipo MIME para que los archivos permitidos por extensión no se rechacen en el navegador.
+- [x] Confirmar los módulos privados desde una sesión autenticada en formato móvil.
+- [x] Validar en formato móvil autenticado la apertura y el renderizado del espacio privado de notas y adjuntos.

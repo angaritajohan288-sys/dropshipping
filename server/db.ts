@@ -133,6 +133,12 @@ export async function setPlanStartDateForUser(userId: number, startDate: string)
   await db.insert(userPlanSettings).values({ userId, startDate }).onDuplicateKeyUpdate({ set: { startDate } });
 }
 
+export async function clearPlanStartDateForUser(userId: number) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  await db.delete(userPlanSettings).where(eq(userPlanSettings.userId, userId));
+}
+
 export async function getTaskWorkspaceForUser(userId: number, taskKey: string) {
   const db = await getDb();
   if (!db) return { note: null, attachments: [] };
@@ -192,6 +198,14 @@ export async function getTaskAttachmentForUser(userId: number, attachmentId: num
     .where(and(eq(taskAttachments.userId, userId), eq(taskAttachments.id, attachmentId)))
     .limit(1);
   return result[0] ?? null;
+}
+
+export async function deleteTaskAttachmentForUser(userId: number, attachmentId: number) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  await db
+    .delete(taskAttachments)
+    .where(and(eq(taskAttachments.userId, userId), eq(taskAttachments.id, attachmentId)));
 }
 
 export async function getBusinessMetricsForUser(userId: number) {

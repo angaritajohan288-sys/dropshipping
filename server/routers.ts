@@ -5,6 +5,8 @@ import { getSessionCookieOptions } from "./_core/cookies";
 import { systemRouter } from "./_core/systemRouter";
 import { protectedProcedure, publicProcedure, router } from "./_core/trpc";
 import {
+  clearPlanStartDateForUser,
+  deleteTaskAttachmentForUser,
   getBusinessMetricsForUser,
   getCompletedTaskKeysForUser,
   getPlanStartDateForUser,
@@ -63,6 +65,10 @@ export const appRouter = router({
         await setPlanStartDateForUser(ctx.user.id, input.startDate);
         return { startDate: input.startDate };
       }),
+    clearStartDate: protectedProcedure.mutation(async ({ ctx }) => {
+      await clearPlanStartDateForUser(ctx.user.id);
+      return { startDate: null };
+    }),
     taskWorkspace: protectedProcedure
       .input(z.object({ taskKey: taskKeySchema }))
       .query(({ ctx, input }) => getTaskWorkspaceForUser(ctx.user.id, input.taskKey)),
@@ -77,6 +83,12 @@ export const appRouter = router({
         const attachment = await getTaskAttachmentForUser(ctx.user.id, input.attachmentId);
         if (!attachment) throw new TRPCError({ code: "NOT_FOUND", message: "Adjunto no encontrado." });
         return { url: await storageGetSignedUrl(attachment.storageKey), fileName: attachment.fileName };
+      }),
+    deleteAttachment: protectedProcedure
+      .input(z.object({ attachmentId: z.number().int().positive() }))
+      .mutation(async ({ ctx, input }) => {
+        await deleteTaskAttachmentForUser(ctx.user.id, input.attachmentId);
+        return { success: true } as const;
       }),
     metrics: protectedProcedure.query(async ({ ctx }) => {
       const metrics = await getBusinessMetricsForUser(ctx.user.id);
