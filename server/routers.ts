@@ -4,8 +4,30 @@ import { z } from "zod";
 import { getSessionCookieOptions } from "./_core/cookies";
 import { systemRouter } from "./_core/systemRouter";
 import { protectedProcedure, publicProcedure, router } from "./_core/trpc";
-import { getCompletedTaskKeysForUser, setTaskProgressForUser } from "./db";
+import {
+  getBusinessMetricsForUser,
+  getCompletedTaskKeysForUser,
+  getPlanStartDateForUser,
+  getTaskAttachmentForUser,
+  getTaskWorkspaceForUser,
+  saveBusinessMetricsForUser,
+  saveTaskNoteForUser,
+  setPlanStartDateForUser,
+  setTaskProgressForUser,
+} from "./db";
 import { KNOWN_TASK_KEYS, PHASES, PLAN_WEEKS } from "./planData";
+import { storageGetSignedUrl } from "./storage";
+
+const taskKeySchema = z.string().min(1).max(96).refine(value => KNOWN_TASK_KEYS.has(value), {
+  message: "La tarea indicada no pertenece al plan.",
+});
+
+const dateSchema = z.string().regex(/^\d{4}-\d{2}-\d{2}$/, "La fecha debe usar el formato AAAA-MM-DD.").refine(value => {
+  const date = new Date(`${value}T12:00:00Z`);
+  return !Number.isNaN(date.getTime()) && date.toISOString().slice(0, 10) === value;
+}, "La fecha de inicio no es válida.");
+
+const moneySchema = z.number().int().min(0).max(2_000_000_000);
 
 export const appRouter = router({
     // if you need to use socket.io, read and register route in server/_core/index.ts, all api should start with '/api/' so that the gateway can route correctly
@@ -27,14 +49,50 @@ export const appRouter = router({
       completedTaskKeys: await getCompletedTaskKeysForUser(ctx.user.id),
     })),
     setTaskStatus: protectedProcedure
-      .input(z.object({ taskKey: z.string().min(1).max(96), isCompleted: z.boolean() }))
+      .input(z.object({ taskKey: taskKeySchema, isCompleted: z.boolean() }))
       .mutation(async ({ ctx, input }) => {
-        if (!KNOWN_TASK_KEYS.has(input.taskKey)) {
-          throw new TRPCError({ code: "BAD_REQUEST", message: "La tarea indicada no pertenece al plan." });
-        }
-
         await setTaskProgressForUser(ctx.user.id, input.taskKey, input.isCompleted);
         return { taskKey: input.taskKey, isCompleted: input.isCompleted };
+      }),
+    calendar: protectedProcedure.query(async ({ ctx }) => ({
+      startDate: await getPlanStartDateForUser(ctx.user.id),
+    })),
+    setStartDate: protectedProcedure
+      .input(z.object({ startDate: dateSchema }))
+      .mutation(async ({ ctx, input }) => {
+        await setPlanStartDateForUser(ctx.user.id, input.startDate);
+        return { startDate: input.startDate };
+      }),
+    taskWorkspace: protectedProcedure
+      .input(z.object({ taskKey: taskKeySchema }))
+      .query(({ ctx, input }) => getTaskWorkspaceForUser(ctx.user.id, input.taskKey)),
+    saveTaskNote: protectedProcedure
+      .input(z.object({ taskKey: taskKeySchema, content: z.string().max(5_000) }))
+      .mutation(async ({ ctx, input }) => ({
+        content: await saveTaskNoteForUser(ctx.user.id, input.taskKey, input.content),
+      })),
+    attachmentDownloadUrl: protectedProcedure
+      .input(z.object({ attachmentId: z.number().int().positive() }))
+      .query(async ({ ctx, input }) => {
+        const attachment = await getTaskAttachmentForUser(ctx.user.id, input.attachmentId);
+        if (!attachment) throw new TRPCError({ code: "NOT_FOUND", message: "Adjunto no encontrado." });
+        return { url: await storageGetSignedUrl(attachment.storageKey), fileName: attachment.fileName };
+      }),
+    metrics: protectedProcedure.query(async ({ ctx }) => {
+      const metrics = await getBusinessMetricsForUser(ctx.user.id);
+      return metrics ?? { revenueCents: 0, productCostCents: 0, adSpendCents: 0, orders: 0, currency: "USD" };
+    }),
+    saveMetrics: protectedProcedure
+      .input(z.object({
+        revenueCents: moneySchema,
+        productCostCents: moneySchema,
+        adSpendCents: moneySchema,
+        orders: z.number().int().min(0).max(10_000_000),
+        currency: z.enum(["USD", "EUR", "MXN", "COP"]),
+      }))
+      .mutation(async ({ ctx, input }) => {
+        await saveBusinessMetricsForUser({ userId: ctx.user.id, ...input });
+        return input;
       }),
   }),
 });

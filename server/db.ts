@@ -1,6 +1,14 @@
-import { and, eq } from "drizzle-orm";
+import { and, desc, eq } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/mysql2";
-import { InsertUser, taskProgress, users } from "../drizzle/schema";
+import {
+  InsertUser,
+  taskAttachments,
+  taskNotes,
+  taskProgress,
+  userBusinessMetrics,
+  userPlanSettings,
+  users,
+} from "../drizzle/schema";
 import { ENV } from './_core/env';
 
 let _db: ReturnType<typeof drizzle> | null = null;
@@ -110,4 +118,99 @@ export async function setTaskProgressForUser(userId: number, taskKey: string, is
     .insert(taskProgress)
     .values({ userId, taskKey, isCompleted, completedAt })
     .onDuplicateKeyUpdate({ set: { isCompleted, completedAt } });
+}
+
+export async function getPlanStartDateForUser(userId: number) {
+  const db = await getDb();
+  if (!db) return null;
+  const result = await db.select().from(userPlanSettings).where(eq(userPlanSettings.userId, userId)).limit(1);
+  return result[0]?.startDate ?? null;
+}
+
+export async function setPlanStartDateForUser(userId: number, startDate: string) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  await db.insert(userPlanSettings).values({ userId, startDate }).onDuplicateKeyUpdate({ set: { startDate } });
+}
+
+export async function getTaskWorkspaceForUser(userId: number, taskKey: string) {
+  const db = await getDb();
+  if (!db) return { note: null, attachments: [] };
+
+  const [note] = await db
+    .select({ content: taskNotes.content, updatedAt: taskNotes.updatedAt })
+    .from(taskNotes)
+    .where(and(eq(taskNotes.userId, userId), eq(taskNotes.taskKey, taskKey)))
+    .limit(1);
+  const attachments = await db
+    .select({
+      id: taskAttachments.id,
+      fileName: taskAttachments.fileName,
+      mimeType: taskAttachments.mimeType,
+      sizeBytes: taskAttachments.sizeBytes,
+      createdAt: taskAttachments.createdAt,
+    })
+    .from(taskAttachments)
+    .where(and(eq(taskAttachments.userId, userId), eq(taskAttachments.taskKey, taskKey)))
+    .orderBy(desc(taskAttachments.createdAt));
+
+  return { note: note ?? null, attachments };
+}
+
+export async function saveTaskNoteForUser(userId: number, taskKey: string, content: string) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  const normalized = content.trim();
+  if (!normalized) {
+    await db.delete(taskNotes).where(and(eq(taskNotes.userId, userId), eq(taskNotes.taskKey, taskKey)));
+    return null;
+  }
+  await db.insert(taskNotes).values({ userId, taskKey, content: normalized }).onDuplicateKeyUpdate({ set: { content: normalized } });
+  return normalized;
+}
+
+export async function createTaskAttachmentForUser(input: {
+  userId: number;
+  taskKey: string;
+  storageKey: string;
+  fileName: string;
+  mimeType: string;
+  sizeBytes: number;
+}) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  const result = await db.insert(taskAttachments).values(input);
+  return Number(result[0].insertId);
+}
+
+export async function getTaskAttachmentForUser(userId: number, attachmentId: number) {
+  const db = await getDb();
+  if (!db) return null;
+  const result = await db
+    .select()
+    .from(taskAttachments)
+    .where(and(eq(taskAttachments.userId, userId), eq(taskAttachments.id, attachmentId)))
+    .limit(1);
+  return result[0] ?? null;
+}
+
+export async function getBusinessMetricsForUser(userId: number) {
+  const db = await getDb();
+  if (!db) return null;
+  const result = await db.select().from(userBusinessMetrics).where(eq(userBusinessMetrics.userId, userId)).limit(1);
+  return result[0] ?? null;
+}
+
+export async function saveBusinessMetricsForUser(input: {
+  userId: number;
+  revenueCents: number;
+  productCostCents: number;
+  adSpendCents: number;
+  orders: number;
+  currency: string;
+}) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  const { userId, ...values } = input;
+  await db.insert(userBusinessMetrics).values({ userId, ...values }).onDuplicateKeyUpdate({ set: values });
 }

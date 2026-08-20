@@ -15,6 +15,13 @@
       "when": 1787196960024,
       "tag": "0001_adorable_thena",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1787198533980,
+      "tag": "0002_aberrant_maximus",
+      "breakpoints": true
     }
   ]
 }

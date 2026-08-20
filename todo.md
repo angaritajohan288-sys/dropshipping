@@ -16,3 +16,13 @@
 - [x] Probar de forma específica el cálculo de la semana operativa.
 - [x] Verificar navegación básica por teclado y visualización móvil antes de la entrega.
 - [x] Guardar el checkpoint final y preparar la entrega del proyecto.
+- [x] Añadir una fecha de inicio privada y configurable para calcular fechas y semanas reales del cronograma.
+- [x] Incorporar notas privadas por tarea con edición y guardado persistente.
+- [x] Incorporar adjuntos privados por tarea con carga segura al almacenamiento y enlaces protegidos.
+- [x] Crear un panel personal para registrar ingresos, coste de producto, pedidos y gasto publicitario.
+- [x] Calcular margen de ganancias, ingresos, coste publicitario y rentabilidad a partir de los registros del usuario.
+- [ ] Validar los nuevos flujos, cálculos y aislamiento de datos con pruebas y revisión visual.
+- [x] Añadir pruebas de la ruta protegida de adjuntos para sesión, tipo de archivo, tamaño y metadatos.
+- [ ] Validar en sesión autenticada la fecha de inicio, notas, adjuntos y guardado de métricas.
+- [ ] Realizar revisión visual autenticada de los módulos nuevos en escritorio y móvil.
+- [ ] Sincronizar la versión ampliada del tracker con el repositorio de GitHub.

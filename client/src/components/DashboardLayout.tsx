@@ -20,7 +20,7 @@ import {
 } from "@/components/ui/sidebar";
 import { startLogin } from "@/const";
 import { useIsMobile } from "@/hooks/useMobile";
-import { CalendarDays, Crosshair, LayoutDashboard, LogOut, PanelLeft, ShieldAlert, Sparkles } from "lucide-react";
+import { BarChart3, CalendarDays, Crosshair, LayoutDashboard, LogOut, PanelLeft, ShieldAlert, Sparkles } from "lucide-react";
 import { CSSProperties, useEffect, useRef, useState } from "react";
 import { DashboardLayoutSkeleton } from "./DashboardLayoutSkeleton";
 import { Button } from "./ui/button";
@@ -30,6 +30,7 @@ const menuItems = [
   { icon: LayoutDashboard, label: "Centro de mando", target: "overview" },
   { icon: Crosshair, label: "Fases", target: "plan" },
   { icon: CalendarDays, label: "Cronograma", target: "timeline" },
+  { icon: BarChart3, label: "Métricas", target: "metrics" },
   { icon: ShieldAlert, label: "Inteligencia", target: "intelligence" },
 ];
 

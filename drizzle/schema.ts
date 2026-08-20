@@ -42,3 +42,71 @@ export const taskProgress = mysqlTable(
 
 export type TaskProgress = typeof taskProgress.$inferSelect;
 export type InsertTaskProgress = typeof taskProgress.$inferInsert;
+
+/** Configuración de calendario privada. La fecha usa formato YYYY-MM-DD para conservar el día elegido por el usuario. */
+export const userPlanSettings = mysqlTable(
+  "userPlanSettings",
+  {
+    id: int("id").autoincrement().primaryKey(),
+    userId: int("userId").notNull().references(() => users.id, { onDelete: "cascade" }),
+    startDate: varchar("startDate", { length: 10 }).notNull(),
+    createdAt: timestamp("createdAt").notNull().defaultNow(),
+    updatedAt: timestamp("updatedAt").notNull().defaultNow().onUpdateNow(),
+  },
+  table => [uniqueIndex("plan_settings_user_unique").on(table.userId)],
+);
+
+export type UserPlanSettings = typeof userPlanSettings.$inferSelect;
+export type InsertUserPlanSettings = typeof userPlanSettings.$inferInsert;
+
+/** Una nota editable por combinación de usuario y tarea canónica. */
+export const taskNotes = mysqlTable(
+  "taskNotes",
+  {
+    id: int("id").autoincrement().primaryKey(),
+    userId: int("userId").notNull().references(() => users.id, { onDelete: "cascade" }),
+    taskKey: varchar("taskKey", { length: 96 }).notNull(),
+    content: text("content").notNull(),
+    createdAt: timestamp("createdAt").notNull().defaultNow(),
+    updatedAt: timestamp("updatedAt").notNull().defaultNow().onUpdateNow(),
+  },
+  table => [uniqueIndex("task_note_user_task_unique").on(table.userId, table.taskKey)],
+);
+
+export type TaskNote = typeof taskNotes.$inferSelect;
+export type InsertTaskNote = typeof taskNotes.$inferInsert;
+
+/** Metadatos de adjuntos; los bytes se almacenan en S3 y nunca en la base de datos. */
+export const taskAttachments = mysqlTable("taskAttachments", {
+  id: int("id").autoincrement().primaryKey(),
+  userId: int("userId").notNull().references(() => users.id, { onDelete: "cascade" }),
+  taskKey: varchar("taskKey", { length: 96 }).notNull(),
+  storageKey: varchar("storageKey", { length: 500 }).notNull(),
+  fileName: varchar("fileName", { length: 255 }).notNull(),
+  mimeType: varchar("mimeType", { length: 120 }).notNull(),
+  sizeBytes: int("sizeBytes").notNull(),
+  createdAt: timestamp("createdAt").notNull().defaultNow(),
+});
+
+export type TaskAttachment = typeof taskAttachments.$inferSelect;
+export type InsertTaskAttachment = typeof taskAttachments.$inferInsert;
+
+/** Snapshot manual de negocio; los montos se guardan en centavos para evitar errores de punto flotante. */
+export const userBusinessMetrics = mysqlTable(
+  "userBusinessMetrics",
+  {
+    id: int("id").autoincrement().primaryKey(),
+    userId: int("userId").notNull().references(() => users.id, { onDelete: "cascade" }),
+    revenueCents: int("revenueCents").notNull().default(0),
+    productCostCents: int("productCostCents").notNull().default(0),
+    adSpendCents: int("adSpendCents").notNull().default(0),
+    orders: int("orders").notNull().default(0),
+    currency: varchar("currency", { length: 3 }).notNull().default("USD"),
+    createdAt: timestamp("createdAt").notNull().defaultNow(),
+    updatedAt: timestamp("updatedAt").notNull().defaultNow().onUpdateNow(),
+  },
+  table => [uniqueIndex("business_metrics_user_unique").on(table.userId)],
+);
+
+export type UserBusinessMetrics = typeof userBusinessMetrics.$inferSelect;
+export type InsertUserBusinessMetrics = typeof userBusinessMetrics.$inferInsert;
