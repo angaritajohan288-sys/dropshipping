@@ -25,7 +25,7 @@
 - [x] Añadir pruebas de la ruta protegida de adjuntos para sesión, tipo de archivo, tamaño y metadatos.
 - [x] Validar en sesión autenticada la fecha de inicio, notas, adjuntos y guardado de métricas.
 - [x] Realizar revisión visual autenticada de los módulos nuevos en escritorio y móvil.
-- [ ] Sincronizar la versión ampliada del tracker con el repositorio de GitHub.
+- [x] Sincronizar la versión ampliada del tracker con el repositorio de GitHub.
 - [x] Permitir restablecer la fecha de inicio para eliminar datos temporales de validación.
 - [x] Permitir retirar de una tarea los adjuntos privados y sus referencias de almacenamiento.
 - [x] Validar en una sesión autenticada la carga y eliminación de un adjunto temporal sin conservar referencias activas.
