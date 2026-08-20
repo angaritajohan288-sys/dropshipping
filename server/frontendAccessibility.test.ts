@@ -3,6 +3,10 @@ import { describe, expect, it } from "vitest";
 
 const monthlyPanel = readFileSync(new URL("../client/src/components/MonthlyMetricsPanel.tsx", import.meta.url), "utf-8");
 const reminderPanel = readFileSync(new URL("../client/src/components/ReminderSettingsPanel.tsx", import.meta.url), "utf-8");
+const deadlineCalendar = readFileSync(new URL("../client/src/components/DeadlineCalendar.tsx", import.meta.url), "utf-8");
+const dashboardLayout = readFileSync(new URL("../client/src/components/DashboardLayout.tsx", import.meta.url), "utf-8");
+const themeContext = readFileSync(new URL("../client/src/contexts/ThemeContext.tsx", import.meta.url), "utf-8");
+const themeStyles = readFileSync(new URL("../client/src/index.css", import.meta.url), "utf-8");
 const homePage = readFileSync(new URL("../client/src/pages/Home.tsx", import.meta.url), "utf-8");
 
 describe("contrato de accesibilidad de los controles de análisis", () => {
@@ -25,5 +29,23 @@ describe("contrato de accesibilidad de los controles de análisis", () => {
     expect(reminderPanel).toContain("focus:border-amber-200/70");
     expect(homePage).toContain("Ordenar por vencimiento");
     expect(homePage).toContain("Restaurar orden del plan");
+  });
+
+  it("mantiene controles semánticos para navegar el calendario y alternar el tema global", () => {
+    expect(deadlineCalendar).toContain("onMonthChange={setMonth}");
+    expect(deadlineCalendar).toContain("onOpenTask(entry.taskKey)");
+    expect(deadlineCalendar).toContain("Ver todo el mes");
+    expect(dashboardLayout).toContain("Cambiar a modo claro");
+    expect(dashboardLayout).toContain("Cambiar a modo oscuro");
+    expect(themeContext).toContain('localStorage.setItem("theme", theme)');
+  });
+
+  it("define una paleta clara legible junto a los anillos de foco del calendario y tema", () => {
+    expect(themeStyles).toContain(".light {");
+    expect(themeStyles).toContain("--foreground: #101828");
+    expect(themeStyles).toContain(".light .text-white");
+    expect(deadlineCalendar).toContain("onSelect={setSelectedDate}");
+    expect(deadlineCalendar).toContain("Ver todo el mes");
+    expect(dashboardLayout).toContain("aria-label={theme === \"dark\"");
   });
 });

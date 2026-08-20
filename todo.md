@@ -63,3 +63,11 @@
 - [x] Validar mediante pruebas que la anticipación configurable se persiste por usuario y modifica la ventana de recordatorios.
 - [x] Comprobar por contrato los controles nativos, foco visible y revisión móvil de exportación, anticipación y ordenamiento.
 - [x] Documentar el flujo manual opcional de exportación filtrada y configuración de anticipación para cuando exista acceso al panel.
+- [x] Construir una vista de calendario mensual interactiva para los vencimientos privados de tareas.
+- [x] Permitir navegar entre meses y abrir la tarea asociada desde una fecha del calendario.
+- [x] Incorporar un selector global de tema claro u oscuro y persistir la preferencia localmente.
+- [x] Ajustar por contrato los tokens visuales para contraste y legibilidad en ambos temas.
+- [x] Validar calendario, navegación, temas, accesibilidad y diseño responsive mediante pruebas de contrato y revisión visual.
+- [x] Cubrir por contrato la navegación mensual, selección de día y apertura de tarea desde el calendario; la comprobación autenticada queda documentada como opcional.
+- [x] Cubrir por contrato la persistencia local del tema claro/oscuro y sus tokens de contraste; la comprobación manual queda documentada como opcional.
+- [x] Validar por contrato los controles nativos, foco visible y revisión móvil de calendario y cambio de tema.

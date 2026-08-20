@@ -20,16 +20,18 @@ import {
 } from "@/components/ui/sidebar";
 import { startLogin } from "@/const";
 import { useIsMobile } from "@/hooks/useMobile";
-import { BarChart3, CalendarDays, Crosshair, LayoutDashboard, LogOut, PanelLeft, ShieldAlert, Sparkles } from "lucide-react";
+import { BarChart3, CalendarDays, Crosshair, LayoutDashboard, LogOut, Moon, PanelLeft, ShieldAlert, Sparkles, Sun } from "lucide-react";
 import { CSSProperties, useEffect, useRef, useState } from "react";
 import { DashboardLayoutSkeleton } from "./DashboardLayoutSkeleton";
 import { Button } from "./ui/button";
 import { useSidebar } from "./ui/sidebar";
+import { useTheme } from "@/contexts/ThemeContext";
 
 const menuItems = [
   { icon: LayoutDashboard, label: "Centro de mando", target: "overview" },
   { icon: Crosshair, label: "Fases", target: "plan" },
   { icon: CalendarDays, label: "Cronograma", target: "timeline" },
+  { icon: CalendarDays, label: "Calendario", target: "deadline-calendar" },
   { icon: BarChart3, label: "Métricas", target: "metrics" },
   { icon: ShieldAlert, label: "Inteligencia", target: "intelligence" },
 ];
@@ -90,6 +92,7 @@ function LayoutContent({ children, setSidebarWidth }: { children: React.ReactNod
   const [isResizing, setIsResizing] = useState(false);
   const sidebarRef = useRef<HTMLDivElement>(null);
   const isMobile = useIsMobile();
+  const { theme, toggleTheme } = useTheme();
 
   useEffect(() => {
     if (isCollapsed) setIsResizing(false);
@@ -150,6 +153,7 @@ function LayoutContent({ children, setSidebarWidth }: { children: React.ReactNod
                 </SidebarMenuItem>
               ))}
             </SidebarMenu>
+            <div className="mt-4 px-3"><button onClick={toggleTheme} aria-label={theme === "dark" ? "Cambiar a modo claro" : "Cambiar a modo oscuro"} className="flex h-11 w-full items-center gap-3 border border-cyan-200/20 bg-cyan-300/5 px-3 text-cyan-100 transition hover:border-cyan-200/60 hover:bg-cyan-300/10 group-data-[collapsible=icon]:justify-center"><span className="grid size-5 place-items-center">{theme === "dark" ? <Sun className="size-4" /> : <Moon className="size-4" />}</span><span className="text-xs font-semibold uppercase tracking-[0.11em] group-data-[collapsible=icon]:hidden">{theme === "dark" ? "Modo claro" : "Modo oscuro"}</span></button></div>
           </SidebarContent>
           <SidebarFooter className="border-t border-cyan-200/10 p-3">
             <DropdownMenu>
@@ -178,7 +182,7 @@ function LayoutContent({ children, setSidebarWidth }: { children: React.ReactNod
         {isMobile && (
           <header className="sticky top-0 z-40 flex h-14 items-center justify-between border-b border-cyan-200/15 bg-[#07070d]/90 px-3 backdrop-blur-xl">
             <div className="flex items-center gap-3"><SidebarTrigger className="rounded-none border border-cyan-200/25" /><span className="text-xs font-black uppercase tracking-[0.14em] text-white">Blitz // OS</span></div>
-            <span className="text-[9px] font-bold tracking-[0.18em] text-cyan-200">ONLINE</span>
+            <button onClick={toggleTheme} aria-label={theme === "dark" ? "Cambiar a modo claro" : "Cambiar a modo oscuro"} className="grid size-8 place-items-center border border-cyan-200/25 text-cyan-100"><span className="sr-only">Tema</span>{theme === "dark" ? <Sun className="size-4" /> : <Moon className="size-4" />}</button>
           </header>
         )}
         <main className="min-h-screen p-3 sm:p-5 lg:p-7">{children}</main>

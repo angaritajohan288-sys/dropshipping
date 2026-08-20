@@ -102,3 +102,44 @@
   .signal-dot { animation: pulse-signal 2s ease-in-out infinite; }
   @keyframes pulse-signal { 50% { opacity: .45; transform: scale(.8); } }
 }
+
+.light {
+  --background: #f4f7ff;
+  --foreground: #101828;
+  --card: #ffffff;
+  --card-foreground: #101828;
+  --popover: #ffffff;
+  --popover-foreground: #101828;
+  --primary: #be2fbe;
+  --primary-foreground: #ffffff;
+  --secondary: #e8edf8;
+  --secondary-foreground: #17233a;
+  --muted: #e9eef8;
+  --muted-foreground: #53617a;
+  --accent: #e8f8fd;
+  --accent-foreground: #10243a;
+  --destructive: #c72750;
+  --destructive-foreground: #ffffff;
+  --border: rgba(14, 116, 144, 0.22);
+  --input: rgba(14, 116, 144, 0.25);
+  --ring: #0e7490;
+  --sidebar: #edf4fb;
+  --sidebar-foreground: #10243a;
+  --sidebar-primary: #0e7490;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #dbeef8;
+  --sidebar-accent-foreground: #10243a;
+  --sidebar-border: rgba(14, 116, 144, 0.22);
+  --sidebar-ring: #0e7490;
+}
+
+.light body { background-color: #f4f7ff; background-image: linear-gradient(rgba(14, 116, 144, 0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(14, 116, 144, 0.06) 1px, transparent 1px), radial-gradient(circle at 76% 0%, rgba(190, 47, 190, 0.16), transparent 30rem), radial-gradient(circle at 0% 45%, rgba(14, 116, 144, 0.10), transparent 32rem); }
+.light .hud-panel { background: linear-gradient(135deg, rgba(255,255,255,.95), rgba(236,244,255,.92)); border-color: rgba(14, 116, 144, .24); box-shadow: inset 0 0 0 1px rgba(255,255,255,.75), 0 20px 45px rgba(23, 50, 86, .11); }
+.light .alert-panel { background: linear-gradient(135deg, rgba(255, 235, 241, .95), rgba(255, 246, 248, .94)); }
+.light .hud-label { color: #50627d; }
+.light .text-white { color: #101828 !important; }
+.light .text-slate-100 { color: #1f2a3d !important; }
+.light .text-slate-300 { color: #32415a !important; }
+.light .text-slate-400, .light .text-slate-500 { color: #53617a !important; }
+.light .bg-black\/15, .light .bg-black\/20, .light .bg-black\/25, .light .bg-black\/30, .light .bg-black\/40 { background-color: rgba(224, 236, 250, .58) !important; }
+.light .bg-\[\#07070d\]\/95, .light .bg-\[\#070914\]\/75 { background-color: rgba(237, 244, 251, .95) !important; }

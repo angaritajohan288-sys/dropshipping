@@ -1,5 +1,6 @@
 import { useAuth } from "@/_core/hooks/useAuth";
 import DashboardLayout from "@/components/DashboardLayout";
+import DeadlineCalendar from "@/components/DeadlineCalendar";
 import MetricsPanel from "@/components/MetricsPanel";
 import ReminderSettingsPanel from "@/components/ReminderSettingsPanel";
 import TaskWorkspace from "@/components/TaskWorkspace";
@@ -97,6 +98,17 @@ export default function Home() {
   const overdueTasks = allTasks.filter(task => isTaskOverdue(deadlineMap.get(task.id), completedKeys.has(task.id)));
   const dueSoonTasks = allTasks.filter(task => isTaskDueSoon(deadlineMap.get(task.id), completedKeys.has(task.id), new Date(), reminderLeadDays) && !isTaskOverdue(deadlineMap.get(task.id), completedKeys.has(task.id)));
   const activeTasks = useMemo(() => activePhase ? (sortByDeadline ? sortTasksByDeadline(activePhase.tasks, deadlineMap) : activePhase.tasks) : [], [activePhase, deadlineMap, sortByDeadline]);
+  const calendarEntries = allTasks.flatMap(task => {
+    const dueDate = deadlineMap.get(task.id);
+    const phase = phases.find(item => item.tasks.some(phaseTask => phaseTask.id === task.id));
+    return dueDate && phase ? [{ taskKey: task.id, dueDate, title: task.title, phaseName: phase.name, isCompleted: completedKeys.has(task.id) }] : [];
+  });
+  const openCalendarTask = (taskKey: string) => {
+    const phase = phases.find(item => item.tasks.some(task => task.id === taskKey));
+    if (phase) setActivePhaseId(phase.id);
+    setOpenedTaskKey(taskKey);
+    document.getElementById("plan")?.scrollIntoView({ behavior: "smooth" });
+  };
 
   if (planQuery.isLoading || (isAuthenticated && progressQuery.isLoading)) return <DashboardLayout><div className="grid min-h-[70vh] place-items-center"><div className="text-center"><Loader2 className="mx-auto size-8 animate-spin text-cyan-200" /><p className="hud-label mt-5">Sincronización segura</p><p className="mt-2 text-sm text-slate-400">Recuperando tu centro de mando privado.</p></div></div></DashboardLayout>;
   if (planQuery.isError) return <DashboardLayout><section className="grid min-h-[70vh] place-items-center"><div className="alert-panel max-w-xl p-8 text-center"><AlertTriangle className="mx-auto size-7 text-rose-200" /><p className="hud-label mt-5 text-rose-200">Conexión interrumpida</p><h1 className="mt-2 text-2xl font-black uppercase text-white">No pudimos cargar tu plan.</h1><Button onClick={() => planQuery.refetch()} className="neon-button mt-7 rounded-none px-6 font-bold uppercase">Reintentar conexión</Button></div></section></DashboardLayout>;
@@ -116,6 +128,8 @@ export default function Home() {
     </section>
 
     <section id="timeline" className="scroll-mt-20 hud-panel p-5 sm:p-7"><div className="flex flex-col justify-between gap-5 xl:flex-row xl:items-end"><div><p className="hud-label">Cronograma // 04 semanas reales</p><h2 className="mt-2 text-3xl font-black uppercase text-white">El mapa de ejecución</h2><p className="mt-2 text-xs text-slate-400">{calendarQuery.data?.startDate ? <><strong className="text-fuchsia-200">Semana {currentWeek} real</strong> calculada desde tu inicio.</> : "Define una fecha de inicio para anclar cada semana a días reales."}</p></div><div className="border border-cyan-200/15 bg-black/25 p-3"><label className="hud-label">Fecha de inicio</label><div className="mt-2 flex flex-wrap gap-2"><input type="date" value={startDateDraft} onChange={event => setStartDateDraft(event.target.value)} className="border border-cyan-200/20 bg-black/30 px-3 py-2 text-sm text-white" /><Button onClick={() => startDateDraft && setStartDate.mutate({ startDate: startDateDraft })} disabled={!startDateDraft || setStartDate.isPending} className="neon-button rounded-none px-4 text-xs font-bold uppercase">{setStartDate.isPending ? "Guardando" : "Aplicar"}</Button>{calendarQuery.data?.startDate && <Button variant="outline" onClick={() => clearStartDate.mutate()} disabled={clearStartDate.isPending} className="rounded-none border-slate-500/45 text-slate-300">Quitar fecha</Button>}</div></div></div><div className="mt-7 grid gap-3 md:grid-cols-4">{weeks.map(week => { const phase = phases.find(item => item.id === week.phaseId); const done = phase?.tasks.filter(task => completedKeys.has(task.id)).length ?? 0; const count = phase?.tasks.length ?? 0; const range = getWeekRange(calendarQuery.data?.startDate ?? null, week.number); const isCurrent = week.number === currentWeek; return <button key={week.number} onClick={() => setActivePhaseId(week.phaseId)} className={`relative border p-5 text-left ${isCurrent ? "border-fuchsia-300/70 bg-fuchsia-300/[0.08]" : "border-white/10 bg-white/[0.02]"}`}><p className="text-[10px] font-bold uppercase tracking-[0.16em] text-slate-500">Semana {week.number}{range ? ` · ${formatDate(range.start)}–${formatDate(range.end)}` : ""}</p><p className="mt-3 text-lg font-black uppercase text-white">{week.label}</p><p className="mt-2 text-xs leading-5 text-slate-400">{week.focus}</p><p className="mt-5 text-[10px] font-bold uppercase tracking-[0.12em] text-slate-400">{done}/{count} tareas</p>{isCurrent && <div className="absolute inset-x-0 bottom-0 h-1 bg-gradient-to-r from-cyan-300 via-fuchsia-400 to-violet-400" />}</button>; })}</div></section>
+
+    <DeadlineCalendar entries={calendarEntries} leadDays={reminderLeadDays} onOpenTask={openCalendarTask} />
 
     <MetricsPanel />
     <ReminderSettingsPanel />
