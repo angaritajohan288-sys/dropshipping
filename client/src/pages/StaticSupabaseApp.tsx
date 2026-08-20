@@ -20,24 +20,56 @@ function money(value: number, currency: string) {
 }
 
 function StaticLogin() {
-  const { sendMagicLink } = useSupabaseAuth();
+  const { signInWithPassword, signUpWithPassword, sendPasswordRecovery } = useSupabaseAuth();
+  const [mode, setMode] = useState<"login" | "register" | "recovery">("login");
   const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [sending, setSending] = useState(false);
   const [message, setMessage] = useState<string | null>(null);
 
   const submit = async (event: React.FormEvent) => {
     event.preventDefault();
     setSending(true);
-    const error = await sendMagicLink(email);
+    const error = mode === "login"
+      ? await signInWithPassword(email, password)
+      : mode === "register"
+        ? await signUpWithPassword(email, password)
+        : await sendPasswordRecovery(email);
     setSending(false);
-    setMessage(error ?? "Revisa tu correo y abre el enlace para entrar a tu espacio privado.");
+    if (error) return setMessage(error);
+    if (mode === "login") return setMessage("Sesión iniciada correctamente.");
+    if (mode === "register") return setMessage("Cuenta creada. Revisa tu correo si Supabase solicita confirmar la dirección.");
+    setMessage("Si existe una cuenta con este correo, recibirás instrucciones para restablecer la contraseña.");
   };
 
-  return <main className="cyber-shell grid min-h-screen place-items-center px-5"><form onSubmit={submit} className="hud-panel w-full max-w-md p-8 sm:p-10"><p className="hud-label text-cyan-200">Blitz // Supabase</p><h1 className="mt-4 text-4xl font-black uppercase tracking-[-0.06em] text-white">Tu operación privada.</h1><p className="mt-4 text-sm leading-6 text-slate-300">Inicia con un enlace seguro. Progreso, métricas, fechas, notas y adjuntos se guardan por usuario.</p><label className="mt-7 block hud-label">Correo electrónico</label><input required type="email" value={email} onChange={event => setEmail(event.target.value)} placeholder="tu@correo.com" className="mt-2 w-full border border-cyan-200/30 bg-black/30 px-4 py-3 text-sm text-white focus:border-cyan-200/80 focus:outline-none" /><Button disabled={sending} className="neon-button mt-4 w-full rounded-none py-6 font-bold uppercase tracking-[0.14em]">{sending ? "Enviando enlace" : "Enviar enlace de acceso"}</Button>{message && <p className="mt-5 border border-cyan-200/25 bg-cyan-300/10 p-3 text-xs leading-5 text-cyan-50">{message}</p>}</form></main>;
+  const title = mode === "login" ? "Inicia sesión." : mode === "register" ? "Crea tu cuenta." : "Recupera el acceso.";
+  const action = mode === "login" ? "Iniciar sesión" : mode === "register" ? "Crear cuenta" : "Enviar recuperación";
+
+  return <main className="cyber-shell grid min-h-screen place-items-center px-5"><form onSubmit={submit} className="hud-panel w-full max-w-md p-8 sm:p-10"><p className="hud-label text-cyan-200">Blitz // Supabase</p><h1 className="mt-4 text-4xl font-black uppercase tracking-[-0.06em] text-white">{title}</h1><p className="mt-4 text-sm leading-6 text-slate-300">Accede con correo y contraseña. Tu progreso, métricas, fechas, notas y adjuntos permanecen privados.</p><div className="mt-7 grid grid-cols-3 border border-cyan-200/20 p-1 text-[10px] font-bold uppercase"><button type="button" onClick={() => { setMode("login"); setMessage(null); }} className={`px-2 py-2 ${mode === "login" ? "bg-cyan-300/15 text-cyan-100" : "text-slate-400"}`}>Entrar</button><button type="button" onClick={() => { setMode("register"); setMessage(null); }} className={`px-2 py-2 ${mode === "register" ? "bg-cyan-300/15 text-cyan-100" : "text-slate-400"}`}>Registro</button><button type="button" onClick={() => { setMode("recovery"); setMessage(null); }} className={`px-2 py-2 ${mode === "recovery" ? "bg-cyan-300/15 text-cyan-100" : "text-slate-400"}`}>Recuperar</button></div><label className="mt-6 block hud-label">Correo electrónico</label><input required type="email" autoComplete="email" value={email} onChange={event => setEmail(event.target.value)} placeholder="tu@correo.com" className="mt-2 w-full border border-cyan-200/30 bg-black/30 px-4 py-3 text-sm text-white focus:border-cyan-200/80 focus:outline-none" />{mode !== "recovery" && <><label className="mt-4 block hud-label">Contraseña</label><input required minLength={6} type="password" autoComplete={mode === "login" ? "current-password" : "new-password"} value={password} onChange={event => setPassword(event.target.value)} placeholder="Mínimo 6 caracteres" className="mt-2 w-full border border-cyan-200/30 bg-black/30 px-4 py-3 text-sm text-white focus:border-cyan-200/80 focus:outline-none" /></>}<Button disabled={sending} className="neon-button mt-5 w-full rounded-none py-6 font-bold uppercase tracking-[0.14em]">{sending ? "Procesando" : action}</Button>{message && <p className="mt-5 border border-cyan-200/25 bg-cyan-300/10 p-3 text-xs leading-5 text-cyan-50">{message}</p>}</form></main>;
+}
+
+function StaticPasswordUpdate() {
+  const { updatePassword, signOut } = useSupabaseAuth();
+  const [password, setPassword] = useState("");
+  const [confirmation, setConfirmation] = useState("");
+  const [saving, setSaving] = useState(false);
+  const [message, setMessage] = useState<string | null>(null);
+
+  const submit = async (event: React.FormEvent) => {
+    event.preventDefault();
+    if (password.length < 6) return setMessage("La contraseña debe tener al menos 6 caracteres.");
+    if (password !== confirmation) return setMessage("Las contraseñas no coinciden.");
+    setSaving(true);
+    const error = await updatePassword(password);
+    setSaving(false);
+    setMessage(error ?? "Contraseña actualizada. Ya puedes continuar a tu espacio privado.");
+  };
+
+  return <main className="cyber-shell grid min-h-screen place-items-center px-5"><form onSubmit={submit} className="hud-panel w-full max-w-md p-8 sm:p-10"><p className="hud-label text-cyan-200">Blitz // Recuperación</p><h1 className="mt-4 text-4xl font-black uppercase tracking-[-0.06em] text-white">Nueva contraseña.</h1><p className="mt-4 text-sm leading-6 text-slate-300">Define una contraseña nueva para recuperar tu cuenta.</p><label className="mt-7 block hud-label">Nueva contraseña</label><input required minLength={6} type="password" autoComplete="new-password" value={password} onChange={event => setPassword(event.target.value)} className="mt-2 w-full border border-cyan-200/30 bg-black/30 px-4 py-3 text-sm text-white focus:border-cyan-200/80 focus:outline-none" /><label className="mt-4 block hud-label">Confirmar contraseña</label><input required minLength={6} type="password" autoComplete="new-password" value={confirmation} onChange={event => setConfirmation(event.target.value)} className="mt-2 w-full border border-cyan-200/30 bg-black/30 px-4 py-3 text-sm text-white focus:border-cyan-200/80 focus:outline-none" /><Button disabled={saving} className="neon-button mt-5 w-full rounded-none py-6 font-bold uppercase tracking-[0.14em]">{saving ? "Actualizando" : "Actualizar contraseña"}</Button><button type="button" onClick={signOut} className="mt-4 w-full text-xs font-bold uppercase text-slate-400 underline">Cancelar y cerrar sesión</button>{message && <p className="mt-5 border border-cyan-200/25 bg-cyan-300/10 p-3 text-xs leading-5 text-cyan-50">{message}</p>}</form></main>;
 }
 
 export default function StaticSupabaseApp() {
-  const { user, loading, signOut } = useSupabaseAuth();
+  const { user, loading, signOut, isRecovery } = useSupabaseAuth();
   const [theme, setTheme] = useState<"dark" | "light">(() => (localStorage.getItem("blitz-theme") as "dark" | "light") || "dark");
   const [states, setStates] = useState<TaskState[]>([]);
   const [attachments, setAttachments] = useState<Attachment[]>([]);
@@ -73,6 +105,7 @@ export default function StaticSupabaseApp() {
   useEffect(() => { load(); }, [load]);
   if (loading) return <main className="grid min-h-screen place-items-center"><p className="hud-label">Conectando espacio privado</p></main>;
   if (!user) return <StaticLogin />;
+  if (isRecovery) return <StaticPasswordUpdate />;
 
   const profileEmail = user.email ?? "Correo no disponible";
   const profileLabel = typeof user.user_metadata?.full_name === "string" && user.user_metadata.full_name.trim() ? user.user_metadata.full_name : "Perfil privado";

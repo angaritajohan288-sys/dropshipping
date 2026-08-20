@@ -11,7 +11,7 @@ La variante estática se compila con `VITE_STATIC_SUPABASE=true`. GitHub Pages e
 
 > El script activa **Row Level Security**. Cada fila queda limitada a `auth.uid()`, por lo que una persona autenticada solo puede consultar y modificar sus propios datos.
 
-## 2. Configurar acceso por correo
+## 2. Configurar acceso con correo y contraseña
 
 En Supabase abre **Authentication → URL Configuration** y agrega estas direcciones en **Redirect URLs**:
 
@@ -20,7 +20,9 @@ http://localhost:5173/
 https://TU_USUARIO.github.io/TU_REPOSITORIO/
 ```
 
-Sustituye `TU_USUARIO` y `TU_REPOSITORIO` por los valores reales de GitHub. Verifica también que el proveedor **Email** esté habilitado en **Authentication → Providers**.
+Sustituye `TU_USUARIO` y `TU_REPOSITORIO` por los valores reales de GitHub. Después abre **Authentication → Providers → Email** y comprueba que el proveedor esté habilitado con **Email and password**. Mantén activada la confirmación de correo si deseas que toda cuenta nueva verifique primero su dirección.
+
+La aplicación muestra tres pestañas: **Entrar**, **Registro** y **Recuperar**. Las contraseñas deben tener al menos seis caracteres. La recuperación envía un enlace de Supabase a la URL publicada; configura una página de cambio de contraseña en Supabase si deseas permitir que el usuario defina una nueva contraseña desde ese enlace.
 
 ## 3. Añadir secretos al repositorio de GitHub
 
@@ -42,4 +44,4 @@ No agregues `service_role`, claves secretas ni contraseñas en GitHub Pages.
 
 ## 5. Prueba final
 
-Abre la URL de Pages, solicita un enlace de acceso con tu correo, abre ese enlace y confirma que puedes guardar una tarea, una nota y una fecha límite. Si el enlace de correo vuelve a una URL incorrecta, revisa las **Redirect URLs** de Supabase.
+Abre la URL de Pages, crea una cuenta o inicia sesión con correo y contraseña, y confirma que puedes guardar una tarea, una nota y una fecha límite. Para probar la recuperación, usa la pestaña **Recuperar**. Si la confirmación o recuperación vuelve a una URL incorrecta, revisa las **Redirect URLs** de Supabase.

@@ -32,6 +32,21 @@ describe("static Supabase migration", () => {
     expect(staticApp).toContain('type="file"');
   });
 
+  it("ofrece acceso convencional con correo, contraseña, registro y recuperación", () => {
+    expect(staticApp).toContain("signInWithPassword");
+    expect(staticApp).toContain("signUpWithPassword");
+    expect(staticApp).toContain("sendPasswordRecovery");
+    expect(staticApp).toContain("Contraseña");
+    expect(staticApp).toContain("Recuperar");
+  });
+
+  it("detecta la recuperación y permite definir una contraseña nueva", () => {
+    expect(staticApp).toContain("StaticPasswordUpdate");
+    expect(staticApp).toContain("Actualizar contraseña");
+    expect(staticApp).toContain("if (isRecovery) return <StaticPasswordUpdate />");
+    expect(staticApp).toContain("updatePassword");
+  });
+
   it("usa un borrador de notas aislado con guardado explícito", () => {
     expect(staticApp).toContain("useRef<Record<string, string>>({})");
     expect(staticApp).toContain("noteDrafts.current[task.id]");

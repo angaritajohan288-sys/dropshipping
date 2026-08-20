@@ -100,6 +100,12 @@
 - [ ] Registrar evidencia observable de que notas, fechas, métricas y adjuntos de la cuenta A no aparecen en la cuenta B.
 - [x] Mostrar en el encabezado el perfil de sesión activo con correo, estado autenticado y acceso de cierre de sesión.
 - [ ] Desplegar y confirmar el indicador de perfil en la página publicada con una sesión autenticada.
+- [x] Sustituir el acceso por enlace mágico por inicio de sesión con correo y contraseña.
+- [x] Añadir registro de cuenta y recuperación completa de contraseña mediante Supabase Auth.
+- [ ] Validar la configuración de contraseñas en Supabase y el flujo publicado de autenticación.
+- [x] Documentar la habilitación del proveedor Email con contraseña y el proceso de recuperación en Supabase.
+- [x] Detectar el estado de recuperación de Supabase y permitir definir una nueva contraseña en la aplicación publicada.
+- [ ] Validar de forma observable el acceso, registro y recuperación completa por contraseña en la página publicada.
 - [x] Repetir la prueba publicada del adjunto temporal y comprobar tras eliminarlo que desaparece de la tarea después de recargar.
 - [x] Corregir la incompatibilidad de versión de pnpm detectada en el workflow de GitHub Pages.
 - [x] Eliminar la dependencia operativa de tRPC y Express del entrypoint y de los scripts de la versión estática.
