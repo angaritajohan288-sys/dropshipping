@@ -27,5 +27,7 @@ describe("static Supabase migration", () => {
     expect(workflow).toContain("actions/deploy-pages@v4");
     expect(workflow).toContain('VITE_STATIC_SUPABASE: "true"');
     expect(workflow).toContain("VITE_BASE_PATH");
+    expect(workflow).toContain("pnpm/action-setup@v4");
+    expect(workflow).not.toContain('version: 10');
   });
 });
