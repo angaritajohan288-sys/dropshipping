@@ -97,7 +97,12 @@
 - [ ] Validar en Supabase real el aislamiento entre dos usuarios autenticados distintos, confirmando que un segundo usuario no puede leer ni modificar los datos del primero.
 - [x] Corregir el error de hora del JWT en la segunda sesión antes de ejecutar la prueba de aislamiento entre cuentas.
 - [ ] Registrar evidencia observable de que una tarea cambiada en la cuenta B no se refleja al recargar la cuenta A.
-- [ ] Registrar evidencia observable de que notas, fechas, métricas y adjuntos de la cuenta A no aparecen en la cuenta B.
+- [x] Registrar evidencia observable de que notas, fechas, métricas y adjuntos de la cuenta A no aparecen en la cuenta B.
+- [x] Confirmar en la segunda cuenta de prueba que el espacio privado inicia vacío y sin datos de la cuenta principal.
+- [x] Validar con evidencia observable en la cuenta B que no aparecen las notas de la cuenta A.
+- [x] Validar con evidencia observable en la cuenta B que no aparecen las fechas límite de la cuenta A.
+- [x] Validar con evidencia observable en la cuenta B que no aparecen las métricas mensuales de la cuenta A.
+- [x] Validar con evidencia observable en la cuenta B que no aparecen los adjuntos de la cuenta A.
 - [x] Mostrar en el encabezado el perfil de sesión activo con correo, estado autenticado y acceso de cierre de sesión.
 - [ ] Desplegar y confirmar el indicador de perfil en la página publicada con una sesión autenticada.
 - [x] Sustituir el acceso por enlace mágico por inicio de sesión con correo y contraseña.
