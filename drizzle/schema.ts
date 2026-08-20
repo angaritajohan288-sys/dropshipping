@@ -43,6 +43,23 @@ export const taskProgress = mysqlTable(
 export type TaskProgress = typeof taskProgress.$inferSelect;
 export type InsertTaskProgress = typeof taskProgress.$inferInsert;
 
+/** Fecha límite elegida por el usuario para una tarea canónica. */
+export const userTaskDeadlines = mysqlTable(
+  "userTaskDeadlines",
+  {
+    id: int("id").autoincrement().primaryKey(),
+    userId: int("userId").notNull().references(() => users.id, { onDelete: "cascade" }),
+    taskKey: varchar("taskKey", { length: 96 }).notNull(),
+    dueDate: varchar("dueDate", { length: 10 }).notNull(),
+    createdAt: timestamp("createdAt").notNull().defaultNow(),
+    updatedAt: timestamp("updatedAt").notNull().defaultNow().onUpdateNow(),
+  },
+  table => [uniqueIndex("task_deadline_user_task_unique").on(table.userId, table.taskKey)],
+);
+
+export type UserTaskDeadline = typeof userTaskDeadlines.$inferSelect;
+export type InsertUserTaskDeadline = typeof userTaskDeadlines.$inferInsert;
+
 /** Configuración de calendario privada. La fecha usa formato YYYY-MM-DD para conservar el día elegido por el usuario. */
 export const userPlanSettings = mysqlTable(
   "userPlanSettings",
@@ -110,3 +127,25 @@ export const userBusinessMetrics = mysqlTable(
 
 export type UserBusinessMetrics = typeof userBusinessMetrics.$inferSelect;
 export type InsertUserBusinessMetrics = typeof userBusinessMetrics.$inferInsert;
+
+/** Serie mensual privada; cada registro representa un mes y moneda concretos importados o confirmados por el usuario. */
+export const userMonthlyMetrics = mysqlTable(
+  "userMonthlyMetrics",
+  {
+    id: int("id").autoincrement().primaryKey(),
+    userId: int("userId").notNull().references(() => users.id, { onDelete: "cascade" }),
+    monthKey: varchar("monthKey", { length: 7 }).notNull(),
+    revenueCents: int("revenueCents").notNull().default(0),
+    productCostCents: int("productCostCents").notNull().default(0),
+    adSpendCents: int("adSpendCents").notNull().default(0),
+    orders: int("orders").notNull().default(0),
+    currency: varchar("currency", { length: 3 }).notNull().default("USD"),
+    importedAt: timestamp("importedAt").notNull().defaultNow(),
+    createdAt: timestamp("createdAt").notNull().defaultNow(),
+    updatedAt: timestamp("updatedAt").notNull().defaultNow().onUpdateNow(),
+  },
+  table => [uniqueIndex("monthly_metrics_user_month_currency_unique").on(table.userId, table.monthKey, table.currency)],
+);
+
+export type UserMonthlyMetric = typeof userMonthlyMetrics.$inferSelect;
+export type InsertUserMonthlyMetric = typeof userMonthlyMetrics.$inferInsert;

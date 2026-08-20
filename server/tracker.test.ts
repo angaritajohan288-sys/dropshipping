@@ -13,6 +13,12 @@ const dbMocks = vi.hoisted(() => ({
   getTaskAttachmentForUser: vi.fn(),
   getBusinessMetricsForUser: vi.fn(),
   saveBusinessMetricsForUser: vi.fn(),
+  getTaskDeadlinesForUser: vi.fn(),
+  setTaskDeadlineForUser: vi.fn(),
+  clearTaskDeadlineForUser: vi.fn(),
+  getMonthlyMetricsForUser: vi.fn(),
+  importMonthlyMetricsForUser: vi.fn(),
+  deleteMonthlyMetricForUser: vi.fn(),
 }));
 
 const storageMocks = vi.hoisted(() => ({ storageGetSignedUrl: vi.fn() }));
@@ -55,6 +61,12 @@ describe("tracker", () => {
     dbMocks.getTaskAttachmentForUser.mockResolvedValue({ id: 9, storageKey: "private/object.pdf", fileName: "brief.pdf" });
     dbMocks.getBusinessMetricsForUser.mockResolvedValue(null);
     dbMocks.saveBusinessMetricsForUser.mockResolvedValue(undefined);
+    dbMocks.getTaskDeadlinesForUser.mockResolvedValue([{ taskKey: "products-01", dueDate: "2026-08-20" }]);
+    dbMocks.setTaskDeadlineForUser.mockResolvedValue(undefined);
+    dbMocks.clearTaskDeadlineForUser.mockResolvedValue(undefined);
+    dbMocks.getMonthlyMetricsForUser.mockResolvedValue([]);
+    dbMocks.importMonthlyMetricsForUser.mockResolvedValue(1);
+    dbMocks.deleteMonthlyMetricForUser.mockResolvedValue(undefined);
     storageMocks.storageGetSignedUrl.mockResolvedValue("https://signed.example/object.pdf");
   });
 
@@ -124,5 +136,30 @@ describe("tracker", () => {
     const caller = appRouter.createCaller(createContext(42));
     await expect(caller.tracker.deleteAttachment({ attachmentId: 9 })).resolves.toEqual({ success: true });
     expect(dbMocks.deleteTaskAttachmentForUser).toHaveBeenCalledWith(42, 9);
+  });
+
+  it("guarda y elimina fechas límite usando solo la identidad autenticada", async () => {
+    const caller = appRouter.createCaller(createContext(42));
+    await caller.tracker.setTaskDeadline({ taskKey: "products-01", dueDate: "2026-08-20" });
+    await caller.tracker.clearTaskDeadline({ taskKey: "products-01" });
+
+    expect(dbMocks.setTaskDeadlineForUser).toHaveBeenCalledWith(42, "products-01", "2026-08-20");
+    expect(dbMocks.clearTaskDeadlineForUser).toHaveBeenCalledWith(42, "products-01");
+  });
+
+  it("importa y consulta historial mensual solamente para el usuario de la sesión", async () => {
+    const caller = appRouter.createCaller(createContext(42));
+    const row = { monthKey: "2026-08", revenueCents: 50000, productCostCents: 18000, adSpendCents: 12000, orders: 10, currency: "USD" as const };
+    await caller.tracker.importMonthlyMetrics({ rows: [row] });
+    await caller.tracker.monthlyMetrics();
+
+    expect(dbMocks.importMonthlyMetricsForUser).toHaveBeenCalledWith(42, [row]);
+    expect(dbMocks.getMonthlyMetricsForUser).toHaveBeenCalledWith(42);
+  });
+
+  it("retira un mes del historial solo con la identidad autenticada", async () => {
+    const caller = appRouter.createCaller(createContext(42));
+    await caller.tracker.deleteMonthlyMetric({ monthKey: "2026-08", currency: "USD" });
+    expect(dbMocks.deleteMonthlyMetricForUser).toHaveBeenCalledWith(42, "2026-08", "USD");
   });
 });

@@ -22,6 +22,13 @@
       "when": 1787198533980,
       "tag": "0002_aberrant_maximus",
       "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "5",
+      "when": 1787201620038,
+      "tag": "0003_mysterious_callisto",
+      "breakpoints": true
     }
   ]
 }

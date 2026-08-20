@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { trpc } from "@/lib/trpc";
-import { Download, FileText, Loader2, Paperclip, Save, Trash2, X } from "lucide-react";
+import { CalendarClock, Download, FileText, Loader2, Paperclip, Save, Trash2, X } from "lucide-react";
 import { ChangeEvent, useEffect, useState } from "react";
 import { toast } from "sonner";
 
@@ -46,6 +46,7 @@ function readFileAsBase64(file: File) {
 export default function TaskWorkspace({ taskKey, taskTitle, onClose }: TaskWorkspaceProps) {
   const utils = trpc.useUtils();
   const [note, setNote] = useState("");
+  const [dueDate, setDueDate] = useState("");
   const [isUploading, setIsUploading] = useState(false);
   const workspaceQuery = trpc.tracker.taskWorkspace.useQuery({ taskKey });
   const saveNote = trpc.tracker.saveTaskNote.useMutation({
@@ -62,10 +63,32 @@ export default function TaskWorkspace({ taskKey, taskTitle, onClose }: TaskWorks
     },
     onError: () => toast.error("No se pudo retirar el adjunto."),
   });
+  const setDeadline = trpc.tracker.setTaskDeadline.useMutation({
+    onSuccess: () => {
+      utils.tracker.taskWorkspace.invalidate({ taskKey });
+      utils.tracker.deadlines.invalidate();
+      toast.success("Fecha límite guardada en tu espacio privado.");
+    },
+    onError: () => toast.error("No se pudo guardar la fecha límite."),
+  });
+  const clearDeadline = trpc.tracker.clearTaskDeadline.useMutation({
+    onSuccess: () => {
+      setDueDate("");
+      utils.tracker.taskWorkspace.invalidate({ taskKey });
+      utils.tracker.deadlines.invalidate();
+      toast.success("Fecha límite eliminada.");
+    },
+    onError: () => toast.error("No se pudo eliminar la fecha límite."),
+  });
 
   useEffect(() => {
     setNote(workspaceQuery.data?.note?.content ?? "");
+    setDueDate(workspaceQuery.data?.deadline ?? "");
   }, [workspaceQuery.data?.note?.content, taskKey]);
+
+  useEffect(() => {
+    setDueDate(workspaceQuery.data?.deadline ?? "");
+  }, [workspaceQuery.data?.deadline, taskKey]);
 
   const handleUpload = async (event: ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
@@ -120,7 +143,11 @@ export default function TaskWorkspace({ taskKey, taskTitle, onClose }: TaskWorks
       ) : workspaceQuery.isError ? (
         <div className="mt-5 border border-rose-300/30 bg-rose-400/5 p-4 text-sm text-rose-100">No fue posible recuperar tus notas y adjuntos. <button onClick={() => workspaceQuery.refetch()} className="ml-2 font-bold underline">Reintentar</button></div>
       ) : (
-        <div className="mt-5 grid gap-5 lg:grid-cols-[1.25fr_0.75fr]">
+        <div className="mt-5 space-y-5">
+          <div className="border border-amber-300/20 bg-amber-300/[0.035] p-4">
+            <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between"><div><p className="hud-label text-amber-100">Fecha límite privada</p><p className="mt-1 text-xs leading-5 text-slate-400">Las tareas vencidas aparecerán resaltadas en tu checklist.</p></div><div className="flex flex-wrap gap-2"><input type="date" value={dueDate} onChange={event => setDueDate(event.target.value)} className="border border-amber-300/30 bg-black/30 px-3 py-2 text-sm text-white focus:border-amber-200/70 focus:outline-none" /><Button onClick={() => dueDate && setDeadline.mutate({ taskKey, dueDate })} disabled={!dueDate || setDeadline.isPending} className="rounded-none border border-amber-300/45 bg-amber-300/10 px-4 text-xs font-bold uppercase tracking-[0.1em] text-amber-100 hover:bg-amber-300/20"><CalendarClock className="mr-2 size-3.5" />{setDeadline.isPending ? "Guardando" : "Aplicar"}</Button>{workspaceQuery.data?.deadline && <Button variant="outline" onClick={() => clearDeadline.mutate({ taskKey })} disabled={clearDeadline.isPending} className="rounded-none border-slate-500/45 text-slate-300 hover:bg-white/5 hover:text-white">Quitar</Button>}</div></div>
+          </div>
+        <div className="grid gap-5 lg:grid-cols-[1.25fr_0.75fr]">
           <div>
             <label htmlFor={`note-${taskKey}`} className="hud-label">Notas personales</label>
             <textarea id={`note-${taskKey}`} value={note} onChange={event => setNote(event.target.value)} maxLength={5000} placeholder="Escribe decisiones, enlaces, hallazgos o próximos pasos..." className="mt-2 min-h-36 w-full resize-y border border-cyan-200/20 bg-black/30 p-3 text-sm leading-6 text-slate-100 placeholder:text-slate-600 focus:border-cyan-200/70 focus:outline-none" />
@@ -131,6 +158,7 @@ export default function TaskWorkspace({ taskKey, taskTitle, onClose }: TaskWorks
             <p className="mt-2 text-xs leading-5 text-slate-500">PDF, imagen, TXT, DOCX o XLSX. Máximo 6 MB. Los enlaces se emiten tras comprobar tu sesión.</p>
             <div className="mt-4 space-y-2">{workspaceQuery.data?.attachments.length ? workspaceQuery.data.attachments.map(attachment => <div key={attachment.id} className="flex items-center gap-3 border border-white/8 bg-white/[0.025] p-3"><span className="grid size-8 shrink-0 place-items-center border border-cyan-300/25 bg-cyan-300/5 text-cyan-100"><FileText className="size-4" /></span><div className="min-w-0 flex-1"><p className="truncate text-xs font-bold text-white">{attachment.fileName}</p><p className="mt-1 text-[10px] uppercase tracking-wide text-slate-500">{formatBytes(attachment.sizeBytes)} · {attachment.mimeType.split("/").pop()}</p></div><button onClick={() => handleDownload(attachment.id)} className="grid size-8 place-items-center border border-cyan-300/25 text-cyan-100 transition hover:bg-cyan-300/10" aria-label={`Abrir ${attachment.fileName}`}><Download className="size-4" /></button><button onClick={() => deleteAttachment.mutate({ attachmentId: attachment.id })} disabled={deleteAttachment.isPending} className="grid size-8 place-items-center border border-rose-300/30 text-rose-100 transition hover:bg-rose-400/10 disabled:opacity-50" aria-label={`Retirar ${attachment.fileName}`}><Trash2 className="size-4" /></button></div>) : <div className="border border-dashed border-slate-600/50 p-5 text-center"><Paperclip className="mx-auto size-4 text-slate-600" /><p className="mt-2 text-xs text-slate-500">Sin adjuntos todavía.</p></div>}</div>
           </div>
+        </div>
         </div>
       )}
     </section>

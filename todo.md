@@ -34,3 +34,14 @@
 - [x] Corregir la detección de tipo MIME para que los archivos permitidos por extensión no se rechacen en el navegador.
 - [x] Confirmar los módulos privados desde una sesión autenticada en formato móvil.
 - [x] Validar en formato móvil autenticado la apertura y el renderizado del espacio privado de notas y adjuntos.
+- [x] Diseñar el formato CSV, el modelo de métricas mensuales y el esquema de vencimientos por tarea.
+- [x] Definir en código el contrato CSV de columnas, meses, moneda e importes para la importación privada.
+- [x] Implementar un parser comprobable que convierta CSV válido en filas mensuales protegidas.
+- [x] Importar de forma privada métricas mensuales desde CSV con validación de columnas, importes y meses.
+- [x] Persistir un historial mensual privado de ingresos, coste de producto, anuncios y pedidos.
+- [x] Añadir fechas límite privadas a las tareas y alertas visuales para tareas vencidas.
+- [x] Construir la vista de historial mensual con evolución de rentabilidad, margen y ROAS.
+- [x] Visualizar explícitamente la evolución mensual de margen y ROAS dentro del historial.
+- [x] Validar importación, privacidad, alertas de vencimiento y diseño responsive.
+- [x] Permitir retirar meses del historial privado para limpiar o corregir importaciones temporales.
+- [x] Exponer un selector CSV visible y accesible para completar la importación desde la interfaz.

@@ -4,6 +4,7 @@ import { BarChart3, DollarSign, Loader2, ReceiptText, Save, ShoppingBag, Target 
 import { useEffect, useMemo, useState } from "react";
 import { toast } from "sonner";
 import { calculateBusinessMetrics } from "@shared/businessMetrics";
+import MonthlyMetricsPanel from "./MonthlyMetricsPanel";
 
 type MetricForm = { revenue: string; productCost: string; adSpend: string; orders: string; currency: "USD" | "EUR" | "MXN" | "COP" };
 
@@ -44,6 +45,7 @@ export default function MetricsPanel() {
   if (metricsQuery.isLoading) return <section className="hud-panel grid min-h-72 place-items-center"><Loader2 className="size-6 animate-spin text-cyan-200" /></section>;
 
   return (
+    <div className="space-y-5">
     <section id="metrics" className="scroll-mt-20 hud-panel p-5 sm:p-7">
       <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between"><div><p className="hud-label">Métricas personales // dinero real</p><h2 className="mt-2 text-3xl font-black uppercase tracking-[-0.055em] text-white">Panel de rentabilidad</h2><p className="mt-2 max-w-2xl text-sm leading-6 text-slate-400">Registra importes acumulados en la moneda seleccionada. Los cálculos son una lectura operativa, no asesoría financiera o fiscal.</p></div><span className="inline-flex w-fit items-center gap-2 border border-cyan-300/25 bg-cyan-300/10 px-3 py-2 text-[10px] font-bold uppercase tracking-[0.14em] text-cyan-100"><BarChart3 className="size-3.5" />Privado por usuario</span></div>
       {metricsQuery.isError ? <div className="mt-5 border border-rose-300/30 bg-rose-400/5 p-4 text-sm text-rose-100">No se pudieron cargar las métricas. <button onClick={() => metricsQuery.refetch()} className="font-bold underline">Reintentar</button></div> : <>
@@ -52,5 +54,7 @@ export default function MetricsPanel() {
         <div className="mt-5 flex flex-wrap items-center justify-between gap-3"><p className="flex items-center gap-2 text-xs text-slate-500"><ReceiptText className="size-4" />Valores acumulados; se guardan al confirmar.</p><Button onClick={() => saveMetrics.mutate({ revenueCents: computation.revenue, productCostCents: computation.productCost, adSpendCents: computation.adSpend, orders: computation.orders, currency: form.currency })} disabled={saveMetrics.isPending} className="neon-button rounded-none px-5 text-xs font-bold uppercase tracking-[0.12em]"><Save className="mr-2 size-3.5" />{saveMetrics.isPending ? "Guardando" : "Guardar métricas"}</Button></div>
       </>}
     </section>
+    <MonthlyMetricsPanel />
+    </div>
   );
 }

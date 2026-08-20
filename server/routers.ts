@@ -6,15 +6,21 @@ import { systemRouter } from "./_core/systemRouter";
 import { protectedProcedure, publicProcedure, router } from "./_core/trpc";
 import {
   clearPlanStartDateForUser,
+  clearTaskDeadlineForUser,
+  deleteMonthlyMetricForUser,
   deleteTaskAttachmentForUser,
   getBusinessMetricsForUser,
   getCompletedTaskKeysForUser,
+  getMonthlyMetricsForUser,
   getPlanStartDateForUser,
   getTaskAttachmentForUser,
+  getTaskDeadlinesForUser,
   getTaskWorkspaceForUser,
+  importMonthlyMetricsForUser,
   saveBusinessMetricsForUser,
   saveTaskNoteForUser,
   setPlanStartDateForUser,
+  setTaskDeadlineForUser,
   setTaskProgressForUser,
 } from "./db";
 import { KNOWN_TASK_KEYS, PHASES, PLAN_WEEKS } from "./planData";
@@ -30,6 +36,16 @@ const dateSchema = z.string().regex(/^\d{4}-\d{2}-\d{2}$/, "La fecha debe usar e
 }, "La fecha de inicio no es válida.");
 
 const moneySchema = z.number().int().min(0).max(2_000_000_000);
+const monthSchema = z.string().regex(/^\d{4}-(0[1-9]|1[0-2])$/, "El mes debe usar el formato AAAA-MM.");
+const currencySchema = z.enum(["USD", "EUR", "MXN", "COP"]);
+const monthlyMetricSchema = z.object({
+  monthKey: monthSchema,
+  revenueCents: moneySchema,
+  productCostCents: moneySchema,
+  adSpendCents: moneySchema,
+  orders: z.number().int().min(0).max(10_000_000),
+  currency: currencySchema,
+});
 
 export const appRouter = router({
     // if you need to use socket.io, read and register route in server/_core/index.ts, all api should start with '/api/' so that the gateway can route correctly
@@ -55,6 +71,19 @@ export const appRouter = router({
       .mutation(async ({ ctx, input }) => {
         await setTaskProgressForUser(ctx.user.id, input.taskKey, input.isCompleted);
         return { taskKey: input.taskKey, isCompleted: input.isCompleted };
+      }),
+    deadlines: protectedProcedure.query(({ ctx }) => getTaskDeadlinesForUser(ctx.user.id)),
+    setTaskDeadline: protectedProcedure
+      .input(z.object({ taskKey: taskKeySchema, dueDate: dateSchema }))
+      .mutation(async ({ ctx, input }) => {
+        await setTaskDeadlineForUser(ctx.user.id, input.taskKey, input.dueDate);
+        return input;
+      }),
+    clearTaskDeadline: protectedProcedure
+      .input(z.object({ taskKey: taskKeySchema }))
+      .mutation(async ({ ctx, input }) => {
+        await clearTaskDeadlineForUser(ctx.user.id, input.taskKey);
+        return { taskKey: input.taskKey, dueDate: null };
       }),
     calendar: protectedProcedure.query(async ({ ctx }) => ({
       startDate: await getPlanStartDateForUser(ctx.user.id),
@@ -105,6 +134,16 @@ export const appRouter = router({
       .mutation(async ({ ctx, input }) => {
         await saveBusinessMetricsForUser({ userId: ctx.user.id, ...input });
         return input;
+      }),
+    monthlyMetrics: protectedProcedure.query(({ ctx }) => getMonthlyMetricsForUser(ctx.user.id)),
+    importMonthlyMetrics: protectedProcedure
+      .input(z.object({ rows: z.array(monthlyMetricSchema).min(1).max(120) }))
+      .mutation(async ({ ctx, input }) => ({ imported: await importMonthlyMetricsForUser(ctx.user.id, input.rows) })),
+    deleteMonthlyMetric: protectedProcedure
+      .input(z.object({ monthKey: monthSchema, currency: currencySchema }))
+      .mutation(async ({ ctx, input }) => {
+        await deleteMonthlyMetricForUser(ctx.user.id, input.monthKey, input.currency);
+        return { success: true } as const;
       }),
   }),
 });

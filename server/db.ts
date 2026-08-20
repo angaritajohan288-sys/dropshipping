@@ -6,7 +6,9 @@ import {
   taskNotes,
   taskProgress,
   userBusinessMetrics,
+  userMonthlyMetrics,
   userPlanSettings,
+  userTaskDeadlines,
   users,
 } from "../drizzle/schema";
 import { ENV } from './_core/env';
@@ -120,6 +122,27 @@ export async function setTaskProgressForUser(userId: number, taskKey: string, is
     .onDuplicateKeyUpdate({ set: { isCompleted, completedAt } });
 }
 
+export async function getTaskDeadlinesForUser(userId: number) {
+  const db = await getDb();
+  if (!db) return [];
+  return db
+    .select({ taskKey: userTaskDeadlines.taskKey, dueDate: userTaskDeadlines.dueDate })
+    .from(userTaskDeadlines)
+    .where(eq(userTaskDeadlines.userId, userId));
+}
+
+export async function setTaskDeadlineForUser(userId: number, taskKey: string, dueDate: string) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  await db.insert(userTaskDeadlines).values({ userId, taskKey, dueDate }).onDuplicateKeyUpdate({ set: { dueDate } });
+}
+
+export async function clearTaskDeadlineForUser(userId: number, taskKey: string) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  await db.delete(userTaskDeadlines).where(and(eq(userTaskDeadlines.userId, userId), eq(userTaskDeadlines.taskKey, taskKey)));
+}
+
 export async function getPlanStartDateForUser(userId: number) {
   const db = await getDb();
   if (!db) return null;
@@ -141,7 +164,7 @@ export async function clearPlanStartDateForUser(userId: number) {
 
 export async function getTaskWorkspaceForUser(userId: number, taskKey: string) {
   const db = await getDb();
-  if (!db) return { note: null, attachments: [] };
+  if (!db) return { note: null, attachments: [], deadline: null };
 
   const [note] = await db
     .select({ content: taskNotes.content, updatedAt: taskNotes.updatedAt })
@@ -160,7 +183,13 @@ export async function getTaskWorkspaceForUser(userId: number, taskKey: string) {
     .where(and(eq(taskAttachments.userId, userId), eq(taskAttachments.taskKey, taskKey)))
     .orderBy(desc(taskAttachments.createdAt));
 
-  return { note: note ?? null, attachments };
+  const [deadline] = await db
+    .select({ dueDate: userTaskDeadlines.dueDate })
+    .from(userTaskDeadlines)
+    .where(and(eq(userTaskDeadlines.userId, userId), eq(userTaskDeadlines.taskKey, taskKey)))
+    .limit(1);
+
+  return { note: note ?? null, attachments, deadline: deadline?.dueDate ?? null };
 }
 
 export async function saveTaskNoteForUser(userId: number, taskKey: string, content: string) {
@@ -227,4 +256,38 @@ export async function saveBusinessMetricsForUser(input: {
   if (!db) throw new Error("Database not available");
   const { userId, ...values } = input;
   await db.insert(userBusinessMetrics).values({ userId, ...values }).onDuplicateKeyUpdate({ set: values });
+}
+
+export type MonthlyMetricInput = {
+  monthKey: string;
+  revenueCents: number;
+  productCostCents: number;
+  adSpendCents: number;
+  orders: number;
+  currency: string;
+};
+
+export async function getMonthlyMetricsForUser(userId: number) {
+  const db = await getDb();
+  if (!db) return [];
+  return db.select().from(userMonthlyMetrics).where(eq(userMonthlyMetrics.userId, userId)).orderBy(desc(userMonthlyMetrics.monthKey));
+}
+
+export async function importMonthlyMetricsForUser(userId: number, rows: MonthlyMetricInput[]) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  for (const row of rows) {
+    const { monthKey, currency, ...values } = row;
+    await db
+      .insert(userMonthlyMetrics)
+      .values({ userId, monthKey, currency, ...values, importedAt: new Date() })
+      .onDuplicateKeyUpdate({ set: { ...values, importedAt: new Date() } });
+  }
+  return rows.length;
+}
+
+export async function deleteMonthlyMetricForUser(userId: number, monthKey: string, currency: string) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  await db.delete(userMonthlyMetrics).where(and(eq(userMonthlyMetrics.userId, userId), eq(userMonthlyMetrics.monthKey, monthKey), eq(userMonthlyMetrics.currency, currency)));
 }
