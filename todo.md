@@ -108,7 +108,8 @@
 - [ ] Validar de forma observable el acceso, registro y recuperación completa por contraseña en la página publicada.
 - [x] Añadir confirmación de contraseña durante el registro y bloquear envíos con valores distintos.
 - [x] Permitir mostrar u ocultar de forma accesible los campos de contraseña del registro.
-- [ ] Validar el formulario mejorado, accesibilidad y compilación estática antes de publicar.
+- [x] Validar el formulario mejorado, accesibilidad y compilación estática antes de publicar.
+- [ ] Corregir el retorno del enlace de recuperación para mostrar el formulario de nueva contraseña en GitHub Pages.
 - [x] Repetir la prueba publicada del adjunto temporal y comprobar tras eliminarlo que desaparece de la tarea después de recargar.
 - [x] Corregir la incompatibilidad de versión de pnpm detectada en el workflow de GitHub Pages.
 - [x] Eliminar la dependencia operativa de tRPC y Express del entrypoint y de los scripts de la versión estática.

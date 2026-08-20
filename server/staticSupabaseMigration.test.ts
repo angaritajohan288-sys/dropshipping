@@ -3,6 +3,7 @@ import { describe, expect, it } from "vitest";
 
 const schema = readFileSync(new URL("../supabase/github-pages-schema.sql", import.meta.url), "utf-8");
 const staticApp = readFileSync(new URL("../client/src/pages/StaticSupabaseApp.tsx", import.meta.url), "utf-8");
+const authContext = readFileSync(new URL("../client/src/contexts/SupabaseAuthContext.tsx", import.meta.url), "utf-8");
 const staticMetrics = readFileSync(new URL("../client/src/components/StaticMonthlyMetricsPanel.tsx", import.meta.url), "utf-8");
 const workflow = readFileSync(new URL("../.github/workflows/deploy-github-pages.yml", import.meta.url), "utf-8");
 
@@ -52,7 +53,14 @@ describe("static Supabase migration", () => {
     expect(staticApp).toContain("StaticPasswordUpdate");
     expect(staticApp).toContain("Actualizar contraseña");
     expect(staticApp).toContain("if (isRecovery) return <StaticPasswordUpdate />");
+    expect(staticApp.indexOf("if (isRecovery) return <StaticPasswordUpdate />")).toBeLessThan(staticApp.indexOf("if (!user) return <StaticLogin />"));
     expect(staticApp).toContain("updatePassword");
+    expect(authContext).toContain("isPasswordRecoveryRedirect");
+    expect(authContext).toContain("window.location.hash");
+    expect(authContext).toContain('hashParams.get("type") === "recovery"');
+    expect(authContext).toContain('event === "PASSWORD_RECOVERY"');
+    expect(authContext).toContain('event === "USER_UPDATED" || event === "SIGNED_OUT"');
+    expect(authContext).toContain("clearPasswordRecoveryRedirect");
   });
 
   it("usa un borrador de notas aislado con guardado explícito", () => {

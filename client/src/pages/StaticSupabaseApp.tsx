@@ -115,8 +115,8 @@ export default function StaticSupabaseApp() {
 
   useEffect(() => { load(); }, [load]);
   if (loading) return <main className="grid min-h-screen place-items-center"><p className="hud-label">Conectando espacio privado</p></main>;
-  if (!user) return <StaticLogin />;
   if (isRecovery) return <StaticPasswordUpdate />;
+  if (!user) return <StaticLogin />;
 
   const profileEmail = user.email ?? "Correo no disponible";
   const profileLabel = typeof user.user_metadata?.full_name === "string" && user.user_metadata.full_name.trim() ? user.user_metadata.full_name : "Perfil privado";
