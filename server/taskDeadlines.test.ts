@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { isTaskDueToday, isTaskOverdue } from "../shared/taskDeadlines";
+import { isTaskDueSoon, isTaskDueToday, isTaskOverdue } from "../shared/taskDeadlines";
 
 describe("task deadline status", () => {
   const today = new Date(2026, 7, 20, 10, 0, 0);
@@ -13,5 +13,13 @@ describe("task deadline status", () => {
   it("reconoce las tareas que vencen hoy sin marcarlas como vencidas", () => {
     expect(isTaskDueToday("2026-08-20", false, today)).toBe(true);
     expect(isTaskOverdue("2026-08-20", false, today)).toBe(false);
+  });
+
+  it("marca recordatorios durante una ventana de tres días, sin incluir tareas terminadas o vencidas", () => {
+    expect(isTaskDueSoon("2026-08-20", false, today)).toBe(true);
+    expect(isTaskDueSoon("2026-08-23", false, today)).toBe(true);
+    expect(isTaskDueSoon("2026-08-24", false, today)).toBe(false);
+    expect(isTaskDueSoon("2026-08-19", false, today)).toBe(false);
+    expect(isTaskDueSoon("2026-08-21", true, today)).toBe(false);
   });
 });

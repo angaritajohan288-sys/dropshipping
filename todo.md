@@ -45,3 +45,12 @@
 - [x] Validar importación, privacidad, alertas de vencimiento y diseño responsive.
 - [x] Permitir retirar meses del historial privado para limpiar o corregir importaciones temporales.
 - [x] Exponer un selector CSV visible y accesible para completar la importación desde la interfaz.
+- [x] Crear una plantilla CSV descargable y compatible con el importador privado de métricas.
+- [x] Añadir filtros de moneda y rango de meses al historial mensual de rentabilidad.
+- [x] Implementar reglas comprobables para identificar tareas próximas a vencer.
+- [x] Mostrar recordatorios visuales de tareas próximas a vencer en el resumen y checklist.
+- [x] Validar descarga, filtros, recordatorios, accesibilidad y diseño responsive mediante pruebas automatizadas y revisión visual.
+- [ ] Verificar en sesión autenticada que la plantilla CSV descargada es válida para el importador.
+- [ ] Validar manualmente la moneda, el rango vacío y el rango inválido dentro del historial mensual.
+- [ ] Comprobar foco visible y manejo por teclado de plantilla y filtros en escritorio y formato móvil.
+- [x] Documentar la validación manual autenticada como paso opcional mientras no haya acceso al panel.

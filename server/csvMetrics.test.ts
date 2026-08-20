@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { METRICS_CSV_HEADERS, parseMonthlyMetricsCsv } from "../shared/csvMetrics";
+import { createMonthlyMetricsCsvTemplate, METRICS_CSV_HEADERS, parseMonthlyMetricsCsv } from "../shared/csvMetrics";
 
 describe("parseMonthlyMetricsCsv", () => {
   it("documenta y convierte el contrato de importación a centavos", () => {
@@ -18,5 +18,12 @@ describe("parseMonthlyMetricsCsv", () => {
     const result = parseMonthlyMetricsCsv("currency;orders;adSpend;productCost;month;revenue\nEUR;5;20,50;35;2026-07;150,25");
     expect(result.errors).toEqual([]);
     expect(result.rows[0]).toMatchObject({ monthKey: "2026-07", currency: "EUR", revenueCents: 15025, adSpendCents: 2050 });
+  });
+
+  it("ofrece una plantilla que el mismo parser acepta sin errores", () => {
+    const result = parseMonthlyMetricsCsv(createMonthlyMetricsCsvTemplate());
+    expect(result.errors).toEqual([]);
+    expect(result.rows).toHaveLength(1);
+    expect(result.rows[0]).toMatchObject({ monthKey: "2026-01", currency: "USD" });
   });
 });

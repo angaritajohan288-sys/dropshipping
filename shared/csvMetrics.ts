@@ -1,5 +1,10 @@
 export const METRICS_CSV_HEADERS = ["month", "revenue", "productCost", "adSpend", "orders", "currency"] as const;
 
+/** Plantilla válida y alineada con el parser; el usuario debe reemplazar la fila de ejemplo. */
+export function createMonthlyMetricsCsvTemplate() {
+  return `${METRICS_CSV_HEADERS.join(",")}\n2026-01,0.00,0.00,0.00,0,USD\n`;
+}
+
 export type ParsedMonthlyMetric = {
   monthKey: string;
   revenueCents: number;
