@@ -120,6 +120,9 @@
 - [x] Permitir cambiar la contraseña desde el perfil con contraseña actual, nueva contraseña y confirmación.
 - [ ] Validar accesibilidad, protección de datos, pruebas y diseño responsive de la pestaña de perfil.
 - [ ] Reemplazar la apertura imperativa del perfil por un control React explícito dentro del encabezado del tablero.
-- [ ] Validar en sesión real la navegación al perfil y sus datos, gráficas y resumen de avance privados.
+- [x] Validar en sesión real la navegación al perfil y sus datos, gráficas y resumen de avance privados.
 - [ ] Validar desde el perfil la contraseña actual incorrecta, el cambio exitoso y el posterior acceso con la nueva clave.
+- [x] Registrar evidencia observable del perfil publicado: apertura desde el tablero, correo de cuenta, KPIs y gráficas.
+- [ ] Registrar evidencia observable del cambio de contraseña: error con clave actual incorrecta, actualización exitosa y nuevo acceso correcto.
+- [x] Registrar evidencia observable de actualización exitosa de contraseña y nuevo acceso correcto con la clave modificada.
 - [ ] Añadir cobertura automatizada de la navegación declarativa de perfil desde la interfaz principal.
