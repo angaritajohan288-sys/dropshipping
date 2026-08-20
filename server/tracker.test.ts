@@ -19,6 +19,8 @@ const dbMocks = vi.hoisted(() => ({
   getMonthlyMetricsForUser: vi.fn(),
   importMonthlyMetricsForUser: vi.fn(),
   deleteMonthlyMetricForUser: vi.fn(),
+  getReminderLeadDaysForUser: vi.fn(),
+  setReminderLeadDaysForUser: vi.fn(),
 }));
 
 const storageMocks = vi.hoisted(() => ({ storageGetSignedUrl: vi.fn() }));
@@ -67,6 +69,8 @@ describe("tracker", () => {
     dbMocks.getMonthlyMetricsForUser.mockResolvedValue([]);
     dbMocks.importMonthlyMetricsForUser.mockResolvedValue(1);
     dbMocks.deleteMonthlyMetricForUser.mockResolvedValue(undefined);
+    dbMocks.getReminderLeadDaysForUser.mockResolvedValue(3);
+    dbMocks.setReminderLeadDaysForUser.mockResolvedValue(undefined);
     storageMocks.storageGetSignedUrl.mockResolvedValue("https://signed.example/object.pdf");
   });
 
@@ -145,6 +149,16 @@ describe("tracker", () => {
 
     expect(dbMocks.setTaskDeadlineForUser).toHaveBeenCalledWith(42, "products-01", "2026-08-20");
     expect(dbMocks.clearTaskDeadlineForUser).toHaveBeenCalledWith(42, "products-01");
+  });
+
+  it("guarda la anticipación de recordatorios únicamente para el usuario autenticado", async () => {
+    const caller = appRouter.createCaller(createContext(42));
+    await caller.tracker.setReminderLeadDays({ leadDays: 5 });
+    const settings = await caller.tracker.reminderSettings();
+
+    expect(dbMocks.setReminderLeadDaysForUser).toHaveBeenCalledWith(42, 5);
+    expect(dbMocks.getReminderLeadDaysForUser).toHaveBeenCalledWith(42);
+    expect(settings).toEqual({ leadDays: 3 });
   });
 
   it("importa y consulta historial mensual solamente para el usuario de la sesión", async () => {

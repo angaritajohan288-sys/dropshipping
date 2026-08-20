@@ -54,3 +54,12 @@
 - [x] Validar mediante pruebas la moneda, el rango vacío y el rango inválido dentro del historial mensual.
 - [x] Comprobar por contrato los controles nativos, nombres accesibles y foco visible de plantilla y filtros, junto con revisión visual responsive.
 - [x] Documentar la validación manual autenticada como paso opcional mientras no haya acceso al panel.
+- [x] Exportar a CSV el historial mensual respetando la moneda y el rango de meses filtrado.
+- [x] Persistir por usuario la cantidad configurable de días de anticipación para recordatorios.
+- [x] Ordenar tareas del checklist por fecha de vencimiento con opción de restaurar el orden del plan.
+- [x] Mostrar y editar la anticipación de recordatorios en la interfaz privada.
+- [x] Validar exportación filtrada, preferencias privadas, ordenamiento, accesibilidad y diseño responsive mediante pruebas y revisión visual.
+- [x] Verificar mediante prueba de contrato que la exportación filtrada conserva solo las filas recibidas y un archivo reimportable; la comprobación autenticada queda documentada como opcional.
+- [x] Validar mediante pruebas que la anticipación configurable se persiste por usuario y modifica la ventana de recordatorios.
+- [x] Comprobar por contrato los controles nativos, foco visible y revisión móvil de exportación, anticipación y ordenamiento.
+- [x] Documentar el flujo manual opcional de exportación filtrada y configuración de anticipación para cuando exista acceso al panel.

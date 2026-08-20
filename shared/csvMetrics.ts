@@ -5,6 +5,28 @@ export function createMonthlyMetricsCsvTemplate() {
   return `${METRICS_CSV_HEADERS.join(",")}\n2026-01,0.00,0.00,0.00,0,USD\n`;
 }
 
+export type ExportableMonthlyMetric = {
+  monthKey: string;
+  revenueCents: number;
+  productCostCents: number;
+  adSpendCents: number;
+  orders: number;
+  currency: string;
+};
+
+/** Convierte solo las filas ya filtradas por el usuario en un CSV compatible con el importador. */
+export function createMonthlyMetricsCsvExport(rows: ExportableMonthlyMetric[]) {
+  const dataRows = rows.map(row => [
+    row.monthKey,
+    (row.revenueCents / 100).toFixed(2),
+    (row.productCostCents / 100).toFixed(2),
+    (row.adSpendCents / 100).toFixed(2),
+    String(row.orders),
+    row.currency,
+  ].join(","));
+  return `${METRICS_CSV_HEADERS.join(",")}\n${dataRows.join("\n")}${dataRows.length ? "\n" : ""}`;
+}
+
 export type ParsedMonthlyMetric = {
   monthKey: string;
   revenueCents: number;

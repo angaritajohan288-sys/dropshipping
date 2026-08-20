@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { createMonthlyMetricsCsvTemplate, METRICS_CSV_HEADERS, parseMonthlyMetricsCsv } from "../shared/csvMetrics";
+import { createMonthlyMetricsCsvExport, createMonthlyMetricsCsvTemplate, METRICS_CSV_HEADERS, parseMonthlyMetricsCsv } from "../shared/csvMetrics";
 
 describe("parseMonthlyMetricsCsv", () => {
   it("documenta y convierte el contrato de importación a centavos", () => {
@@ -25,5 +25,12 @@ describe("parseMonthlyMetricsCsv", () => {
     expect(result.errors).toEqual([]);
     expect(result.rows).toHaveLength(1);
     expect(result.rows[0]).toMatchObject({ monthKey: "2026-01", currency: "USD" });
+  });
+
+  it("exporta únicamente las filas recibidas en un formato reimportable", () => {
+    const content = createMonthlyMetricsCsvExport([{ monthKey: "2026-08", revenueCents: 125050, productCostCents: 42500, adSpendCents: 12025, orders: 32, currency: "USD" }]);
+    const result = parseMonthlyMetricsCsv(content);
+    expect(result.errors).toEqual([]);
+    expect(result.rows).toEqual([{ monthKey: "2026-08", revenueCents: 125050, productCostCents: 42500, adSpendCents: 12025, orders: 32, currency: "USD" }]);
   });
 });

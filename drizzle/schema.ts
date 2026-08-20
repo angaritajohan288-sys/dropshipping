@@ -76,6 +76,22 @@ export const userPlanSettings = mysqlTable(
 export type UserPlanSettings = typeof userPlanSettings.$inferSelect;
 export type InsertUserPlanSettings = typeof userPlanSettings.$inferInsert;
 
+/** Preferencia privada para anticipar recordatorios de tareas con fecha límite. */
+export const userReminderSettings = mysqlTable(
+  "userReminderSettings",
+  {
+    id: int("id").autoincrement().primaryKey(),
+    userId: int("userId").notNull().references(() => users.id, { onDelete: "cascade" }),
+    leadDays: int("leadDays").notNull().default(3),
+    createdAt: timestamp("createdAt").notNull().defaultNow(),
+    updatedAt: timestamp("updatedAt").notNull().defaultNow().onUpdateNow(),
+  },
+  table => [uniqueIndex("reminder_settings_user_unique").on(table.userId)],
+);
+
+export type UserReminderSettings = typeof userReminderSettings.$inferSelect;
+export type InsertUserReminderSettings = typeof userReminderSettings.$inferInsert;
+
 /** Una nota editable por combinación de usuario y tarea canónica. */
 export const taskNotes = mysqlTable(
   "taskNotes",

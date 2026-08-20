@@ -8,6 +8,7 @@ import {
   userBusinessMetrics,
   userMonthlyMetrics,
   userPlanSettings,
+  userReminderSettings,
   userTaskDeadlines,
   users,
 } from "../drizzle/schema";
@@ -141,6 +142,19 @@ export async function clearTaskDeadlineForUser(userId: number, taskKey: string) 
   const db = await getDb();
   if (!db) throw new Error("Database not available");
   await db.delete(userTaskDeadlines).where(and(eq(userTaskDeadlines.userId, userId), eq(userTaskDeadlines.taskKey, taskKey)));
+}
+
+export async function getReminderLeadDaysForUser(userId: number) {
+  const db = await getDb();
+  if (!db) return 3;
+  const result = await db.select({ leadDays: userReminderSettings.leadDays }).from(userReminderSettings).where(eq(userReminderSettings.userId, userId)).limit(1);
+  return result[0]?.leadDays ?? 3;
+}
+
+export async function setReminderLeadDaysForUser(userId: number, leadDays: number) {
+  const db = await getDb();
+  if (!db) throw new Error("Database not available");
+  await db.insert(userReminderSettings).values({ userId, leadDays }).onDuplicateKeyUpdate({ set: { leadDays } });
 }
 
 export async function getPlanStartDateForUser(userId: number) {

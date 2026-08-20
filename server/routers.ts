@@ -13,6 +13,7 @@ import {
   getCompletedTaskKeysForUser,
   getMonthlyMetricsForUser,
   getPlanStartDateForUser,
+  getReminderLeadDaysForUser,
   getTaskAttachmentForUser,
   getTaskDeadlinesForUser,
   getTaskWorkspaceForUser,
@@ -20,6 +21,7 @@ import {
   saveBusinessMetricsForUser,
   saveTaskNoteForUser,
   setPlanStartDateForUser,
+  setReminderLeadDaysForUser,
   setTaskDeadlineForUser,
   setTaskProgressForUser,
 } from "./db";
@@ -84,6 +86,15 @@ export const appRouter = router({
       .mutation(async ({ ctx, input }) => {
         await clearTaskDeadlineForUser(ctx.user.id, input.taskKey);
         return { taskKey: input.taskKey, dueDate: null };
+      }),
+    reminderSettings: protectedProcedure.query(async ({ ctx }) => ({
+      leadDays: await getReminderLeadDaysForUser(ctx.user.id),
+    })),
+    setReminderLeadDays: protectedProcedure
+      .input(z.object({ leadDays: z.number().int().min(0).max(30) }))
+      .mutation(async ({ ctx, input }) => {
+        await setReminderLeadDaysForUser(ctx.user.id, input.leadDays);
+        return input;
       }),
     calendar: protectedProcedure.query(async ({ ctx }) => ({
       startDate: await getPlanStartDateForUser(ctx.user.id),

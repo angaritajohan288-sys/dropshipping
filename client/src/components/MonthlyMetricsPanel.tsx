@@ -1,9 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { trpc } from "@/lib/trpc";
 import { calculateBusinessMetrics } from "@shared/businessMetrics";
-import { createMonthlyMetricsCsvTemplate, METRICS_CSV_HEADERS, parseMonthlyMetricsCsv } from "@shared/csvMetrics";
+import { createMonthlyMetricsCsvExport, createMonthlyMetricsCsvTemplate, METRICS_CSV_HEADERS, parseMonthlyMetricsCsv } from "@shared/csvMetrics";
 import { filterMonthlyHistory, isMonthlyRangeValid } from "@shared/monthlyHistoryFilters";
-import { Download, FileUp, History, Loader2, SlidersHorizontal, Trash2 } from "lucide-react";
+import { Download, FileDown, FileUp, History, Loader2, SlidersHorizontal, Trash2 } from "lucide-react";
 import { ChangeEvent, useMemo, useState } from "react";
 import { Bar, CartesianGrid, ComposedChart, Legend, Line, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
 import { toast } from "sonner";
@@ -27,6 +27,16 @@ function downloadCsvTemplate() {
   const anchor = document.createElement("a");
   anchor.href = url;
   anchor.download = "plantilla_metricas_mensuales.csv";
+  anchor.click();
+  URL.revokeObjectURL(url);
+}
+
+function downloadFilteredHistory(rows: Parameters<typeof createMonthlyMetricsCsvExport>[0], currency: string, startMonth: string, endMonth: string) {
+  const blob = new Blob([createMonthlyMetricsCsvExport(rows)], { type: "text/csv;charset=utf-8" });
+  const url = URL.createObjectURL(blob);
+  const anchor = document.createElement("a");
+  anchor.href = url;
+  anchor.download = `historial_${currency}_${startMonth || "inicio"}_${endMonth || "actual"}.csv`;
   anchor.click();
   URL.revokeObjectURL(url);
 }
@@ -85,7 +95,7 @@ export default function MonthlyMetricsPanel() {
   return <section id="monthly-history" className="scroll-mt-20 hud-panel p-5 sm:p-7">
     <div className="flex flex-col gap-4 xl:flex-row xl:items-end xl:justify-between">
       <div><p className="hud-label">Historial mensual // importación privada</p><h2 className="mt-2 text-3xl font-black uppercase tracking-[-0.055em] text-white">Evolución de rentabilidad</h2><p className="mt-2 max-w-3xl text-sm leading-6 text-slate-400">Importa meses reales desde un CSV y filtra la serie por moneda o período. Cada fila se mantiene aislada en tu espacio privado.</p></div>
-      <div className="grid w-full max-w-sm gap-2 sm:grid-cols-2 xl:grid-cols-1"><Button type="button" variant="outline" onClick={downloadCsvTemplate} className="rounded-none border-cyan-300/35 bg-cyan-300/5 text-xs font-bold uppercase tracking-[0.08em] text-cyan-100 hover:bg-cyan-300/10"><Download className="mr-2 size-3.5" />Plantilla CSV</Button><div className="border border-fuchsia-300/40 bg-fuchsia-300/10 p-3"><div className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.12em] text-fuchsia-100"><FileUp className="size-4" />{isReading || importMetrics.isPending ? "Procesando CSV" : "Importar CSV"}</div><input type="file" accept=".csv,text/csv" onChange={handleCsv} disabled={isReading || importMetrics.isPending} aria-label="Seleccionar CSV de métricas mensuales" className="mt-3 w-full cursor-pointer border border-fuchsia-300/30 bg-black/25 px-2 py-1.5 text-[10px] text-slate-300 file:mr-3 file:border-0 file:bg-fuchsia-300/15 file:px-2 file:py-1 file:text-[10px] file:font-bold file:uppercase file:tracking-[0.08em] file:text-fuchsia-100 disabled:cursor-wait disabled:opacity-60" /></div></div>
+      <div className="grid w-full max-w-sm gap-2 sm:grid-cols-2 xl:grid-cols-1"><Button type="button" variant="outline" onClick={downloadCsvTemplate} className="rounded-none border-cyan-300/35 bg-cyan-300/5 text-xs font-bold uppercase tracking-[0.08em] text-cyan-100 hover:bg-cyan-300/10"><Download className="mr-2 size-3.5" />Plantilla CSV</Button><Button type="button" variant="outline" disabled={invalidRange || filteredRows.length === 0} onClick={() => downloadFilteredHistory(filteredRows, activeCurrency, startMonth, endMonth)} className="rounded-none border-violet-300/35 bg-violet-300/5 text-xs font-bold uppercase tracking-[0.08em] text-violet-100 hover:bg-violet-300/10 disabled:opacity-40"><FileDown className="mr-2 size-3.5" />Exportar filtrado</Button><div className="border border-fuchsia-300/40 bg-fuchsia-300/10 p-3"><div className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.12em] text-fuchsia-100"><FileUp className="size-4" />{isReading || importMetrics.isPending ? "Procesando CSV" : "Importar CSV"}</div><input type="file" accept=".csv,text/csv" onChange={handleCsv} disabled={isReading || importMetrics.isPending} aria-label="Seleccionar CSV de métricas mensuales" className="mt-3 w-full cursor-pointer border border-fuchsia-300/30 bg-black/25 px-2 py-1.5 text-[10px] text-slate-300 file:mr-3 file:border-0 file:bg-fuchsia-300/15 file:px-2 file:py-1 file:text-[10px] file:font-bold file:uppercase file:tracking-[0.08em] file:text-fuchsia-100 disabled:cursor-wait disabled:opacity-60" /></div></div>
     </div>
     <div className="mt-5 border border-cyan-300/15 bg-black/25 p-4"><p className="hud-label text-cyan-100">Formato requerido</p><code className="mt-2 block overflow-x-auto text-xs text-cyan-50">{METRICS_CSV_HEADERS.join(",")}</code><p className="mt-2 text-xs leading-5 text-slate-500">La plantilla incluye una fila válida de ejemplo que puedes sustituir. `month` usa AAAA-MM; los importes aceptan hasta dos decimales; `currency` acepta USD, EUR, MXN o COP.</p></div>
     {historyQuery.isError ? <div className="mt-5 border border-rose-300/30 bg-rose-400/5 p-4 text-sm text-rose-100">No se pudo cargar el historial. <button onClick={() => historyQuery.refetch()} className="font-bold underline">Reintentar</button></div> : allRows.length === 0 ? <div className="mt-6 border border-dashed border-slate-600/60 p-8 text-center"><History className="mx-auto size-6 text-slate-600" /><p className="mt-3 text-sm font-bold text-white">Aún no hay meses importados.</p><p className="mt-2 text-xs leading-5 text-slate-500">Descarga la plantilla o carga un CSV con métricas reales para analizar su evolución.</p></div> : <>

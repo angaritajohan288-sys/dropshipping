@@ -22,4 +22,10 @@ describe("task deadline status", () => {
     expect(isTaskDueSoon("2026-08-19", false, today)).toBe(false);
     expect(isTaskDueSoon("2026-08-21", true, today)).toBe(false);
   });
+
+  it("respeta la anticipación configurable sin modificar las reglas de vencimiento", () => {
+    expect(isTaskDueSoon("2026-08-24", false, today, 3)).toBe(false);
+    expect(isTaskDueSoon("2026-08-24", false, today, 4)).toBe(true);
+    expect(isTaskOverdue("2026-08-19", false, today)).toBe(true);
+  });
 });
