@@ -90,6 +90,7 @@
 - [x] Corregir la persistencia de notas privadas mediante estado controlado y un guardado explícito.
 - [ ] Desplegar la corrección de notas y validar en sesión autenticada su guardado, recarga y restauración.
 - [x] Añadir una prueba de contrato para el flujo explícito de guardado de notas de la variante estática.
+- [x] Incluir explícitamente el identificador del usuario autenticado en los upserts privados de Supabase.
 - [x] Corregir la incompatibilidad de versión de pnpm detectada en el workflow de GitHub Pages.
 - [x] Eliminar la dependencia operativa de tRPC y Express del entrypoint y de los scripts de la versión estática.
 - [x] Arrancar y compilar por defecto la aplicación en modo estático con Supabase.

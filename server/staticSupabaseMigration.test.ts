@@ -3,6 +3,7 @@ import { describe, expect, it } from "vitest";
 
 const schema = readFileSync(new URL("../supabase/github-pages-schema.sql", import.meta.url), "utf-8");
 const staticApp = readFileSync(new URL("../client/src/pages/StaticSupabaseApp.tsx", import.meta.url), "utf-8");
+const staticMetrics = readFileSync(new URL("../client/src/components/StaticMonthlyMetricsPanel.tsx", import.meta.url), "utf-8");
 const workflow = readFileSync(new URL("../.github/workflows/deploy-github-pages.yml", import.meta.url), "utf-8");
 
 describe("static Supabase migration", () => {
@@ -24,6 +25,9 @@ describe("static Supabase migration", () => {
     expect(staticApp).toContain("supabase.storage.from(\"task-attachments\")");
     expect(staticApp).toContain("user_task_state");
     expect(staticApp).toContain("monthly_metrics");
+    expect(staticApp).toContain("upsert({ user_id: user.id, ...previous, ...patch");
+    expect(staticApp).toContain("upsert({ user_id: user.id, ...settings }");
+    expect(staticMetrics).toContain("user_id: user?.id");
   });
 
   it("usa un editor de notas controlado con guardado explícito", () => {

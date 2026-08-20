@@ -88,13 +88,13 @@ export default function StaticSupabaseApp() {
 
   const saveTask = async (taskKey: string, patch: Partial<TaskState>) => {
     const previous = stateByTask.get(taskKey) ?? { task_key: taskKey, is_completed: false, note: "", due_date: null };
-    const { error } = await supabase.from("user_task_state").upsert({ ...previous, ...patch, task_key: taskKey }, { onConflict: "user_id,task_key" });
+    const { error } = await supabase.from("user_task_state").upsert({ user_id: user.id, ...previous, ...patch, task_key: taskKey }, { onConflict: "user_id,task_key" });
     if (error) return setNotice(error.message);
     await load();
   };
 
   const saveSettings = async () => {
-    const { error } = await supabase.from("user_tracker_settings").upsert(settings, { onConflict: "user_id" });
+    const { error } = await supabase.from("user_tracker_settings").upsert({ user_id: user.id, ...settings }, { onConflict: "user_id" });
     if (error) setNotice(error.message); else setNotice("Configuración de cronograma y recordatorios guardada.");
   };
 

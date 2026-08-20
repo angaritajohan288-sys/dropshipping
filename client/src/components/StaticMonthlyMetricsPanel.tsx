@@ -5,6 +5,7 @@ import { createMonthlyMetricsCsvExport, createMonthlyMetricsCsvTemplate, METRICS
 import { filterMonthlyHistory, isMonthlyRangeValid } from "@shared/monthlyHistoryFilters";
 import { Download, FileDown, FileUp, History, SlidersHorizontal, Trash2 } from "lucide-react";
 import { ChangeEvent, useMemo, useState } from "react";
+import { useSupabaseAuth } from "@/contexts/SupabaseAuthContext";
 import { Bar, CartesianGrid, ComposedChart, Legend, Line, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
 
 export type StaticMonthlyMetric = { month: string; revenue: number; product_cost: number; ad_spend: number; orders: number; currency: string };
@@ -32,6 +33,7 @@ function readText(file: File) {
 }
 
 export default function StaticMonthlyMetricsPanel({ metrics, reload, report }: { metrics: StaticMonthlyMetric[]; reload: () => Promise<void>; report: (message: string) => void }) {
+  const { user } = useSupabaseAuth();
   const [selectedCurrency, setSelectedCurrency] = useState("USD");
   const [startMonth, setStartMonth] = useState("");
   const [endMonth, setEndMonth] = useState("");
@@ -62,7 +64,7 @@ export default function StaticMonthlyMetricsPanel({ metrics, reload, report }: {
       const parsed = parseMonthlyMetricsCsv(await readText(file));
       if (parsed.errors.length) return report(parsed.errors.slice(0, 2).join(" "));
       const { error } = await supabase.from("monthly_metrics").upsert(parsed.rows.map(row => ({
-        month: `${row.monthKey}-01`, revenue: row.revenueCents / 100, product_cost: row.productCostCents / 100,
+        user_id: user?.id, month: `${row.monthKey}-01`, revenue: row.revenueCents / 100, product_cost: row.productCostCents / 100,
         ad_spend: row.adSpendCents / 100, orders: row.orders, currency: row.currency,
       })), { onConflict: "user_id,month" });
       if (error) return report(error.message);
