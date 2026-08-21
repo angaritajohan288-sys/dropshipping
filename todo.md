@@ -120,6 +120,11 @@
 - [x] Validar el formulario mejorado, accesibilidad y compilación estática antes de publicar.
 - [x] Corregir el retorno del enlace de recuperación para mostrar el formulario de nueva contraseña en GitHub Pages.
 - [ ] Registrar evidencia observable del acceso publicado, la recuperación exitosa y el estado final de sesión autenticada.
+- [ ] Registrar evidencia visual del alta completa de la cuenta B desde Registro, sin exponer credenciales.
+- [ ] Registrar evidencia visual del enlace de recuperación: pantalla “Nueva contraseña” y éxito posterior.
+- [x] Corregir el mensaje de registro para no afirmar “Cuenta creada” cuando Supabase no envía un correo por tratarse de una cuenta existente.
+- [x] Guiar de forma clara y segura al inicio de sesión o recuperación cuando el correo ya puede estar registrado.
+- [ ] Probar y publicar el mensaje corregido de registro para correos existentes.
 - [x] Reintentar el alta de la cuenta B cuando Supabase restablezca el límite temporal de correos y registrar el resultado.
 - [x] Repetir la prueba publicada del adjunto temporal y comprobar tras eliminarlo que desaparece de la tarea después de recargar.
 - [x] Corregir la incompatibilidad de versión de pnpm detectada en el workflow de GitHub Pages.
@@ -139,4 +144,4 @@
 - [x] Registrar evidencia observable de actualización exitosa de contraseña y nuevo acceso correcto con la clave modificada.
 - [ ] Añadir cobertura automatizada de la navegación declarativa de perfil desde la interfaz principal.
 - [x] Añadir cobertura automatizada de accesibilidad del perfil: nombre accesible, foco por teclado, apertura y retorno.
-- [ ] Registrar evidencia de que el perfil publicado expone únicamente los datos de la sesión activa.
+- [x] Registrar evidencia de que el perfil publicado expone únicamente los datos de la sesión activa.

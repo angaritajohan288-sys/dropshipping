@@ -50,7 +50,7 @@ function StaticLogin() {
     setSending(false);
     if (error) return setMessage(error);
     if (mode === "login") return setMessage("Sesión iniciada correctamente.");
-    if (mode === "register") return setMessage("Cuenta creada. Revisa tu correo si Supabase solicita confirmar la dirección.");
+    if (mode === "register") return setMessage("Si el correo es nuevo, revisa la confirmación de Supabase. Si ya tenías cuenta, no se crea otra: usa Entrar o Recuperar.");
     setMessage("Si existe una cuenta con este correo, recibirás instrucciones para restablecer la contraseña.");
   };
 

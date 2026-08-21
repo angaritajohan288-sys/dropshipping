@@ -48,6 +48,7 @@ describe("static Supabase migration", () => {
     expect(staticApp).toContain("Mostrar contraseña");
     expect(staticApp).toContain("Ocultar contraseña");
     expect(staticApp).toContain("Confirmar contraseña");
+    expect(staticApp).toContain("Si ya tenías cuenta, no se crea otra: usa Entrar o Recuperar.");
   });
 
   it("detecta la recuperación y permite definir una contraseña nueva", () => {
