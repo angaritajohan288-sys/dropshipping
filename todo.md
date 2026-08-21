@@ -108,10 +108,10 @@
 - [x] Documentar con precisión la tarea “Definir el microsegmento” marcada en B y sin marcar en A en la comparación recibida.
 - [x] Confirmar explícitamente que ambas vistas fueron recargadas después de marcar “Definir el microsegmento” en B.
 - [x] Mostrar en el encabezado el perfil de sesión activo con correo, estado autenticado y acceso de cierre de sesión.
-- [ ] Desplegar y confirmar el indicador de perfil en la página publicada con una sesión autenticada.
+- [x] Desplegar y confirmar el indicador de perfil en la página publicada con una sesión autenticada.
 - [x] Sustituir el acceso por enlace mágico por inicio de sesión con correo y contraseña.
 - [x] Añadir registro de cuenta y recuperación completa de contraseña mediante Supabase Auth.
-- [ ] Validar la configuración de contraseñas en Supabase y el flujo publicado de autenticación.
+- [x] Validar la configuración de contraseñas en Supabase y el flujo publicado de autenticación.
 - [x] Documentar la habilitación del proveedor Email con contraseña y el proceso de recuperación en Supabase.
 - [x] Detectar el estado de recuperación de Supabase y permitir definir una nueva contraseña en la aplicación publicada.
 - [ ] Validar de forma observable el acceso, registro y recuperación completa por contraseña en la página publicada.
@@ -120,6 +120,7 @@
 - [x] Validar el formulario mejorado, accesibilidad y compilación estática antes de publicar.
 - [x] Corregir el retorno del enlace de recuperación para mostrar el formulario de nueva contraseña en GitHub Pages.
 - [ ] Registrar evidencia observable del acceso publicado, la recuperación exitosa y el estado final de sesión autenticada.
+- [x] Reintentar el alta de la cuenta B cuando Supabase restablezca el límite temporal de correos y registrar el resultado.
 - [x] Repetir la prueba publicada del adjunto temporal y comprobar tras eliminarlo que desaparece de la tarea después de recargar.
 - [x] Corregir la incompatibilidad de versión de pnpm detectada en el workflow de GitHub Pages.
 - [x] Eliminar la dependencia operativa de tRPC y Express del entrypoint y de los scripts de la versión estática.
@@ -130,8 +131,10 @@
 - [ ] Validar accesibilidad, protección de datos, pruebas y diseño responsive de la pestaña de perfil.
 - [ ] Reemplazar la apertura imperativa del perfil por un control React explícito dentro del encabezado del tablero.
 - [x] Validar en sesión real la navegación al perfil y sus datos, gráficas y resumen de avance privados.
-- [ ] Validar desde el perfil la contraseña actual incorrecta, el cambio exitoso y el posterior acceso con la nueva clave.
+- [x] Validar desde el perfil la contraseña actual incorrecta, el cambio exitoso y el posterior acceso con la nueva clave.
 - [x] Registrar evidencia observable del perfil publicado: apertura desde el tablero, correo de cuenta, KPIs y gráficas.
-- [ ] Registrar evidencia observable del cambio de contraseña: error con clave actual incorrecta, actualización exitosa y nuevo acceso correcto.
+- [x] Registrar evidencia observable del cambio de contraseña: error con clave actual incorrecta, actualización exitosa y nuevo acceso correcto.
+- [x] Registrar evidencia observable del mensaje de actualización exitosa de contraseña desde Perfil, sin exponer credenciales.
+- [x] Registrar evidencia visual del nuevo inicio de sesión tras cambiar la contraseña, sin mostrar credenciales.
 - [x] Registrar evidencia observable de actualización exitosa de contraseña y nuevo acceso correcto con la clave modificada.
 - [ ] Añadir cobertura automatizada de la navegación declarativa de perfil desde la interfaz principal.
