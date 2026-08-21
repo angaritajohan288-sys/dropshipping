@@ -6,6 +6,7 @@ const staticApp = readFileSync(new URL("../client/src/pages/StaticSupabaseApp.ts
 const authContext = readFileSync(new URL("../client/src/contexts/SupabaseAuthContext.tsx", import.meta.url), "utf-8");
 const profilePanel = readFileSync(new URL("../client/src/components/StaticProfilePanel.tsx", import.meta.url), "utf-8");
 const staticMetrics = readFileSync(new URL("../client/src/components/StaticMonthlyMetricsPanel.tsx", import.meta.url), "utf-8");
+const staticStyles = readFileSync(new URL("../client/src/index.css", import.meta.url), "utf-8");
 const workflow = readFileSync(new URL("../.github/workflows/deploy-github-pages.yml", import.meta.url), "utf-8");
 
 describe("static Supabase migration", () => {
@@ -108,6 +109,7 @@ describe("static Supabase migration", () => {
     expect(staticApp).toContain('title", "Abrir perfil"');
     expect(profilePanel).toContain("onReturn");
     expect(profilePanel).toContain("Tablero");
+    expect(staticStyles).toContain('[aria-label^="Perfil autenticado:"][role="button"]:focus-visible');
   });
 
   it("prepara un despliegue de Pages con el modo estático activado", () => {
