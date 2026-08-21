@@ -60,6 +60,10 @@ describe("static Supabase migration", () => {
     expect(authContext).toContain("isPasswordRecoveryRedirect");
     expect(authContext).toContain("window.location.hash");
     expect(authContext).toContain('hashParams.get("type") === "recovery"');
+    expect(authContext).toContain('searchParams.get("recovery") === "1"');
+    expect(authContext).toContain("function recoveryRedirectUrl()");
+    expect(authContext).toContain('url.searchParams.set("recovery", "1")');
+    expect(authContext).toContain("redirectTo: recoveryRedirectUrl()");
     expect(authContext).toContain('event === "PASSWORD_RECOVERY"');
     expect(authContext).toContain('event === "USER_UPDATED" || event === "SIGNED_OUT"');
     expect(authContext).toContain("clearPasswordRecoveryRedirect");

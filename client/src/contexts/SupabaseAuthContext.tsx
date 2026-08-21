@@ -19,7 +19,14 @@ const SupabaseAuthContext = createContext<SupabaseAuthState | undefined>(undefin
 function isPasswordRecoveryRedirect() {
   const hashParams = new URLSearchParams(window.location.hash.replace(/^#/, ""));
   const searchParams = new URLSearchParams(window.location.search);
-  return hashParams.get("type") === "recovery" || searchParams.get("type") === "recovery";
+  return hashParams.get("type") === "recovery" || searchParams.get("type") === "recovery" || searchParams.get("recovery") === "1";
+}
+
+function recoveryRedirectUrl() {
+  const url = new URL(window.location.href);
+  url.hash = "";
+  url.searchParams.set("recovery", "1");
+  return url.toString();
 }
 
 function clearPasswordRecoveryRedirect() {
@@ -28,6 +35,7 @@ function clearPasswordRecoveryRedirect() {
   const searchParams = new URLSearchParams(url.search);
   [hashParams, searchParams].forEach(params => {
     params.delete("type");
+    params.delete("recovery");
     params.delete("access_token");
     params.delete("refresh_token");
     params.delete("expires_at");
@@ -78,7 +86,7 @@ export function SupabaseAuthProvider({ children }: { children: React.ReactNode }
     },
     async sendPasswordRecovery(email) {
       const { error } = await supabase.auth.resetPasswordForEmail(email, {
-        redirectTo: window.location.href,
+        redirectTo: recoveryRedirectUrl(),
       });
       return error?.message ?? null;
     },

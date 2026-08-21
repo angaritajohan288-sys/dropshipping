@@ -124,6 +124,8 @@
 - [x] Registrar evidencia visual del enlace de recuperación: pantalla “Nueva contraseña” y éxito posterior.
 - [x] Registrar evidencia visual del enlace de recuperación que abre la pantalla “Nueva contraseña”.
 - [ ] Registrar evidencia visual del mensaje de éxito tras actualizar la contraseña desde el enlace de recuperación.
+- [x] Forzar una marca explícita de recuperación en el enlace para abrir “Nueva contraseña” incluso si hay una sesión activa.
+- [ ] Validar en la página publicada el retorno de recuperación con sesión previa iniciada.
 - [x] Mostrar en el tablero un aviso visible de recuperación de contraseña completada tras abrir el enlace.
 - [x] Registrar evidencia visual del retorno al tablero con sesión activa tras actualizar la contraseña desde recuperación.
 - [x] Corregir el mensaje de registro para no afirmar “Cuenta creada” cuando Supabase no envía un correo por tratarse de una cuenta existente.
