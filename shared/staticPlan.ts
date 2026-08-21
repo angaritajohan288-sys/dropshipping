@@ -1,133 +1,87 @@
 export type ToolCategory = "Gratuita" | "De pago";
+export type PlanTask = { id: string; title: string; detail: string; priority: "Crítica" | "Alta" | "Media" };
+export type PlanTool = { name: string; category: ToolCategory; description: string; url: string };
+export type PlanPhase = { id: string; name: string; shortLabel: string; objective: string; deliverable: string; exitGate: string; tasks: PlanTask[]; tools: PlanTool[]; errors: string[] };
 
-export type PlanTask = {
-  id: string;
-  title: string;
-  detail: string;
-  priority: "Crítica" | "Alta" | "Media";
-};
-
-export type PlanTool = {
-  name: string;
-  category: ToolCategory;
-  description: string;
-  url: string;
-};
-
-export type PlanPhase = {
-  id: string;
-  name: "Selección de Productos" | "Construcción de Tienda" | "Marketing" | "Operaciones";
-  shortLabel: string;
-  objective: string;
-  tasks: PlanTask[];
-  tools: PlanTool[];
-  errors: string[];
-};
+const sheets: PlanTool = { name: "Google Sheets", category: "Gratuita", description: "Centraliza hipótesis, costes, decisiones y métricas.", url: "https://sheets.google.com" };
+const shopify: PlanTool = { name: "Shopify", category: "De pago", description: "Gestiona catálogo, checkout y pedidos iniciales.", url: "https://www.shopify.com" };
+const trends: PlanTool = { name: "Google Trends", category: "Gratuita", description: "Contrasta demanda por producto y región.", url: "https://trends.google.com" };
+const canva: PlanTool = { name: "Canva", category: "Gratuita", description: "Crea recursos visuales y piezas de contenido.", url: "https://www.canva.com" };
+const meta: PlanTool = { name: "Meta Ads Manager", category: "Gratuita", description: "Ejecuta pruebas publicitarias controladas.", url: "https://www.facebook.com/adsmanager" };
 
 export const PHASES: PlanPhase[] = [
-  {
-    id: "products",
-    name: "Selección de Productos",
-    shortLabel: "Fase 01",
-    objective: "Elegir un producto gaming con margen, demostración visual clara y logística viable.",
-    tasks: [
-      { id: "products-01", title: "Definir el microsegmento", detail: "Escoge una necesidad concreta: setup RGB, periféricos móviles, organización de escritorio o confort gaming.", priority: "Crítica" },
-      { id: "products-02", title: "Crear una lista corta de 10 productos", detail: "Prioriza artículos compactos, demostrables en vídeo y sin restricciones de baterías o marcas registradas.", priority: "Crítica" },
-      { id: "products-03", title: "Validar demanda y contenido existente", detail: "Revisa tendencias, anuncios y vídeos de uso para detectar interés y ángulos de venta reales.", priority: "Alta" },
-      { id: "products-04", title: "Calcular margen objetivo", detail: "Incluye producto, envío, comisiones, publicidad y reembolsos antes de fijar el precio final.", priority: "Crítica" },
-      { id: "products-05", title: "Solicitar o revisar una muestra", detail: "Comprueba calidad, empaque, tiempo de tránsito y grababilidad del producto antes de escalar.", priority: "Alta" },
-    ],
-    tools: [
-      { name: "Google Trends", category: "Gratuita", description: "Compara la evolución del interés de búsqueda por producto y región.", url: "https://trends.google.com" },
-      { name: "TikTok Creative Center", category: "Gratuita", description: "Analiza creativos, tendencias e ideas de demostración en vídeo.", url: "https://ads.tiktok.com/business/creativecenter" },
-      { name: "AliExpress", category: "Gratuita", description: "Explora referencias de producto, variantes, valoraciones de catálogo y proveedores.", url: "https://www.aliexpress.com" },
-      { name: "Minea", category: "De pago", description: "Investiga anuncios de e-commerce y productos con actividad publicitaria.", url: "https://www.minea.com" },
-    ],
-    errors: [
-      "Elegir un producto solo porque parece viral sin verificar coste total, saturación y margen.",
-      "Vender productos con licencias de marcas gaming, compatibilidades no verificadas o reclamaciones técnicas imposibles de sostener.",
-      "Ignorar peso, tiempos de entrega y devoluciones internacionales antes de lanzar campañas.",
-    ],
-  },
-  {
-    id: "store",
-    name: "Construcción de Tienda",
-    shortLabel: "Fase 02",
-    objective: "Convertir la investigación en una tienda enfocada, confiable y preparada para vender desde el primer tráfico.",
-    tasks: [
-      { id: "store-01", title: "Definir una propuesta de valor clara", detail: "Resume en una frase qué problema de un setup gaming resuelve tu producto y para quién.", priority: "Crítica" },
-      { id: "store-02", title: "Configurar Shopify y el dominio", detail: "Crea una marca sencilla, un dominio propio y una configuración regional coherente con tu mercado inicial.", priority: "Crítica" },
-      { id: "store-03", title: "Construir una página de producto persuasiva", detail: "Incluye beneficios, demostración, especificaciones, variantes, envío y respuestas a objeciones.", priority: "Crítica" },
-      { id: "store-04", title: "Completar páginas de confianza", detail: "Publica contacto, envíos, devoluciones, privacidad, términos y preguntas frecuentes reales.", priority: "Alta" },
-      { id: "store-05", title: "Probar compra y versión móvil", detail: "Simula el checkout completo en móvil, valida enlaces, velocidad, moneda y mensajes de confirmación.", priority: "Crítica" },
-    ],
-    tools: [
-      { name: "Shopify", category: "De pago", description: "Plataforma para catálogo, tienda, checkout y gestión inicial de pedidos.", url: "https://www.shopify.com" },
-      { name: "Canva", category: "Gratuita", description: "Crea piezas de identidad, comparativas de beneficios y recursos para la tienda.", url: "https://www.canva.com" },
-      { name: "PageSpeed Insights", category: "Gratuita", description: "Detecta problemas básicos de rendimiento y experiencia móvil.", url: "https://pagespeed.web.dev" },
-      { name: "Klaviyo", category: "De pago", description: "Automatiza emails de carrito abandonado y flujos de postcompra cuando haya volumen.", url: "https://www.klaviyo.com" },
-    ],
-    errors: [
-      "Lanzar una tienda genérica con demasiados productos y sin un mensaje de valor específico.",
-      "Copiar descripciones del proveedor sin revisar afirmaciones, idioma, compatibilidades o beneficios reales.",
-      "Ocultar tiempos de entrega o políticas: esto eleva los reembolsos y reduce la confianza.",
-    ],
-  },
-  {
-    id: "marketing",
-    name: "Marketing",
-    shortLabel: "Fase 03",
-    objective: "Generar tráfico cualificado con contenido demostrativo y campañas pequeñas, medibles y controladas.",
-    tasks: [
-      { id: "marketing-01", title: "Definir tres ángulos de venta", detail: "Plantea ganchos distintos: estética del setup, solución a un problema o mejora de rendimiento/confort.", priority: "Crítica" },
-      { id: "marketing-02", title: "Producir 10 creativos verticales", detail: "Graba demostraciones breves con un gancho en los primeros segundos y una llamada a la acción clara.", priority: "Crítica" },
-      { id: "marketing-03", title: "Instalar medición de conversiones", detail: "Verifica eventos de visita, carrito, checkout y compra antes de invertir en anuncios.", priority: "Crítica" },
-      { id: "marketing-04", title: "Lanzar pruebas de bajo presupuesto", detail: "Usa conjuntos de anuncios pequeños para evaluar creativos y oferta, no para escalar de inmediato.", priority: "Alta" },
-      { id: "marketing-05", title: "Revisar métricas cada día", detail: "Documenta coste por visita, añadir al carrito, checkout y compra para decidir qué pausar o iterar.", priority: "Alta" },
-    ],
-    tools: [
-      { name: "Meta Ads Manager", category: "Gratuita", description: "Gestiona pruebas de anuncios para Facebook e Instagram.", url: "https://www.facebook.com/adsmanager" },
-      { name: "TikTok Ads Manager", category: "Gratuita", description: "Configura y mide campañas de vídeo vertical para audiencias gaming.", url: "https://ads.tiktok.com" },
-      { name: "CapCut", category: "Gratuita", description: "Edita vídeos verticales de producto con ritmo, subtítulos y demostraciones.", url: "https://www.capcut.com" },
-      { name: "Triple Whale", category: "De pago", description: "Centraliza atribución y análisis cuando el gasto publicitario justifique la inversión.", url: "https://www.triplewhale.com" },
-    ],
-    errors: [
-      "Escalar presupuesto sin una venta rentable o sin saber qué creativo generó la intención.",
-      "Usar anuncios que prometen resultados técnicos que el producto no puede demostrar.",
-      "Tomar decisiones por likes o visitas sin revisar los eventos del embudo de compra.",
-    ],
-  },
-  {
-    id: "operations",
-    name: "Operaciones",
-    shortLabel: "Fase 04",
-    objective: "Entregar una experiencia consistente, reducir incidencias y sostener una operación rentable a medida que crece el volumen.",
-    tasks: [
-      { id: "operations-01", title: "Definir el flujo de pedido", detail: "Documenta quién valida, paga al proveedor, revisa tracking y comunica incidencias.", priority: "Crítica" },
-      { id: "operations-02", title: "Preparar respuestas de soporte", detail: "Crea respuestas claras para envío, cambio de dirección, retrasos, devoluciones y producto defectuoso.", priority: "Alta" },
-      { id: "operations-03", title: "Establecer criterios de proveedor", detail: "Define cuándo cambiar de proveedor según calidad, seguimiento, plazo e incidencias recurrentes.", priority: "Alta" },
-      { id: "operations-04", title: "Controlar rentabilidad por pedido", detail: "Registra coste de producto, envío, comisión, reembolso y adquisición en cada pedido.", priority: "Crítica" },
-      { id: "operations-05", title: "Revisar semanalmente riesgos", detail: "Haz una revisión de stock, reclamos, tiempos de tránsito, chargebacks y preguntas frecuentes.", priority: "Media" },
-    ],
-    tools: [
-      { name: "Shopify Inbox", category: "Gratuita", description: "Centraliza conversaciones con clientes desde la tienda.", url: "https://apps.shopify.com/shopify-inbox" },
-      { name: "Google Sheets", category: "Gratuita", description: "Lleva un control sencillo de pedidos, incidencias y margen operativo.", url: "https://sheets.google.com" },
-      { name: "Zendesk", category: "De pago", description: "Organiza soporte multicanal cuando el volumen ya no cabe en un flujo manual.", url: "https://www.zendesk.com" },
-      { name: "AfterShip", category: "De pago", description: "Ofrece seguimiento de pedidos y avisos de envío desde una plataforma centralizada.", url: "https://www.aftership.com" },
-    ],
-    errors: [
-      "Prometer entregas sin confirmar el plazo real ni contar con un proceso para incidencias.",
-      "Responder tarde a solicitudes de soporte o dejar abiertas conversaciones sobre tracking y devoluciones.",
-      "Confundir facturación con beneficio y no registrar comisiones, reembolsos ni costes de adquisición.",
-    ],
-  },
+  { id: "strategy", shortLabel: "Fase 01", name: "Definición estratégica y preparación", objective: "Acotar mercado, cliente, objetivo, recursos, presupuesto y criterios de decisión antes de invertir.", deliverable: "Ficha de mercado, cliente, objetivos, recursos, presupuesto y criterios de descarte.", exitGate: "Mercado, cliente, objetivo medible, presupuesto y criterios de descarte definidos.", tasks: [
+    { id: "strategy-01", title: "Definir mercado inicial", detail: "P0 · Elige país o región, moneda, idioma, entrega y restricciones conocidas.", priority: "Crítica" },
+    { id: "strategy-02", title: "Definir cliente y problema", detail: "P0 · Describe necesidad, frustraciones, alternativas y objeciones del comprador.", priority: "Crítica" },
+    { id: "strategy-03", title: "Fijar objetivos, recursos y descartes", detail: "P0/P1 · Documenta éxito, horas, presupuesto de validación y no negociables.", priority: "Crítica" },
+    { id: "strategy-04", title: "Crear sistema de trabajo", detail: "P2 · Prepara tablero, carpetas, hoja de decisiones y evidencia por tarea.", priority: "Media" },
+  ], tools: [sheets, canva], errors: ["Comenzar con todo el mundo como mercado.", "Gastar sin límite de validación.", "Avanzar sin un criterio de descarte." ] },
+  { id: "research", shortLabel: "Fase 02", name: "Investigación y validación de nicho y productos", objective: "Elegir uno o dos productos con demanda documentada, diferenciación y un problema comprobable.", deliverable: "Ranking de candidatos, evidencias de demanda y mapa de competencia.", exitGate: "Uno o dos productos prioritarios con demanda y diferenciación documentadas.", tasks: [
+    { id: "research-01", title: "Generar y filtrar oportunidades", detail: "P0 · Reúne 10–20 ideas y filtra envío, rotura, contenido, riesgo y devoluciones.", priority: "Crítica" },
+    { id: "research-02", title: "Investigar demanda y competidores", detail: "P1 · Registra búsquedas, reseñas, lenguaje del cliente, precios y huecos de mercado.", priority: "Alta" },
+    { id: "research-03", title: "Puntuar y validar candidatos", detail: "P1 · Clasifica demanda, margen y riesgo; prueba una propuesta a bajo coste.", priority: "Alta" },
+  ], tools: [trends, sheets], errors: ["Elegir solo por viralidad.", "Ignorar quejas repetidas.", "Tomar una venta aislada como validación." ] },
+  { id: "suppliers", shortLabel: "Fase 03", name: "Proveedores y economía unitaria", objective: "Confirmar calidad, plazo, coste total y margen antes de prometer el producto.", deliverable: "Proveedor principal y alternativo, muestra evaluada y hoja de economía unitaria.", exitGate: "Calidad, coste total y margen permiten probar adquisición sin pérdida no controlada.", tasks: [
+    { id: "suppliers-01", title: "Comparar y verificar proveedores", detail: "P0 · Documenta tres opciones, soporte, tracking, condiciones y alternativa.", priority: "Crítica" },
+    { id: "suppliers-02", title: "Pedir y evaluar muestra", detail: "P0 · Prueba producto, empaque, funcionamiento, entrega y crea contenido propio.", priority: "Crítica" },
+    { id: "suppliers-03", title: "Calcular economía y flujo de pedido", detail: "P0/P1 · Incluye producto, envío, pagos, adquisición, incidencias, precio y proceso.", priority: "Crítica" },
+  ], tools: [sheets, { name: "AliExpress", category: "Gratuita", description: "Explora referencias y posibles proveedores.", url: "https://www.aliexpress.com" }], errors: ["Calcular margen solo con precio de proveedor.", "Prometer calidad sin muestra.", "Depender de un solo proveedor." ] },
+  { id: "legal", shortLabel: "Fase 04", name: "Legal, fiscal, financiero y marca", objective: "Preparar una operación transparente para cobrar, entregar, devolver y proteger activos.", deliverable: "Políticas, cobros, base financiera, identidad mínima y activos protegidos.", exitGate: "Se puede explicar claramente quién vende, cobra, entrega, devuelve y trata datos.", tasks: [
+    { id: "legal-01", title: "Revisar obligaciones locales", detail: "P0 · Consulta actividad, impuestos, consumo, privacidad, importación y productos regulados.", priority: "Crítica" },
+    { id: "legal-02", title: "Preparar políticas y cobros", detail: "P0 · Alinea términos, privacidad, envíos, devoluciones, pagos y reserva de caja.", priority: "Crítica" },
+    { id: "legal-03", title: "Crear y proteger marca mínima", detail: "P1/P2 · Valida nombre, dominio, contacto, MFA y activos operativos.", priority: "Alta" },
+  ], tools: [sheets, canva], errors: ["Copiar políticas incompatibles con la operación.", "Prometer plazos inexistentes.", "No separar y registrar caja operativa." ] },
+  { id: "store", shortLabel: "Fase 05", name: "Construcción y configuración de la tienda", objective: "Construir una tienda funcional con catálogo, pagos, envíos, analítica y compra de prueba.", deliverable: "Tienda funcional, catálogo, checkout, pagos, envíos y analítica configurados.", exitGate: "Un pedido de prueba funciona de principio a fin sin bloqueos en móvil.", tasks: [
+    { id: "store-01", title: "Elegir plataforma y arquitectura", detail: "P0/P1 · Define páginas, navegación, checkout, FAQs, contacto y políticas.", priority: "Crítica" },
+    { id: "store-02", title: "Configurar catálogo, pagos y envíos", detail: "P0 · Carga datos verificables, zonas, tarifas, plazos, impuestos y reembolsos.", priority: "Crítica" },
+    { id: "store-03", title: "Activar confianza, analítica y QA", detail: "P0/P1 · Prueba móvil, eventos, emails, tracking y compra completa de prueba.", priority: "Crítica" },
+  ], tools: [shopify, { name: "PageSpeed Insights", category: "Gratuita", description: "Revisa rendimiento y experiencia móvil.", url: "https://pagespeed.web.dev" }], errors: ["Instalar apps innecesarias.", "Dejar textos de plantilla.", "Lanzar sin pedido de prueba." ] },
+  { id: "conversion", shortLabel: "Fase 06", name: "Oferta, contenidos y conversión", objective: "Presentar problema, beneficio, prueba y riesgo para que un visitante pueda decidir comprar.", deliverable: "Propuesta de valor, página de producto, activos visuales y elementos de confianza.", exitGate: "Un desconocido entiende qué es, para quién sirve, cuánto cuesta, cuándo llega y qué pasa si no queda satisfecho.", tasks: [
+    { id: "conversion-01", title: "Definir propuesta y página de producto", detail: "P0 · Ordena beneficio, demostración, uso, paquete, entrega, garantía, FAQ y CTA.", priority: "Crítica" },
+    { id: "conversion-02", title: "Crear activos visuales y confianza", detail: "P1 · Prepara fotos, vídeo, medidas, soporte y reseñas auténticas y trazables.", priority: "Alta" },
+    { id: "conversion-03", title: "Preparar automatización y SEO", detail: "P2 · Configura mensajes útiles y contenido basado en lenguaje real del cliente.", priority: "Media" },
+  ], tools: [canva, { name: "CapCut", category: "Gratuita", description: "Edita demostraciones y creatividades de producto.", url: "https://www.capcut.com" }], errors: ["Inventar reseñas.", "Copiar afirmaciones no verificadas.", "Ocultar entrega o devoluciones." ] },
+  { id: "launch", shortLabel: "Fase 07", name: "Marketing y lanzamiento", objective: "Obtener primeras visitas y ventas mediante pruebas de canales, mensajes, creativos y audiencias.", deliverable: "Canales, campañas o contenidos activos y presupuesto de prueba controlado.", exitGate: "Seguimiento activo y mensajes o canales con mayor potencial identificados.", tasks: [
+    { id: "launch-01", title: "Seleccionar canales e hipótesis", detail: "P0 · Elige uno o dos canales y define qué aprendizaje busca cada uno.", priority: "Crítica" },
+    { id: "launch-02", title: "Preparar contenido, anuncios y colaboraciones", detail: "P0/P1 · Verifica píxel, eventos, creatividades, presupuesto y criterios de pausa.", priority: "Crítica" },
+    { id: "launch-03", title: "Ejecutar lanzamiento controlado", detail: "P0 · Vigila pagos, pedidos, stock, tracking y dudas antes de ampliar tráfico.", priority: "Crítica" },
+  ], tools: [meta, canva], errors: ["Abrir todos los canales.", "Escalar sin economía unitaria.", "Cambiar todas las variables a la vez." ] },
+  { id: "operations", shortLabel: "Fase 08", name: "Operaciones, pedidos y atención al cliente", objective: "Cumplir la promesa con procesos repetibles para pedidos, soporte, devoluciones e incidencias.", deliverable: "Flujo de pedidos, soporte, incidencias, devoluciones y control de proveedores documentados.", exitGate: "Otra persona puede procesar un pedido y resolver las incidencias más frecuentes.", tasks: [
+    { id: "operations-01", title: "Documentar pedidos y niveles de servicio", detail: "P0 · Define revisión, proveedor, tracking, conciliación, plazos, responsable y sustituto.", priority: "Crítica" },
+    { id: "operations-02", title: "Crear protocolos de soporte y devoluciones", detail: "P0/P1 · Prepara respuestas, reembolsos, defectos, retrasos y costes de incidencia.", priority: "Crítica" },
+    { id: "operations-03", title: "Controlar calidad, proveedores y fraude", detail: "P1 · Mide defectos, cancelaciones, riesgo, entrega y disputas de pago.", priority: "Alta" },
+  ], tools: [sheets, { name: "Shopify Inbox", category: "Gratuita", description: "Centraliza consultas de clientes.", url: "https://apps.shopify.com/shopify-inbox" }], errors: ["Procesar sin revisar señales de riesgo.", "Ocultar incidencias.", "No medir coste de reembolsos." ] },
+  { id: "optimization", shortLabel: "Fase 09", name: "Medición, optimización y escalamiento", objective: "Tomar decisiones con datos y escalar solo ofertas que conservan margen y buena experiencia.", deliverable: "Tablero de métricas, experimentos y criterios para invertir, mantener o retirar.", exitGate: "Existe un proceso de medición, experimentación y decisión rentable documentado.", tasks: [
+    { id: "optimization-01", title: "Crear tablero y cadencia de métricas", detail: "P0/P1 · Mide embudo, costes, margen, entrega, reembolsos e incidencias diariamente y semanalmente.", priority: "Crítica" },
+    { id: "optimization-02", title: "Priorizar experimentos", detail: "P1 · Formula hipótesis, cambia una variable, observa y documenta resultado y decisión.", priority: "Alta" },
+    { id: "optimization-03", title: "Decidir continuidad y escala", detail: "P0 · Clasifica producto: escalar, mantener, mejorar, sustituir o retirar; protege caja.", priority: "Crítica" },
+  ], tools: [sheets, meta], errors: ["Optimizar por clics sin margen.", "Escalar antes de entender el embudo.", "Comprometer caja sin demanda predecible." ] },
+  { id: "project", shortLabel: "Fase 10", name: "Gestión del proyecto y mejora continua", objective: "Gestionar prioridades, evidencias, riesgos y revisiones para convertir el lanzamiento en un sistema repetible.", deliverable: "Tablero maestro, revisión semanal, riesgos, documentación y retrospectivas.", exitGate: "Cada avance tiene evidencia y el lanzamiento funciona como un sistema repetible.", tasks: [
+    { id: "project-01", title: "Crear tablero maestro", detail: "P0 · Asigna responsable, prioridad, fecha, dependencia, estado y evidencia a cada tarea.", priority: "Crítica" },
+    { id: "project-02", title: "Planificar resultados y riesgos", detail: "P0/P1 · Define entregables semanales, bloqueos, riesgos, mitigaciones y documentación.", priority: "Crítica" },
+    { id: "project-03", title: "Revisar puertas de salida y retrospectiva", detail: "P1/P2 · Avanza solo con evidencia y revisa aprendizajes cada dos o cuatro semanas.", priority: "Alta" },
+  ], tools: [sheets, { name: "Notion", category: "Gratuita", description: "Organiza documentación, riesgos y decisiones.", url: "https://www.notion.so" }], errors: ["Avanzar solo porque pasó una semana.", "Cerrar tareas sin evidencia.", "Guardar decisiones solo en memoria." ] },
 ];
 
+for (const phase of PHASES) {
+  phase.objective = `${phase.objective} Entregable: ${phase.deliverable}. Puerta de salida: ${phase.exitGate}`;
+  phase.tasks.forEach(task => {
+    const priorityCode = task.detail.match(/^P[0-3](?:\/P[0-3])?/)?.[0] ?? "P2";
+    task.title = `${priorityCode} // ${task.title}`;
+  });
+}
+
 export const PLAN_WEEKS = [
-  { number: 1, label: "Validación", focus: "Producto, demanda y margen", phaseId: "products" },
-  { number: 2, label: "Fundación", focus: "Tienda, oferta y checkout", phaseId: "store" },
-  { number: 3, label: "Adquisición", focus: "Creativos, medición y pruebas", phaseId: "marketing" },
-  { number: 4, label: "Optimización", focus: "Operación, soporte y rentabilidad", phaseId: "operations" },
+  { number: 1, label: "Estrategia", focus: "Mercado, cliente, objetivo y recursos", phaseId: "strategy" },
+  { number: 2, label: "Validación", focus: "Nicho, demanda y productos", phaseId: "research" },
+  { number: 3, label: "Economía", focus: "Proveedor, muestra y margen", phaseId: "suppliers" },
+  { number: 4, label: "Base", focus: "Legal, finanzas y marca", phaseId: "legal" },
+  { number: 5, label: "Tienda", focus: "Catálogo, pagos y QA", phaseId: "store" },
+  { number: 6, label: "Conversión", focus: "Oferta, contenido y confianza", phaseId: "conversion" },
+  { number: 7, label: "Lanzamiento", focus: "Canales, anuncios y primeras ventas", phaseId: "launch" },
+  { number: 8, label: "Operación", focus: "Pedidos, soporte y devoluciones", phaseId: "operations" },
+  { number: 9, label: "Optimización", focus: "Métricas, experimentos y escala", phaseId: "optimization" },
+  { number: 10, label: "Control", focus: "Riesgos, evidencias y mejora", phaseId: "project" },
 ] as const;
 
 export const KNOWN_TASK_KEYS = new Set(PHASES.flatMap(phase => phase.tasks.map(task => task.id)));

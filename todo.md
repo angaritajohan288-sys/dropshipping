@@ -16,6 +16,17 @@
 - [x] Probar de forma específica el cálculo de la semana operativa.
 - [x] Verificar navegación básica por teclado y visualización móvil antes de la entrega.
 - [x] Guardar el checkpoint final y preparar la entrega del proyecto.
+- [x] Extraer las diez fases, subtareas prioritarias, entregables y puertas de salida del mapa maestro proporcionado.
+- [x] Sustituir el plan canónico y el cronograma anterior por el nuevo mapa maestro de lanzamiento.
+- [ ] Adaptar la interfaz para navegar las diez fases, prioridades P0–P3, entregables y puertas de salida.
+- [ ] Eliminar del tracker todas las referencias operativas al plan anterior de cuatro fases.
+- [ ] Conservar y validar el progreso privado, notas, adjuntos, métricas, calendario y perfil sobre el nuevo plan.
+- [ ] Probar, publicar y validar visualmente el mapa maestro actualizado.
+- [ ] Eliminar textos y estructuras de interfaz ligadas al plan anterior de cuatro fases.
+- [ ] Mostrar etiquetas visibles P0–P3, entregable y puerta de salida en cada fase del mapa maestro.
+- [ ] Añadir cobertura de contrato para las diez fases y los elementos visibles del nuevo mapa maestro.
+- [ ] Renderizar secciones separadas de entregable y puerta de salida en la vista activa del tracker.
+- [ ] Añadir badges visuales P0–P3 por tarea en la vista activa del tracker.
 - [x] Añadir una fecha de inicio privada y configurable para calcular fechas y semanas reales del cronograma.
 - [x] Incorporar notas privadas por tarea con edición y guardado persistente.
 - [x] Incorporar adjuntos privados por tarea con carga segura al almacenamiento y enlaces protegidos.
