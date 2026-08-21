@@ -65,6 +65,12 @@ export const PHASES: PlanPhase[] = [
 
 for (const phase of PHASES) {
   phase.objective = `${phase.objective} Entregable: ${phase.deliverable}. Puerta de salida: ${phase.exitGate}`;
+  phase.tasks.unshift({
+    id: `${phase.id}-exit-gate`,
+    title: `P0 // Entregable y puerta de salida`,
+    detail: `Entregable: ${phase.deliverable} Puerta de salida: ${phase.exitGate}`,
+    priority: "Crítica",
+  });
   phase.tasks.forEach(task => {
     const priorityCode = task.detail.match(/^P[0-3](?:\/P[0-3])?/)?.[0] ?? "P2";
     task.title = `${priorityCode} // ${task.title}`;

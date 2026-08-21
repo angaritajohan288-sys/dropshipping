@@ -110,6 +110,8 @@ describe("static Supabase migration", () => {
     expect(profilePanel).toContain("onReturn");
     expect(profilePanel).toContain("Tablero");
     expect(staticStyles).toContain('[aria-label^="Perfil autenticado:"][role="button"]:focus-visible');
+    expect(staticStyles).toContain("Línea de tiempo");
+    expect(staticStyles).toContain("counter-reset: timeline");
     expect(readFileSync(new URL("../shared/staticPlan.ts", import.meta.url), "utf-8")).toContain("Puerta de salida");
     expect(readFileSync(new URL("../shared/staticPlan.ts", import.meta.url), "utf-8")).toContain("priorityCode");
   });

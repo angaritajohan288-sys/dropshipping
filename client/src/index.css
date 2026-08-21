@@ -97,6 +97,16 @@
   .neon-button:hover { box-shadow: 0 0 30px rgba(103,232,249,.32), 0 0 40px rgba(232,121,249,.22); }
   .neon-button:active { transform: scale(.97); }
   .signal-dot { width: 8px; height: 8px; background: #67e8f9; box-shadow: 0 0 0 4px rgba(103,232,249,.12), 0 0 13px rgba(103,232,249,.9); }
+  #static-checklist { grid-template-columns: minmax(0, 1fr) !important; }
+  #static-checklist > aside { overflow: hidden; padding: 1rem; }
+  #static-checklist > aside > .hud-label { display: flex; align-items: center; gap: .7rem; }
+  #static-checklist > aside > .hud-label::after { content: "Línea de tiempo"; color: #67e8f9; font-size: 9px; letter-spacing: .14em; }
+  #static-checklist > aside > div { position: relative; display: flex; gap: .65rem; overflow-x: auto; padding: .8rem 0 .35rem; counter-reset: timeline; scrollbar-color: rgba(103,232,249,.55) transparent; }
+  #static-checklist > aside > div::before { content: ""; position: absolute; top: 1.95rem; left: 2rem; right: 2rem; height: 1px; background: linear-gradient(90deg, rgba(103,232,249,.65), rgba(232,121,249,.45)); }
+  #static-checklist > aside button { counter-increment: timeline; position: relative; z-index: 1; flex: 0 0 11rem; min-height: 5.8rem; padding: 1.55rem .8rem .65rem !important; background: rgba(7,7,13,.82); transition: transform 160ms cubic-bezier(.23,1,.32,1), border-color 160ms cubic-bezier(.23,1,.32,1); }
+  #static-checklist > aside button::before { content: counter(timeline, decimal-leading-zero); position: absolute; top: -.15rem; left: .7rem; display: grid; place-items: center; width: 1.75rem; height: 1.75rem; border: 1px solid rgba(103,232,249,.65); background: #10101b; color: #67e8f9; font-size: 10px; font-weight: 900; }
+  #static-checklist > aside button:hover { transform: translateY(-2px); border-color: rgba(103,232,249,.65); }
+  #static-checklist > aside button p:nth-child(2) { display: none; }
 }
 
 @media (prefers-reduced-motion: no-preference) {

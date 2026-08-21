@@ -27,6 +27,10 @@
 - [ ] Añadir cobertura de contrato para las diez fases y los elementos visibles del nuevo mapa maestro.
 - [ ] Renderizar secciones separadas de entregable y puerta de salida en la vista activa del tracker.
 - [ ] Añadir badges visuales P0–P3 por tarea en la vista activa del tracker.
+- [x] Reemplazar la barra lateral extensa por una línea de tiempo compacta de diez fases.
+- [ ] Simplificar el panel activo para priorizar tareas, entregable y puerta de salida.
+- [ ] Validar la línea de tiempo en escritorio y móvil, incluida la navegación por teclado.
+- [ ] Renderizar bloques separados de entregable y puerta de salida en el panel activo.
 - [x] Añadir una fecha de inicio privada y configurable para calcular fechas y semanas reales del cronograma.
 - [x] Incorporar notas privadas por tarea con edición y guardado persistente.
 - [x] Incorporar adjuntos privados por tarea con carga segura al almacenamiento y enlaces protegidos.
