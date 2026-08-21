@@ -121,7 +121,11 @@
 - [x] Corregir el retorno del enlace de recuperación para mostrar el formulario de nueva contraseña en GitHub Pages.
 - [ ] Registrar evidencia observable del acceso publicado, la recuperación exitosa y el estado final de sesión autenticada.
 - [ ] Registrar evidencia visual del alta completa de la cuenta B desde Registro, sin exponer credenciales.
-- [ ] Registrar evidencia visual del enlace de recuperación: pantalla “Nueva contraseña” y éxito posterior.
+- [x] Registrar evidencia visual del enlace de recuperación: pantalla “Nueva contraseña” y éxito posterior.
+- [x] Registrar evidencia visual del enlace de recuperación que abre la pantalla “Nueva contraseña”.
+- [ ] Registrar evidencia visual del mensaje de éxito tras actualizar la contraseña desde el enlace de recuperación.
+- [x] Mostrar en el tablero un aviso visible de recuperación de contraseña completada tras abrir el enlace.
+- [x] Registrar evidencia visual del retorno al tablero con sesión activa tras actualizar la contraseña desde recuperación.
 - [x] Corregir el mensaje de registro para no afirmar “Cuenta creada” cuando Supabase no envía un correo por tratarse de una cuenta existente.
 - [x] Guiar de forma clara y segura al inicio de sesión o recuperación cuando el correo ya puede estar registrado.
 - [x] Probar y publicar el mensaje corregido de registro para correos existentes.

@@ -63,6 +63,8 @@ describe("static Supabase migration", () => {
     expect(authContext).toContain('event === "PASSWORD_RECOVERY"');
     expect(authContext).toContain('event === "USER_UPDATED" || event === "SIGNED_OUT"');
     expect(authContext).toContain("clearPasswordRecoveryRedirect");
+    expect(authContext).toContain("blitz-password-recovery-complete");
+    expect(staticApp).toContain("Contraseña actualizada correctamente. Tu sesión privada está activa.");
   });
 
   it("usa un borrador de notas aislado con guardado explícito", () => {

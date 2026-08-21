@@ -100,6 +100,12 @@ export default function StaticSupabaseApp() {
   }, [theme]);
 
   useEffect(() => {
+    if (!user || isRecovery || sessionStorage.getItem("blitz-password-recovery-complete") !== "true") return;
+    sessionStorage.removeItem("blitz-password-recovery-complete");
+    setNotice("Contraseña actualizada correctamente. Tu sesión privada está activa.");
+  }, [isRecovery, user]);
+
+  useEffect(() => {
     if (!user || loading || isRecovery) return;
     const trigger = document.querySelector<HTMLElement>('[aria-label^="Perfil autenticado:"]');
     if (!trigger) return;

@@ -85,6 +85,7 @@ export function SupabaseAuthProvider({ children }: { children: React.ReactNode }
     async updatePassword(password) {
       const { error } = await supabase.auth.updateUser({ password });
       if (!error) {
+        sessionStorage.setItem("blitz-password-recovery-complete", "true");
         clearPasswordRecoveryRedirect();
         setIsRecovery(false);
       }
