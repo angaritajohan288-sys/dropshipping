@@ -31,6 +31,8 @@
 - [ ] Simplificar el panel activo para priorizar tareas, entregable y puerta de salida.
 - [ ] Validar la línea de tiempo en escritorio y móvil, incluida la navegación por teclado.
 - [ ] Renderizar bloques separados de entregable y puerta de salida en el panel activo.
+- [ ] Diseñar tarjetas diferenciadas para entregable y puerta de salida con jerarquía visual clara.
+- [ ] Validar el panel refinado con una fase representativa en la página publicada.
 - [ ] Reordenar las tareas de cada fase según prioridad P0–P3 y dependencias operativas.
 - [x] Validar visualmente el nuevo orden de tareas en la página publicada.
 - [ ] Revisar y ordenar explícitamente las tareas de las diez fases por dependencias operativas.
