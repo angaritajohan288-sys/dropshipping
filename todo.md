@@ -124,7 +124,7 @@
 - [ ] Registrar evidencia visual del enlace de recuperación: pantalla “Nueva contraseña” y éxito posterior.
 - [x] Corregir el mensaje de registro para no afirmar “Cuenta creada” cuando Supabase no envía un correo por tratarse de una cuenta existente.
 - [x] Guiar de forma clara y segura al inicio de sesión o recuperación cuando el correo ya puede estar registrado.
-- [ ] Probar y publicar el mensaje corregido de registro para correos existentes.
+- [x] Probar y publicar el mensaje corregido de registro para correos existentes.
 - [x] Reintentar el alta de la cuenta B cuando Supabase restablezca el límite temporal de correos y registrar el resultado.
 - [x] Repetir la prueba publicada del adjunto temporal y comprobar tras eliminarlo que desaparece de la tarea después de recargar.
 - [x] Corregir la incompatibilidad de versión de pnpm detectada en el workflow de GitHub Pages.
