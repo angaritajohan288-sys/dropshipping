@@ -114,6 +114,7 @@ describe("static Supabase migration", () => {
     expect(staticStyles).toContain("counter-reset: timeline");
     expect(readFileSync(new URL("../shared/staticPlan.ts", import.meta.url), "utf-8")).toContain("Puerta de salida");
     expect(readFileSync(new URL("../shared/staticPlan.ts", import.meta.url), "utf-8")).toContain("priorityCode");
+    expect(readFileSync(new URL("../shared/staticPlan.ts", import.meta.url), "utf-8")).toContain("phase.tasks.sort");
   });
 
   it("prepara un despliegue de Pages con el modo estático activado", () => {

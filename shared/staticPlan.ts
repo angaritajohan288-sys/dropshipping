@@ -65,16 +65,18 @@ export const PHASES: PlanPhase[] = [
 
 for (const phase of PHASES) {
   phase.objective = `${phase.objective} Entregable: ${phase.deliverable}. Puerta de salida: ${phase.exitGate}`;
-  phase.tasks.unshift({
+  phase.tasks.push({
     id: `${phase.id}-exit-gate`,
-    title: `P0 // Entregable y puerta de salida`,
+    title: `Cierre de fase // Entregable y puerta de salida`,
     detail: `Entregable: ${phase.deliverable} Puerta de salida: ${phase.exitGate}`,
-    priority: "Crítica",
+    priority: "Media",
   });
   phase.tasks.forEach(task => {
     const priorityCode = task.detail.match(/^P[0-3](?:\/P[0-3])?/)?.[0] ?? "P2";
     task.title = `${priorityCode} // ${task.title}`;
   });
+  const priorityRank = (task: PlanTask) => Number(task.title.match(/^P(\d)/)?.[1] ?? "2");
+  phase.tasks.sort((first, second) => priorityRank(first) - priorityRank(second));
 }
 
 export const PLAN_WEEKS = [

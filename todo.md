@@ -31,6 +31,11 @@
 - [ ] Simplificar el panel activo para priorizar tareas, entregable y puerta de salida.
 - [ ] Validar la línea de tiempo en escritorio y móvil, incluida la navegación por teclado.
 - [ ] Renderizar bloques separados de entregable y puerta de salida en el panel activo.
+- [ ] Reordenar las tareas de cada fase según prioridad P0–P3 y dependencias operativas.
+- [ ] Validar visualmente el nuevo orden de tareas en la página publicada.
+- [ ] Revisar y ordenar explícitamente las tareas de las diez fases por dependencias operativas.
+- [x] Añadir pruebas del orden P0 antes de validaciones y mejoras en cada fase.
+- [ ] Documentar y comprobar dependencias operativas concretas en fases representativas del mapa maestro.
 - [x] Añadir una fecha de inicio privada y configurable para calcular fechas y semanas reales del cronograma.
 - [x] Incorporar notas privadas por tarea con edición y guardado persistente.
 - [x] Incorporar adjuntos privados por tarea con carga segura al almacenamiento y enlaces protegidos.
