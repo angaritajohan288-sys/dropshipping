@@ -138,3 +138,5 @@
 - [x] Registrar evidencia visual del nuevo inicio de sesión tras cambiar la contraseña, sin mostrar credenciales.
 - [x] Registrar evidencia observable de actualización exitosa de contraseña y nuevo acceso correcto con la clave modificada.
 - [ ] Añadir cobertura automatizada de la navegación declarativa de perfil desde la interfaz principal.
+- [x] Añadir cobertura automatizada de accesibilidad del perfil: nombre accesible, foco por teclado, apertura y retorno.
+- [ ] Registrar evidencia de que el perfil publicado expone únicamente los datos de la sesión activa.

@@ -94,6 +94,15 @@ describe("static Supabase migration", () => {
     expect(authContext).toContain("supabase.auth.updateUser({ password: newPassword })");
   });
 
+  it("mantiene nombres y teclado accesibles para abrir y retornar del perfil", () => {
+    expect(staticApp).toContain('trigger.setAttribute("role", "button")');
+    expect(staticApp).toContain('trigger.setAttribute("tabindex", "0")');
+    expect(staticApp).toContain('event.key === "Enter" || event.key === " "');
+    expect(staticApp).toContain('title", "Abrir perfil"');
+    expect(profilePanel).toContain("onReturn");
+    expect(profilePanel).toContain("Tablero");
+  });
+
   it("prepara un despliegue de Pages con el modo estático activado", () => {
     expect(workflow).toContain("actions/deploy-pages@v4");
     expect(workflow).toContain('VITE_STATIC_SUPABASE: "true"');
