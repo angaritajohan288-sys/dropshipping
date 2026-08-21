@@ -33,6 +33,8 @@
 - [ ] Renderizar bloques separados de entregable y puerta de salida en el panel activo.
 - [ ] Diseñar tarjetas diferenciadas para entregable y puerta de salida con jerarquía visual clara.
 - [ ] Validar el panel refinado con una fase representativa en la página publicada.
+- [ ] Corregir la pantalla negra publicada y restaurar el renderizado de la aplicación.
+- [ ] Verificar en consola y en la página publicada que el panel refinado no causa errores de ejecución.
 - [ ] Reordenar las tareas de cada fase según prioridad P0–P3 y dependencias operativas.
 - [x] Validar visualmente el nuevo orden de tareas en la página publicada.
 - [ ] Revisar y ordenar explícitamente las tareas de las diez fases por dependencias operativas.
