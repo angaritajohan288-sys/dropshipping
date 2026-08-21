@@ -121,6 +121,7 @@
 - [x] Corregir el retorno del enlace de recuperación para mostrar el formulario de nueva contraseña en GitHub Pages.
 - [ ] Registrar evidencia observable del acceso publicado, la recuperación exitosa y el estado final de sesión autenticada.
 - [ ] Registrar evidencia visual del alta completa de la cuenta B desde Registro, sin exponer credenciales.
+- [x] Documentar que el alta de la cuenta B fue validada en uso, pero su captura inicial no se conserva; queda como comprobación manual.
 - [x] Registrar evidencia visual del enlace de recuperación: pantalla “Nueva contraseña” y éxito posterior.
 - [x] Registrar evidencia visual del enlace de recuperación que abre la pantalla “Nueva contraseña”.
 - [x] Registrar evidencia visual del mensaje de éxito tras actualizar la contraseña desde el enlace de recuperación.
