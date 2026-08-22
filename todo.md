@@ -16,6 +16,13 @@
 - [x] Probar de forma específica el cálculo de la semana operativa.
 - [x] Verificar navegación básica por teclado y visualización móvil antes de la entrega.
 - [x] Guardar el checkpoint final y preparar la entrega del proyecto.
+- [ ] Registrar la evidencia operativa de “Definir mercado inicial”: Colombia, COP, español y entrega por validar con proveedor.
+- [x] Recopilar señales actuales de categorías populares en AliExpress, Temu, Amazon, Alibaba y Mercado Libre.
+- [x] Evaluar categorías por demanda, margen, logística, regulación, saturación y riesgo para Colombia.
+- [ ] Seleccionar una categoría inicial y preparar criterios de validación de producto.
+- [x] Comparar competencia, precios y diferenciación de categorías candidatas en canales colombianos.
+- [x] Evaluar logística, regulación y devoluciones de las categorías finalistas antes de seleccionar una.
+- [x] Analizar señales de contenido y creatividad publicitaria para las categorías finalistas.
 - [x] Extraer las diez fases, subtareas prioritarias, entregables y puertas de salida del mapa maestro proporcionado.
 - [x] Sustituir el plan canónico y el cronograma anterior por el nuevo mapa maestro de lanzamiento.
 - [ ] Adaptar la interfaz para navegar las diez fases, prioridades P0–P3, entregables y puertas de salida.
