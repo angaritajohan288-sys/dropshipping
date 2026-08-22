@@ -72,10 +72,17 @@ for (const phase of PHASES) {
     priority: "Media",
   });
   phase.tasks.forEach(task => {
-    const priorityCode = task.detail.match(/^P[0-3](?:\/P[0-3])?/)?.[0] ?? "P2";
-    task.title = `${priorityCode} // ${task.title}`;
+    task.detail = task.detail.replace(/^P[0-3](?:\/P[0-3])?\s*·\s*/, "");
+    const action = task.id.endsWith("-exit-gate")
+      ? "◆ CIERRA"
+      : task.priority === "Crítica"
+        ? "✦ ACTIVA"
+        : task.priority === "Alta"
+          ? "◉ VALIDA"
+          : "◇ CONSTRUYE";
+    task.title = `${action} · ${task.title}`;
   });
-  const priorityRank = (task: PlanTask) => Number(task.title.match(/^P(\d)/)?.[1] ?? "2");
+  const priorityRank = (task: PlanTask) => task.priority === "Crítica" ? 0 : task.priority === "Alta" ? 1 : 2;
   phase.tasks.sort((first, second) => priorityRank(first) - priorityRank(second));
 }
 

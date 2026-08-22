@@ -27,6 +27,9 @@
 - [ ] Añadir cobertura de contrato para las diez fases y los elementos visibles del nuevo mapa maestro.
 - [ ] Renderizar secciones separadas de entregable y puerta de salida en la vista activa del tracker.
 - [ ] Añadir badges visuales P0–P3 por tarea en la vista activa del tracker.
+- [ ] Sustituir los códigos P0–P3 por etiquetas visuales de acción en el checklist.
+- [ ] Usar iconos y colores consistentes para distinguir inicio, validación, construcción y cierre.
+- [ ] Validar visualmente el nuevo lenguaje de tareas en la página publicada.
 - [x] Reemplazar la barra lateral extensa por una línea de tiempo compacta de diez fases.
 - [ ] Simplificar el panel activo para priorizar tareas, entregable y puerta de salida.
 - [ ] Validar la línea de tiempo en escritorio y móvil, incluida la navegación por teclado.

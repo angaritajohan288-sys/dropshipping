@@ -113,7 +113,7 @@ describe("static Supabase migration", () => {
     expect(staticStyles).toContain("Línea de tiempo");
     expect(staticStyles).toContain("counter-reset: timeline");
     expect(readFileSync(new URL("../shared/staticPlan.ts", import.meta.url), "utf-8")).toContain("Puerta de salida");
-    expect(readFileSync(new URL("../shared/staticPlan.ts", import.meta.url), "utf-8")).toContain("priorityCode");
+    expect(readFileSync(new URL("../shared/staticPlan.ts", import.meta.url), "utf-8")).toContain("✦ ACTIVA");
     expect(readFileSync(new URL("../shared/staticPlan.ts", import.meta.url), "utf-8")).toContain("phase.tasks.sort");
   });
 
