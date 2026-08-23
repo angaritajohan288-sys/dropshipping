@@ -91,6 +91,47 @@ Se descarta un producto candidato si cumple cualquiera de estas condiciones: inc
 
 Cada candidato debe compararse contra por lo menos diez publicaciones de Mercado Libre y tres proveedores, con precio puesto en Colombia, entrega, reseñas, material, medidas, fotos reales y coste de devolución.
 
+## Investigación específica: mandos de videojuegos
+
+Los mandos sí muestran una señal comercial relevante en Colombia: Mercado Libre destaca opciones de GameSir, Xbox y controles Bluetooth compatibles, y valora características como compatibilidad, ergonomía, cableado, Bluetooth, joysticks Hall Effect y carga.[8] Sin embargo, esto confirma **interés de mercado**, no que el dropshipping internacional sea el mejor modelo para iniciar.
+
+| Tipo de producto | Señal de demanda | Riesgo para un lanzamiento nuevo | Recomendación |
+|---|---|---|---|
+| Mandos oficiales de PlayStation, Xbox o Nintendo | Demanda alta y marcas reconocidas. | Muy alto: distribución autorizada, falsificaciones, garantía y precio de inventario. | No vender sin distribuidor autorizado. |
+| Mandos compatibles de marca verificable, por cable | Interés visible en PC/Xbox y menor complejidad de batería. | Medio: compatibilidad, driver, garantía y calidad del stick. | Validar solo con muestra y fabricante/marca trazable. |
+| Mandos inalámbricos genéricos o clones | Precio atractivo y mucha oferta. | Alto: batería, devoluciones, conectividad, etiquetas de compatibilidad y riesgo de réplica. | Evitar como primer producto. |
+| Accesorios para mando sin electrónica | Fundas, soportes, grips y organizadores tienen menor complejidad. | Bajo-medio: material, ajuste y competencia. | Mejor entrada si se quiere mantener el nicho gamer. |
+
+### Lectura de proveedores y tiempos
+
+AliExpress y DSers permiten encontrar catálogos de electrónica y comparar proveedores, pero Shopify advierte que los tiempos varían por proveedor, método y destino; la fecha prometida al cliente debe verificarse mediante una orden de muestra antes de publicar.[6] [10] Alibaba sirve principalmente para negociación B2B y puede convenir para una fase posterior de compra al por mayor, no como primera prueba sin conocer la calidad.[10]
+
+Para mandos, no se debe publicar un plazo de entrega estimado de un proveedor extranjero sin haber simulado el destino colombiano y realizado una orden de muestra. Antes de decidir se deben solicitar: ficha técnica exacta, compatibilidad real por plataforma, certificaciones/advertencias, política de batería, fotos del empaque, procedimiento de garantía, plazo de procesamiento y plazo de transporte para Colombia.
+
+Shopify indica que quien usa dropshipping sigue siendo responsable por la seguridad del producto, por ofrecer información pública de procesamiento/envío y por comunicar cargos relevantes. También recomienda evaluar el proveedor y comprar el producto para comprobar calidad y entrega.[9]
+
+### Veredicto provisional
+
+No recomiendo iniciar la tienda con mandos inalámbricos genéricos ni con mandos oficiales sin autorización. Si el nicho gamer es prioritario, es más seguro validar primero **accesorios gamer sin electrónica** y usar el mando compatible por cable de una marca verificable como segunda hipótesis, solo después de recibir una muestra satisfactoria y confirmar el envío a Colombia.
+
+## Investigación de productos: lista corta de setup
+
+La exploración de listados locales confirma que los accesorios genéricos de bajo precio ya están muy competidos. La oportunidad no es publicar los mismos productos sin cambios, sino validar una solución compacta, sin perforación y orientada a un problema concreto de escritorio. Los precios observados son señales orientativas de mercado, no precios de compra ni de venta recomendados; deben verificarse antes de lanzar.
+
+| Producto candidato | Lectura competitiva | Diferenciación plausible | Veredicto |
+|---|---|---|---|
+| Kit genérico de gestión de cables | Muy competido en el nivel económico. | Bandeja metálica de abrazadera, sin perforación, con clips y guía de instalación. | Validar solo con bundle o enfoque premium. |
+| Soporte plegable de portátil | Saturación elevada y precios bajos. | Bundle con organización de cable o uso específico para teletrabajo/estudio. | Complemento, no producto principal. |
+| Soporte de audífonos bajo mesa | Competencia moderada en diseño funcional; artículos básicos económicos. | Abrazadera giratoria o doble gancho sin marcas y con montaje sencillo. | Validar con cautela como producto de nicho. |
+| Bandeja organizadora bajo escritorio | Existe brecha potencial en modelos sin perforar y de aspecto premium. | Modelo ligero, desmontable, ajustable y explicado con contenido antes/después. | **Principal candidato para validar.** |
+| Desk mat minimalista | Mercado masivo en el segmento barato y premium. | Material reversible o fieltro/corcho con portacables integrado. | Segundo candidato si la muestra supera calidad. |
+
+### Hipótesis de producto inicial
+
+La primera hipótesis a validar será una **bandeja organizadora bajo escritorio sin perforar**, diseñada para cableado y accesorios ligeros. No se debe publicar todavía: primero hay que confirmar peso, medidas, material, compatibilidad con grosor de escritorio, coste puesto en Colombia, proveedor alternativo y tiempo de entrega.
+
+Los complementos potenciales son un soporte giratorio de audífonos y un desk mat minimalista. El soporte de portátil queda como oferta adicional, no como producto principal, porque la competencia de modelos genéricos es amplia y el precio de entrada es bajo.
+
 ## Referencias
 
 [1] [International Trade Administration — Colombia eCommerce](https://www.trade.gov/country-commercial-guides/colombia-ecommerce)
@@ -106,3 +147,9 @@ Cada candidato debe compararse contra por lo menos diez publicaciones de Mercado
 [6] [Shopify — AliExpress Dropshipping in 2026](https://www.shopify.com/il/blog/117607173-the-definitive-guide-to-dropshipping-with-aliexpress)
 
 [7] [Alibaba Smart Buy — Best Products to Sell Online](https://smartbuy.alibaba.com/best-selling/best-products-to-sell-on-the-internet)
+
+[8] [Mercado Libre Colombia — Gamepads y joysticks más vendidos](https://www.mercadolibre.com.co/blog/mas-vendidos/gamepads-joysticks)
+
+[9] [Shopify Help Center — Dropshipping: seguridad, entrega y reembolsos](https://help.shopify.com/en/manual/compliance/legal/dropshipping)
+
+[10] [Shopify — Dropshipping suppliers](https://www.shopify.com/blog/dropshipping-suppliers)

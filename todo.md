@@ -20,6 +20,9 @@
 - [x] Recopilar señales actuales de categorías populares en AliExpress, Temu, Amazon, Alibaba y Mercado Libre.
 - [x] Evaluar categorías por demanda, margen, logística, regulación, saturación y riesgo para Colombia.
 - [ ] Seleccionar una categoría inicial y preparar criterios de validación de producto.
+- [x] Medir demanda, competencia y rangos de precio de mandos de videojuegos en Colombia.
+- [x] Comparar proveedores de mandos compatibles para Shopify y sus tiempos de entrega a Colombia.
+- [x] Evaluar riesgo de falsificación, garantía, batería, compatibilidad y devolución antes de vender mandos.
 - [x] Comparar competencia, precios y diferenciación de categorías candidatas en canales colombianos.
 - [x] Evaluar logística, regulación y devoluciones de las categorías finalistas antes de seleccionar una.
 - [x] Analizar señales de contenido y creatividad publicitaria para las categorías finalistas.
