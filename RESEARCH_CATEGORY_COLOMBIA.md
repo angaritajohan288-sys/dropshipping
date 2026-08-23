@@ -114,6 +114,37 @@ Shopify indica que quien usa dropshipping sigue siendo responsable por la seguri
 
 No recomiendo iniciar la tienda con mandos inalámbricos genéricos ni con mandos oficiales sin autorización. Si el nicho gamer es prioritario, es más seguro validar primero **accesorios gamer sin electrónica** y usar el mando compatible por cable de una marca verificable como segunda hipótesis, solo después de recibir una muestra satisfactoria y confirmar el envío a Colombia.
 
+## Proveedores aptos para Shopify antes de elegir producto
+
+El proveedor no se debe evaluar solo por catálogo. Para Colombia, el requisito mínimo es: integración real con Shopify, estado de pedido y tracking sincronizado, catálogo disponible, coste y plazo verificables por producto, política de soporte/devolución y una orden de prueba antes de publicarlo.
+
+| Opción | Integración confirmada | Operación para Colombia | Riesgo principal | Uso recomendado |
+|---|---|---|---|---|
+| **Dropi / Dropify** | La app oficial importa productos y sincroniza pedidos con una cuenta Dropi.[11] | Es una plataforma colombiana de dropshipping; debe cotizarse producto y transportadora en la cuenta. | Opiniones públicas de la app reportan problemas de transportadoras y soporte; probar antes de escalar. | **Primera plataforma para explorar** por cercanía de mercado e integración. |
+| **Rocketfy** | App oficial de Shopify con importación, sincronización de pedidos/tracking y COD.[12] | Está enfocada en dropshipping COD y múltiples países; comprobar catálogo y condiciones de Colombia al registrarse. | La ficha actual no tiene reseñas en Shopify App Store; requiere una prueba controlada. | Segundo finalista para comparar con Dropi. |
+| **DSers + AliExpress** | App oficial con importación, pedidos masivos, tracking y optimización de proveedores.[13] | El plazo exacto depende de cada ficha, método y destino; no prometer entrega sin simulación y muestra. | Más variabilidad de entrega, aduana, calidad y soporte internacional. | Útil para muestras o productos poco comunes, no como primer flujo de entrega. |
+| **CJdropshipping** | Ofrece integración Shopify y cotizador por producto/destino. | Colombia se debe cotizar por SKU, peso y método. | El coste/plazo es dinámico y los electrónicos requieren más verificación. | Alternativa de comparación internacional. |
+| **Syncee / Spocket** | Apps con sincronización Shopify y red de proveedores. | La cobertura de Colombia depende de cada proveedor individual. | Catálogo y coste pueden no ser competitivos para entrega a Colombia. | Explorar solo si aparece proveedor con entrega local o regional verificable. |
+
+### Recomendación de abastecimiento inicial
+
+> Iniciar la evaluación con **Dropi / Dropify**, pero no comprometerse hasta completar una prueba real de producto, entrega y atención al cliente. Comparar en paralelo una publicación equivalente en **Rocketfy** antes de cargar cualquier catálogo en Shopify.
+
+El flujo mínimo es: crear cuentas de prueba, instalar una sola app en una tienda de ensayo, localizar el mismo tipo de producto, revisar coste del producto y flete, leer condiciones de devolución, importar únicamente un SKU de muestra y hacer una orden de prueba a una dirección colombiana. Solo si el pedido llega en el plazo comunicado y coincide con fotos/medidas se debe elegir como proveedor inicial.
+
+### Alternativas tras descartar Dropi
+
+Las opiniones visibles de la aplicación Dropify incluyen quejas sobre transportadoras y soporte, por lo que no se adopta como proveedor inicial.[11] Se investigaron alternativas, pero ninguna sustituye la prueba de entrega real:
+
+| Alternativa | Punto favorable verificable | Límite clave para Colombia | Decisión |
+|---|---|---|---|
+| **Syncee** | Tiene sello Built for Shopify, red de proveedores y sincronización de catálogo/pedidos.[14] | Syncee no realiza el envío; el proveedor define países, plazos y coste, y el comerciante debe configurar las tarifas manualmente en Shopify.[15] | Explorar solo un proveedor que muestre Colombia, coste y plazo antes de importar. |
+| **Zendrop** | Automatiza fulfillment/tracking y tiene proveedores globales; permite revisar coste y país por SKU.[16] | No todos los productos envían internacionalmente; se debe elegir origen China o proveedor marcado para envío global y seleccionar Colombia en cada SKU.[17] | Mejor candidato internacional para una prueba de un SKU, con control previo de cotización. |
+| **Rocketfy** | La aplicación afirma importación de catálogo, sincronización de pedidos/tracking y COD.[12] | Sin reseñas públicas en su ficha actual de Shopify; requiere una prueba mínima antes de depender de ella. | Comparar únicamente con una orden de prueba. |
+| **Distribuidor local autorizado** | Posible stock, garantía y entrega local; reduce incertidumbre de importación. | Suele requerir registro comercial, compra mayorista o integración a medida. | Mejor ruta al escalar o para productos técnicos como mandos. |
+
+La recomendación actual no es elegir una plataforma por sus comentarios o promesas. Para el primer producto, la ruta más defendible es abrir una cuenta de prueba en **Zendrop**, filtrar un producto marcado para envío global, seleccionar **Colombia** en el SKU y ver coste total/plazo antes de importar. Si no existen condiciones competitivas, se descarta y se pasa a un proveedor local; no se publica el producto con una promesa de entrega no comprobada.
+
 ## Investigación de productos: lista corta de setup
 
 La exploración de listados locales confirma que los accesorios genéricos de bajo precio ya están muy competidos. La oportunidad no es publicar los mismos productos sin cambios, sino validar una solución compacta, sin perforación y orientada a un problema concreto de escritorio. Los precios observados son señales orientativas de mercado, no precios de compra ni de venta recomendados; deben verificarse antes de lanzar.
@@ -153,3 +184,17 @@ Los complementos potenciales son un soporte giratorio de audífonos y un desk ma
 [9] [Shopify Help Center — Dropshipping: seguridad, entrega y reembolsos](https://help.shopify.com/en/manual/compliance/legal/dropshipping)
 
 [10] [Shopify — Dropshipping suppliers](https://www.shopify.com/blog/dropshipping-suppliers)
+
+[11] [Shopify App Store — Dropify](https://apps.shopify.com/dropify-5)
+
+[12] [Shopify App Store — Rocketfy](https://apps.shopify.com/rocketfy-2)
+
+[13] [Shopify App Store — DSers](https://apps.shopify.com/dsers)
+
+[14] [Shopify App Store — Syncee](https://apps.shopify.com/syncee-1)
+
+[15] [Syncee — configuración de envíos en Shopify](https://syncee.com/blog/syncee/how-to-set-up-shipping-syncee/)
+
+[16] [Shopify App Store — Zendrop](https://apps.shopify.com/zendrop)
+
+[17] [Zendrop Support — productos con envío internacional](https://support.zendrop.com/en/articles/11963116-how-to-identify-products-that-ship-internationally-on-zendrop)

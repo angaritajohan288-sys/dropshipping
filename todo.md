@@ -20,6 +20,16 @@
 - [x] Recopilar señales actuales de categorías populares en AliExpress, Temu, Amazon, Alibaba y Mercado Libre.
 - [x] Evaluar categorías por demanda, margen, logística, regulación, saturación y riesgo para Colombia.
 - [ ] Seleccionar una categoría inicial y preparar criterios de validación de producto.
+- [x] Definir requisitos mínimos para un proveedor Shopify con entrega verificable a Colombia.
+- [x] Comparar proveedores Shopify por integración, catálogo, coste, entrega, políticas y soporte.
+- [ ] Seleccionar un proveedor inicial y documentar una prueba de producto antes de publicar catálogo.
+- [x] Descartar Dropi como proveedor inicial por preocupaciones de reseñas y soporte.
+- [x] Investigar proveedores alternativos priorizando soporte, trazabilidad, políticas y entrega verificable a Colombia.
+- [x] Recopilar los planes y costes oficiales de los proveedores finalistas.
+- [x] Construir una tabla normalizada de cuota, límites, coste por pedido y entrega a Colombia.
+- [x] Excluir Dropi de la comparativa y las recomendaciones de proveedor por decisión del usuario.
+- [ ] Localizar enlaces concretos de referencia local y proveedor para bandejas organizadoras sin perforar.
+- [ ] Comparar medidas, material, envío y riesgo de marca antes de recomendar una oferta de prueba.
 - [x] Medir demanda, competencia y rangos de precio de mandos de videojuegos en Colombia.
 - [x] Comparar proveedores de mandos compatibles para Shopify y sus tiempos de entrega a Colombia.
 - [x] Evaluar riesgo de falsificación, garantía, batería, compatibilidad y devolución antes de vender mandos.
