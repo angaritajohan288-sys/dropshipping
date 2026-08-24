@@ -28,6 +28,9 @@
 - [x] Recopilar los planes y costes oficiales de los proveedores finalistas.
 - [x] Construir una tabla normalizada de cuota, límites, coste por pedido y entrega a Colombia.
 - [x] Excluir Dropi de la comparativa y las recomendaciones de proveedor por decisión del usuario.
+- [x] Recopilar calificaciones y comentarios públicos de Rocketfy, DSers, Zendrop, Syncee y Spocket.
+- [x] Clasificar problemas recurrentes de soporte, envíos, facturación, calidad y devoluciones.
+- [x] Comparar la reputación de proveedores con el riesgo de entrega a Colombia.
 - [ ] Localizar enlaces concretos de referencia local y proveedor para bandejas organizadoras sin perforar.
 - [ ] Comparar medidas, material, envío y riesgo de marca antes de recomendar una oferta de prueba.
 - [x] Medir demanda, competencia y rangos de precio de mandos de videojuegos en Colombia.
