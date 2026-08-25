@@ -270,3 +270,4 @@
 - [x] Completar la preparación integral autorizada de envío, políticas, variantes, experiencia de compra y activos de lanzamiento, manteniendo el producto sin publicar y sin activar pagos o anuncios.
 - [x] Obtener y cargar el nombre o razón social, identificación aplicable, correo de atención y dirección de devoluciones antes de completar el aviso legal y publicar la tienda.
 - [x] Cargar en Shopify el aviso legal y la información de contacto con los datos comerciales proporcionados por Johan Eduardo Angarita García.
+- [x] Definir la categoría y los datos de descubrimiento orgánico del organizador de cables dentro del borrador, sin publicar el producto: categoría “Bolsos de viaje en Accesorios de equipaje” aplicada y guardada.

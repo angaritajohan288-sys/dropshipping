@@ -72,6 +72,10 @@ La importación creó 12 combinaciones: Black S, Grey M, Pink M, Black M, Grey D
 | Grey S | 3 |
 | Pink S | 5 |
 
+## Categoría y descubrimiento
+
+La categoría sugerida por Shopify fue aplicada y guardada como **“Bolsos de viaje en Accesorios de equipaje”**. Esta clasificación permite disponer de metacampos relacionados con color, tamaño de accesorio, cierre, transporte, cuidado, material y características de almacenamiento, sin cambiar la condición de Borrador ni publicar la ficha.
+
 ## Activos de contenido sin anuncios pagados
 
 El material del proveedor permite tres demostraciones orgánicas que no usan reseñas ni promesas de resultados: mostrar accesorios sueltos sobre una mesa, agruparlos por tipo dentro del estuche y enseñar cómo cabe en una mochila. Cada pieza debe identificarlo como “organizador de accesorios” y mostrar claramente que los cables y dispositivos no están incluidos.
