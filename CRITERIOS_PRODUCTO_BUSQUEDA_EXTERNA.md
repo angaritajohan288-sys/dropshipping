@@ -9,6 +9,8 @@ DSers quedará como herramienta de importación y sincronización con Shopify. L
 | Riesgo técnico | Sin batería, carga, Bluetooth, USB ni software. |
 | Marca e IP | Genérico, sin personajes, logotipos o réplicas de terceros. |
 | Valor percibido | Debe resolver una necesidad clara o tener un diseño/kit diferenciable; no ser un accesorio genérico sin propuesta. |
+| Demanda y calidad | Al menos 1.000 pedidos y calificación mínima de **4,5/5**. |
+| Coste de prueba | Coste total objetivo máximo de US$10 para Colombia; se confirma en la Lista de importación de DSers. |
 | Logística | Ligero, no frágil y con envío a Colombia mostrado antes de importar. |
 | Shopify | Enlace importable con DSers o una ruta de proveedor con aplicación Shopify. |
 | Mercado colombiano | No debe perder por precio frente a un equivalente local de entrega rápida. |
@@ -17,6 +19,10 @@ DSers quedará como herramienta de importación y sincronización con Shopify. L
 ## Categorías que se descartan desde el inicio
 
 No se investigarán mandos completos, cargadores, artículos RGB/USB, auriculares, baterías, clones de marca, productos con tallas, piezas delicadas ni licencias de personajes.
+
+## Enfoque actual: accesorios para mascotas
+
+La búsqueda actual se limita a accesorios para mascotas **no eléctricos**, visuales y genéricos. Se excluyen alimentos, suplementos, medicamentos, antiparasitarios, cosméticos de aplicación, productos con dosificación, artículos frágiles, collares o arneses con tallas complejas y cualquier artículo que prometa tratar una condición de salud. La preferencia es una solución demostrable en video que reduzca desorden, mejore un hábito cotidiano o aporte enriquecimiento simple sin hacer afirmaciones médicas.
 
 ## Evidencia mínima por candidato
 

@@ -62,6 +62,9 @@
 - [x] Verificar en DSers la bolsa de compresión sin bomba para Colombia: coste US$5,91–9,90, stock 164 y no enviarla a Shopify por riesgo competitivo y de margen.
 - [x] Retirar de la Lista de importación de DSers la bolsa de compresión no recomendada, con autorización del usuario y sin afectar Shopify.
 - [ ] Si la bolsa de compresión no puede verificarse para Colombia, identificar un sustituto de hogar/organización que cumpla pedidos, calificación, coste y competencia local.
+- [ ] Actualizar el filtro de selección a calificación mínima 4,5 y buscar un accesorio visual para mascotas, no eléctrico, con destino Colombia en DSers.
+- [x] Contrastar cepillo autolimpiante y copa manual para mascotas con Colombia: ambos se descartan por competencia local o señal insuficiente.
+- [ ] Validar un único candidato de mascotas frente a coste total, pedidos, stock, entrega y competencia colombiana antes de crear un borrador en Shopify.
 - [ ] Verificar la variante 7-en-1 u 8-en-1, precio final y medidas del kit de limpieza antes de importarlo a Shopify.
 - [x] Descartar el kit de limpieza 7-en-1 como producto principal por competencia local y ventaja logística insuficiente.
 - [x] Medir demanda, competencia y rangos de precio de mandos de videojuegos en Colombia.
