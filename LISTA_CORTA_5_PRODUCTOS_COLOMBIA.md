@@ -58,4 +58,20 @@ La lista solo puede contener productos físicos no eléctricos, sin marcas o per
 
 > Los cinco candidatos cumplen el requisito de **evidencia pública previa**. Lo único no comprobable fuera de DSers es la cotización y el stock reales de la variante importable, razón por la cual todavía no se ha añadido ninguna ficha al catálogo ni a Shopify.
 
+## Resultado de la validación temporal en DSers
+
+**Fecha:** 25 de agosto de 2026. Con autorización del usuario, las cinco fichas se añadieron temporalmente a la Lista de importación de DSers. La pantalla mostró “Precio para CO”, por lo que los rangos siguientes corresponden a Colombia. **Mis productos permaneció en 0**: ningún artículo fue enviado a Shopify.
+
+| # | Candidato | Coste real DSers para CO | Stock DSers | Resultado frente al filtro de US$15 | Decisión |
+|---:|---|---:|---:|---|---|
+| 1 | Organizador impermeable de cables | US$6,69–10,15 | 41 | Pasa. | **Finalista recomendado.** Es el coste más favorable dentro de los productos con stock razonable. |
+| 2 | Neceser colgante | US$15,10–15,32 | 7 | No pasa: el mínimo ya supera el tope. | Descartar. |
+| 3 | Bolsa plegable de viaje | US$10,01–16,59 | 2 | No pasa en todas las variantes; stock crítico. | Descartar. |
+| 4 | Hamaca portátil para pies | US$7,45–15,23 | 1.014 | Solo parte de las variantes pasa. | Descartar como principal: la referencia local empieza por debajo del coste de origen y no deja una oferta defendible. |
+| 5 | Organizador de zapatos para cuatro pares | US$11,09–11,80 | 13 | Pasa. | Segundo finalista, pero con menos margen y stock que el organizador de cables. |
+
+> **Recomendación:** avanzar solo con el **organizador impermeable de cables y accesorios digitales** como candidato de borrador. Pasa el coste máximo, dispone de 41 unidades visibles y es más liviano que las alternativas de viaje. La oferta debe centrarse en “organización de accesorios digitales para viaje”, no en vender un estuche simple de cables; su diferencia frente a referencias locales básicas debe comprobarse en las medidas/compartimentos antes de publicar.
+
+> **Límite de esta decisión:** no garantiza ventas. La recomendación ordena el riesgo de producto y margen con los datos disponibles; el coste de adquisición por anuncio, devoluciones y respuesta real de compradores se validan después con una prueba controlada.
+
 > **Regla de decisión:** al terminar la lista, se presentarán los cinco resultados y su evidencia. El usuario elegirá cuáles —si alguno— se pueden añadir temporalmente a la Lista de importación de DSers. No se creará ni publicará un producto de Shopify en esta fase.

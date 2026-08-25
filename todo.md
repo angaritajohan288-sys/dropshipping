@@ -70,6 +70,9 @@
 - [ ] Aplicar el límite autorizado de coste total máximo US$15 y buscar un producto no eléctrico con mayor valor percibido para Colombia.
 - [x] Evaluar el estante magnético de dos niveles y descartarlo por coste superior a US$15 y ventaja de entrega local.
 - [x] Completar la lista corta de cinco candidatos con coste público estimado verificable, evidencia de entrega a Colombia y dos referencias locales claras antes de solicitar una única autorización para DSers.
+- [x] Añadir temporalmente y en lote los cinco candidatos autorizados a la Lista de importación de DSers, sin enviarlos a Shopify.
+- [x] Comparar en DSers coste real, variantes, inventario y entrega a Colombia de los cinco candidatos autorizados y recomendar el organizador impermeable de cables como único finalista.
+- [ ] Crear únicamente el borrador privado de Shopify del organizador impermeable de cables después de autorización explícita del usuario; no publicar ni activar pagos o anuncios.
 - [x] Verificar en la ficha directa el set de cuatro cubos de compresión y descartarlo por 158 pedidos y límite de una unidad por compra.
 - [x] Verificar el desk pad doble cara y descartarlo por seis pedidos e inventario de una unidad en la variante revisada.
 - [x] Verificar el estuche de viaje para relojes y descartarlo por 14 pedidos, una unidad visible y variante comercial no verificable.

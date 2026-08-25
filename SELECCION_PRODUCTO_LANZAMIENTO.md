@@ -2,7 +2,7 @@
 
 ## Criterios de decisión
 
-El producto elegido debe venderse completo desde una sola ficha, no usar batería ni marcas copiadas, ofrecer una transformación visual demostrable, tener señal pública de demanda/calidad, dejar espacio para una oferta de nicho y mostrar una entrega verificable a Colombia. Ninguna puntuación representa ventas garantizadas.
+El producto elegido debe venderse completo desde una sola ficha, no usar batería ni marcas copiadas, ofrecer una transformación visual demostrable, tener señal pública de demanda/calidad, dejar espacio para una oferta de nicho y mostrar una entrega verificable a Colombia. Los mínimos vigentes son calificación de **4,5/5**, 1.000 pedidos y coste real máximo de **US$15** para Colombia. Ninguna puntuación representa ventas garantizadas.
 
 ## Matriz de candidatos investigados
 
@@ -14,10 +14,20 @@ El producto elegido debe venderse completo desde una sola ficha, no usar baterí
 | Mouse bungee TALONGAMES | Sí; físico y compacto. | 109 vendidos, 4,9 y 15 valoraciones.[4] | Media. | 13–22 de septiembre.[4] | Señal de demanda insuficiente para la primera prueba. | Descartar |
 | Soporte doble para mandos | Sí, si es sin carga. | Las fichas completas no superaron de forma sólida el filtro de demanda/calidad. | Media. | Variable. | Productos locales similares con mejor ventaja de entrega. | Descartar |
 | Bolsa de compresión extra grande sin bomba | Sí; reutilizable, sin batería ni compatibilidad técnica. | 10.000+ ventas y 4,9/5 con 3.524 valoraciones.[6] | Visual: liberar espacio sin bomba. | 12–21 de septiembre a Barranquilla.[6] | DSers: US$5,91–9,90 y stock 164; compite contra sets locales de cinco bolsas desde COP 24.948.[7] | Descartar como principal |
+| Organizador impermeable de cables y accesorios digitales | Sí; funda textil, sin batería ni compatibilidad de dispositivo. | 3.000+ ventas y 4,9/5 con 409 valoraciones.[9] | Media: orden visual de cargadores, cables y pequeños accesorios durante viajes. | 13–22 de septiembre a Barranquilla.[9] | DSers: US$6,69–10,15 y stock 41 para CO; el margen exige diferenciarlo de estuches básicos locales.[8] | Finalista condicional |
 
-## Producto seleccionado
+## Producto finalista: pendiente de borrador Shopify
 
-> **Ninguno por ahora.** No se enviará ningún SKU a Shopify hasta que uno cumpla el filtro técnico **y** comercial con Colombia seleccionado.
+> **Organizador impermeable de cables y accesorios digitales.** Es el único candidato de la lista de cinco que superó simultáneamente la cotización de DSers para Colombia (US$6,69–10,15), el límite máximo de US$15 y un inventario visible razonable de 41 unidades.[8] Aún **no está seleccionado como producto publicado**: requiere autorización independiente del usuario para crear un borrador de Shopify.
+
+La ficha pública verificable muestra 3.000+ ventas, 4,9/5 con 409 valoraciones, entrega a Barranquilla del 13 al 22 de septiembre y coste público de COP 20.784 con envío gratis.[9] Los otros cuatro artículos de la lista temporal se descartan por exceder el coste máximo, stock crítico o un precio local que no permitiría una oferta defendible.[8]
+
+| Alternativa temporal en DSers | Coste para CO | Stock | Resultado |
+|---|---:|---:|---|
+| Neceser colgante | US$15,10–15,32 | 7 | Descartar: supera el límite. |
+| Bolsa plegable de viaje | US$10,01–16,59 | 2 | Descartar: variantes fuera de límite y stock crítico. |
+| Hamaca portátil para pies | US$7,45–15,23 | 1.014 | Descartar como principal: el precio local de referencia es inferior al coste de origen. |
+| Organizador de zapatos para cuatro pares | US$11,09–11,80 | 13 | Segundo finalista, con menos margen y stock. |
 
 La bolsa de compresión extra grande sin bomba fue el primer candidato de hogar que superó la verificación en DSers: coste US$5,91–9,90, stock 164 y país de precio CO. Sin embargo, el mercado colombiano ya dispone de sets comparables de cinco bolsas con bomba desde COP 24.948 y plazos de 3–9 días.[7] La diferencia de cantidad y tiempo de entrega impediría defender un margen sano para publicidad. Se mantiene temporalmente en la Lista de importación de DSers como referencia, pero **no se enviará a Shopify**.
 
@@ -55,3 +65,7 @@ Esta oferta ya no avanza: se conserva únicamente como referencia de por qué es
 [6] [AliExpress: Bolsas de compresión al vacío extra grandes sin bomba](https://es.aliexpress.com/item/1005007171121406.html)
 
 [7] [Éxito: Set x5 bolsas al vacío con bomba manual](https://www.exito.com/set-x5-bolsas-al-vacio-para-ropa-y-cobijas-con-bomba-manual-104322670-mp/p)
+
+[8] [Matriz de cinco candidatos y validación temporal en DSers](./LISTA_CORTA_5_PRODUCTOS_COLOMBIA.md)
+
+[9] [AliExpress: Organizador impermeable de cables y accesorios digitales](https://es.aliexpress.com/item/1005007805530746.html)
