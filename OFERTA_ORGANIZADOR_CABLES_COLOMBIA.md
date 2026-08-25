@@ -94,7 +94,9 @@ Una URL de previsualización privada anterior conservaba título y descripción 
 
 ### Comprobación de pagos
 
-La revisión informativa de **Configuración → Pagos** muestra a Mercado Pago Tarjetas y dLocal Go Credit Cards como proveedores recomendados, no como proveedores activados. PayPal aparece con estado **“Configuración incompleta”** y Shopify indica que se debe completar la cuenta para empezar a recibir pagos de PayPal. No se cambió ninguna configuración ni se probaron los botones de compra. El producto continúa como Borrador y no publicado; por ello, esta evidencia reduce el riesgo de una compra real, pero no sustituye una prueba de checkout controlada y autorizada antes de cualquier lanzamiento.
+Se instaló y vinculó **Mercado Pago Tarjetas** como proveedor para COP. El flujo inicial falló después de la autorización con un texto técnico incompleto (“undefined”), pero un reintento posterior reconoció la cuenta elegida, completó la vinculación y abrió el panel de gestión de Mercado Pago. La diferencia entre el correo de Shopify y el de la cuenta Mercado Pago no fue la causa del bloqueo. [3] [4]
+
+Mercado Pago Tarjetas se activó exclusivamente en **Modo de prueba**. Shopify confirma que las transacciones son simuladas y que no se pueden realizar compras reales mediante este proveedor. PayPal permanece con estado **“Configuración incompleta”**. No se realizaron cobros ni se probó checkout; el producto continúa como Borrador y no publicado. La prueba controlada pendiente debe usar el modo de prueba y cuentas de prueba separadas de vendedor y comprador, según la documentación de Mercado Pago. [5]
 
 ### Comprobación de envío
 
@@ -111,3 +113,9 @@ Se guardaron en Shopify las políticas de envío, devoluciones y reembolsos, té
 [1] [Matriz de cinco candidatos y validación temporal en DSers](./LISTA_CORTA_5_PRODUCTOS_COLOMBIA.md)
 
 [2] [AliExpress: Organizador impermeable de cables y accesorios digitales](https://es.aliexpress.com/item/1005007805530746.html)
+
+[3] [Mercado Pago Colombia: Checkout Pro para Shopify](https://www.mercadopago.com.co/developers/es/docs/shopify/integration-configuration/checkout-pro)
+
+[4] [Shopify: Mercado Pago como método de pago](https://www.shopify.com/es/blog/mercado-pago-metodos-de-pago)
+
+[5] [Mercado Pago Colombia: Probar pagos en Shopify](https://www.mercadopago.com.co/developers/es/docs/shopify/sales-processing/integration-test)

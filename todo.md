@@ -279,3 +279,6 @@
 - [x] Optimizar el título SEO, la meta descripción y la URL de la ficha en borrador para que reflejen la oferta verificada sin publicar el producto: título de 49/70 caracteres, meta de 133/160 y URL organizador-cables-resistente-salpicaduras.
 - [x] Aclarar que las 12 variantes combinan color y tamaño, sin borrar variantes ni modificar inventario del borrador.
 - [x] Añadir textos alternativos claros y verificables a las imágenes relevantes del borrador, sin modificar variantes, inventario ni publicación.
+- [x] Confirmar y resolver el flujo de vinculación de Mercado Pago cuando su correo difiere del correo administrador de Shopify, sin publicar el producto.
+- [x] Diagnosticar el error de vinculación de Mercado Pago con texto técnico incompleto (“undefined”) antes de reintentar la conexión.
+- [x] Resolver o escalar el fallo técnico posterior a permisos y reCAPTCHA de Mercado Pago, ya que la cuenta fue reconocida correctamente.
