@@ -1,6 +1,6 @@
 # Oferta de borrador — organizador de cables y accesorios digitales
 
-**Estado:** oferta aplicada el 25 de agosto de 2026 a un borrador privado de Shopify. El producto continúa en estado **Borrador** y no está publicado en ningún canal. No se activaron pagos, checkout ni anuncios.
+**Estado:** oferta aplicada el 25 de agosto de 2026 a un borrador privado de Shopify. El producto continúa en estado **Borrador** y no está publicado en ningún canal. Se configuraron envío y políticas operativas; no se activaron pagos, checkout público ni anuncios.
 
 ## Posicionamiento y título
 
@@ -43,18 +43,34 @@ Elige la combinación de tamaño y color que aparece en la ficha. **No incluye c
 
 ### Entrega transparente aplicada
 
-El texto aplicado informa que el despacho es internacional y que la estimación exacta depende de la variante, el destino y el transportista. Indica confirmar la ventana de entrega antes de finalizar el pedido. No se configuraron tarifas generales de envío, checkout, pagos ni una promesa fija de fechas.
+El texto aplicado informa que el despacho es internacional y que la estimación exacta depende de la variante, el destino y el transportista. Indica confirmar la ventana de entrega antes de finalizar el pedido. La tarifa de Shopify para Colombia fue configurada como “Envío internacional incluido”, con una ventana de 15 a 25 días hábiles y envío gratuito desde COP 1; por ello el pedido de este producto a COP 69.900 califica para envío incluido.
 
 ## Variantes conservadas en el borrador
 
-La importación creó 12 combinaciones: Black S, Grey M, Pink M, Black M, Grey Double layer-S, Black Double layer-S, Pink Double layer-S, Grey L, Black L, Pink L, Grey S y Pink S. Todas se conservaron y recibieron el mismo precio de referencia de COP 69.900; no se eliminó ninguna variante ni se modificó su inventario.
+La importación creó 12 combinaciones: Black S, Grey M, Pink M, Black M, Grey Double layer-S, Black Double layer-S, Pink Double layer-S, Grey L, Black L, Pink L, Grey S y Pink S. Todas se conservaron y recibieron el mismo precio de referencia de COP 69.900; no se eliminó ninguna variante.
 
 | Prioridad | Variante para futura revisión comercial | Motivo |
 |---:|---|---|
-| 1 | Black M | Color neutro y formato de uso general; revisar coste y stock antes de señalarla como principal. |
-| 2 | Grey M | Alternativa neutra equivalente. |
-| 3 | Black Double layer-S | Se puede valorar como opción de mayor capacidad si el coste permanece bajo el precio de referencia. |
-| 4 | Las demás | Se conservan en borrador; revisar disponibilidad individual antes de señalarlas en campañas o contenidos. |
+| 1 | Black S | Variante inicial visible, color neutro y 5 unidades disponibles al revisar Shopify. |
+| 2 | Grey Double layer-S | Opción neutra de mayor capacidad con 7 unidades disponibles. |
+| 3 | Pink Double layer-S | Alternativa de mayor capacidad con 6 unidades disponibles. |
+| 4 | Grey M y Black M | Solo 1 unidad disponible en cada una; no conviene destacarlas hasta confirmar reposición. |
+| 5 | Las demás | Se conservan en borrador; revisar disponibilidad individual antes de señalarlas en campañas o contenidos. |
+
+| Variante | Unidades disponibles al revisar Shopify |
+|---|---:|
+| Black S | 5 |
+| Grey M | 1 |
+| Pink M | 2 |
+| Black M | 1 |
+| Grey Double layer-S | 7 |
+| Black Double layer-S | 2 |
+| Pink Double layer-S | 6 |
+| Grey L | 3 |
+| Black L | 3 |
+| Pink L | 3 |
+| Grey S | 3 |
+| Pink S | 5 |
 
 ## Activos de contenido sin anuncios pagados
 
@@ -62,11 +78,9 @@ El material del proveedor permite tres demostraciones orgánicas que no usan res
 
 Los guiones detallados, sus restricciones de representación y el checklist previo a cualquier uso comercial están disponibles en [Guiones orgánicos para Colombia](./GUIONES_ORGANICOS_ORGANIZADOR_CABLES_COLOMBIA.md).
 
-## Hallazgo de previsualización pendiente
+## Previsualización verificada y controles pendientes
 
-La URL de previsualización privada existente, generada antes de la edición, muestra el precio de COP 69.900 pero todavía carga el título y la descripción técnica anteriores. En cambio, la ficha administrativa y la vista contextual de Shopify para Colombia muestran el título comercial, la descripción en español, el precio de COP 69.900 y el estado “No publicado en el canal”. No se debe usar el enlace de previsualización antiguo como prueba final ni publicar o distribuir contenido comercial hasta generar y comprobar una nueva vista de tienda.
-
-El 25 de agosto de 2026 se generó una nueva URL de previsualización privada. Esta sí muestra el título comercial, la descripción en español, las 12 variantes y el precio de COP 69.900. La plantilla también renderiza botones “Agregar al carrito” y “Pagar con PayPal”; no se interactuó con ellos. Antes de publicar se debe confirmar que esos controles no habilitan un checkout o un pago real para clientes mientras el producto siga en Borrador.
+Una URL de previsualización privada anterior conservaba título y descripción técnicos. El 25 de agosto de 2026 se generó una nueva URL que sí muestra el título comercial, la descripción en español, las 12 variantes y el precio de COP 69.900. La plantilla también renderiza botones “Agregar al carrito” y “Pagar con PayPal”. Se intentó añadir Black S y el carrito permaneció vacío; no se abrió checkout ni se inició cobro alguno. Esta es la conducta esperada mientras el producto se mantiene en Borrador y no publicado. La tarifa de envío deberá validarse nuevamente en carrito cuando exista un entorno de prueba autorizado con un producto publicable.
 
 ### Comprobación de pagos
 
@@ -74,13 +88,13 @@ La revisión informativa de **Configuración → Pagos** muestra a Mercado Pago 
 
 ### Comprobación de envío
 
-La revisión informativa de **Configuración → Envío y entrega** muestra un único perfil general que incluye todos los productos, dos sucursales y dos zonas. Las fechas de entrega estimadas están desactivadas, no hay cuentas de empresas de transporte conectadas y la entrega local o retiro en tienda están desactivados. No se creó ni modificó ninguna tarifa.
+La revisión de **Configuración → Envío y entrega** muestra un único perfil general que incluye todos los productos, dos sucursales y dos zonas. Las fechas de entrega estimadas están desactivadas, no hay cuentas de empresas de transporte conectadas y la entrega local o retiro en tienda están desactivados.
 
-Al abrir el perfil general se observó para **Colombia** una tarifa “Estándar”: envío gratis a partir de **COP 162.600**, plazo mostrado de **3 a 5 días hábiles** y coste de **COP 14.951** para pedidos bajo el umbral. La zona internacional lista 28 países/regiones, pero Shopify indica que se deben incluir en un mercado antes de empezar a vender; la tarifa mostrada allí es **COP 58.000**. Estas condiciones no están alineadas con la entrega internacional informada por el proveedor ni con el precio de referencia de COP 69.900. Antes de publicar, el titular debe definir una tarifa y una promesa de plazo que reflejen la logística real de DSers para Colombia.
+La tarifa de Colombia fue actualizada y guardada como **“Envío internacional incluido”**, con ventana de **15 a 25 días hábiles** y envío gratis desde **COP 1**. Shopify mantiene una tarifa base de COP 14.951 para pedidos por debajo del mínimo, pero el producto de COP 69.900 supera el umbral. La zona internacional conserva 28 países/regiones, aunque Shopify indica que deben agregarse a un mercado antes de empezar a vender. Falta validar el comportamiento de la tarifa en un carrito de prueba, sin iniciar un pago.
 
 ### Comprobación de políticas
 
-La revisión informativa de **Configuración → Políticas** muestra que no existen reglas predeterminadas de devolución o cancelación. Tampoco están establecidas las políticas escritas de devoluciones y reembolsos, términos del servicio, envío ni aviso legal. La política de privacidad está automatizada y la información de contacto aparece como obligatoria. No se generó ni se modificó texto legal. Estas políticas son un bloqueo previo a publicar, pues deben adecuarse al modelo de entrega internacional y ser revisadas por el titular de la tienda.
+Se guardaron en Shopify las políticas de envío, devoluciones y reembolsos, términos del servicio, información de contacto y aviso legal. La política de privacidad permanece automatizada por Shopify. El aviso legal y la información de contacto incluyen el nombre comercial declarado por el titular, el correo de atención y la dirección de devoluciones proporcionada. Estos textos son borradores operativos y deben revisarse antes de depender de ellos comercialmente.
 
 ## Referencias
 

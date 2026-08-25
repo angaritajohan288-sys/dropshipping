@@ -52,6 +52,37 @@
 - [ ] Añadir subtítulos y un cierre que indique que los accesorios son de demostración.
 - [ ] Revisar que el producto permanezca en Borrador hasta contar con autorización explícita para publicar o distribuir contenido comercial.
 
+## Copys internos para acompañar los guiones
+
+### Copy 1 — Reels / TikTok
+
+Los cables y adaptadores pequeños suelen terminar sueltos en la mochila. Este estuche ayuda a reunirlos en un solo lugar para trabajo, estudio o viaje.
+
+Los accesorios de la demostración no están incluidos. Revisa color, tamaño y ventana de entrega antes de comprar.
+
+### Copy 2 — Antes y después de escritorio
+
+De accesorios sueltos a un solo estuche. Compartimentos para separar cables, adaptadores y otros objetos pequeños que uses a diario.
+
+El producto se vende sin cables, cargadores, audífonos ni dispositivos. Consulta los detalles de la variante disponible.
+
+### Copy 3 — Qué cabe y qué no
+
+Una forma compacta de organizar accesorios pequeños y llevarlos en la mochila. Antes de elegir, revisa la variante, las medidas y el plazo de envío que aparece en la tienda.
+
+### Subtítulos y cierre obligatorio
+
+Usar subtítulos en español durante todo el video. Incluir al cierre: **“Accesorios de demostración no incluidos. Revisa variante y entrega antes de comprar.”**
+
+### Respuestas frecuentes preparadas
+
+| Pregunta | Respuesta permitida |
+|---|---|
+| ¿Incluye cables o cargadores? | No. Se vende únicamente el estuche organizador. |
+| ¿Es totalmente impermeable? | El exterior se describe como tela Oxford resistente a salpicaduras; no se debe sumergir. |
+| ¿Cuándo llega? | La ventana estimada se muestra antes de comprar; actualmente se comunica como 15 a 25 días hábiles para la tarifa internacional incluida. |
+| ¿Qué variante recomiendas? | Revisa el color y la capacidad que necesitas. La disponibilidad puede cambiar, por lo que conviene confirmarla en la ficha antes de comprar. |
+
 ## Límite de la siguiente fase
 
 El siguiente paso no es publicar ni invertir en pauta. Primero se debe revisar la experiencia de compra, las tarifas y política general de envío, el coste y stock vigentes por variante, y el mensaje de entrega que verá el cliente. Cualquier activación de checkout, campañas pagadas o gasto requiere una autorización nueva y específica.

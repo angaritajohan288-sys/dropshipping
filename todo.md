@@ -260,9 +260,13 @@
 - [x] Añadir cobertura automatizada de accesibilidad del perfil: nombre accesible, foco por teclado, apertura y retorno.
 - [x] Registrar evidencia de que el perfil publicado expone únicamente los datos de la sesión activa.
 - [x] Preparar tres guiones orgánicos no pagados para el organizador de cables, con límites explícitos de claims, demostración y entrega.
+- [x] Preparar copys orgánicos, textos de subtítulos y respuestas frecuentes para acompañar los tres guiones sin publicar ni pautar.
 - [ ] Validar logística, experiencia de compra y cumplimiento del contenido antes de grabar, publicar o pautar los guiones del producto.
 - [x] Generar y comprobar una nueva previsualización de tienda: la nueva vista privada muestra el título comercial, descripción en español, 12 variantes y COP 69.900; el producto se conserva sin publicación.
-- [ ] Confirmar que los botones de compra y PayPal visibles solo pertenecen a la previsualización privada y que no existe checkout o pago activo para clientes antes de cualquier publicación.
+- [x] Confirmar que los botones de compra y PayPal visibles solo pertenecen a la previsualización privada: al intentar añadir Black S, el carrito siguió vacío y no se abrió checkout ni se inició cobro alguno.
 - [x] Abrir y revisar las dos zonas y tarifas exactas del perfil general de envío: Colombia muestra COP 14.951 bajo COP 162.600 y 3–5 días; la zona internacional requiere un mercado y muestra COP 58.000.
-- [ ] Definir, con autorización expresa, una tarifa y plazo de envío para Colombia que coincidan con la logística internacional real del proveedor antes de publicar el organizador de cables.
-- [ ] Definir y revisar con el titular las políticas de envío, devoluciones y reembolsos, términos del servicio, aviso legal e información de contacto antes de publicar.
+- [x] Definir, con autorización expresa, una tarifa y plazo de envío para Colombia que coincidan con la logística internacional real del proveedor: envío incluido desde COP 1 y ventana de 15 a 25 días hábiles.
+- [x] Definir y revisar con el titular las políticas de envío, devoluciones y reembolsos, términos del servicio, aviso legal e información de contacto antes de publicar.
+- [x] Completar la preparación integral autorizada de envío, políticas, variantes, experiencia de compra y activos de lanzamiento, manteniendo el producto sin publicar y sin activar pagos o anuncios.
+- [x] Obtener y cargar el nombre o razón social, identificación aplicable, correo de atención y dirección de devoluciones antes de completar el aviso legal y publicar la tienda.
+- [x] Cargar en Shopify el aviso legal y la información de contacto con los datos comerciales proporcionados por Johan Eduardo Angarita García.
