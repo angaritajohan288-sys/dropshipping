@@ -62,6 +62,10 @@ El material del proveedor permite tres demostraciones orgánicas que no usan res
 
 Los guiones detallados, sus restricciones de representación y el checklist previo a cualquier uso comercial están disponibles en [Guiones orgánicos para Colombia](./GUIONES_ORGANICOS_ORGANIZADOR_CABLES_COLOMBIA.md).
 
+## Hallazgo de previsualización pendiente
+
+La URL de previsualización privada existente, generada antes de la edición, muestra el precio de COP 69.900 pero todavía carga el título y la descripción técnica anteriores. En cambio, la ficha administrativa y la vista contextual de Shopify para Colombia muestran el título comercial, la descripción en español, el precio de COP 69.900 y el estado “No publicado en el canal”. No se debe usar el enlace de previsualización antiguo como prueba final ni publicar o distribuir contenido comercial hasta generar y comprobar una nueva vista de tienda.
+
 ## Referencias
 
 [1] [Matriz de cinco candidatos y validación temporal en DSers](./LISTA_CORTA_5_PRODUCTOS_COLOMBIA.md)
