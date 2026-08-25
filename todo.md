@@ -48,8 +48,19 @@
 - [ ] Configurar una tienda Shopify funcional con un producto de prueba sin iniciar publicidad pagada.
 - [ ] Verificar pagos, envíos, políticas y compra de prueba antes del lanzamiento comercial.
 - [ ] Seleccionar hoy un producto real importable mediante DSers antes de crear una ficha pública de Shopify.
-- [ ] Validar que el producto elegido sea completo, no eléctrico, diferenciado, competitivo y con entrega visible a Colombia.
-- [ ] Validar la compatibilidad MX, layout y variante concreta del set de keycaps MAIMOOO antes de importarlo con DSers.
+- [x] Validar que el producto elegido sea completo, no eléctrico, diferenciado, competitivo y con entrega visible a Colombia.
+- [x] Descartar el set de keycaps MAIMOOO después de comprobar que su coste real en DSers excede el límite de margen.
+- [x] Investigar y puntuar candidatos finales gamer/tecnológicos para seleccionar un producto importable hoy.
+- [x] Redactar la oferta, mensajes publicitarios, contenido orgánico y presupuesto de prueba del producto elegido.
+- [x] Definir un presupuesto de prueba concreto y anuncios completos listos para adaptar al producto elegido.
+- [ ] Configurar la ficha del producto elegido en Shopify y verificar el checkout antes de activar publicidad.
+- [ ] Investigar y puntuar candidatos de hogar y organización con coste real verificable en DSers para Colombia.
+- [ ] Seleccionar un producto de hogar y organización para cotización antes de importarlo a Shopify.
+- [ ] Contrastar el enrollador de cables de cocina, dispensador de bolsas y correa de extensiones con el mercado colombiano antes de importar.
+- [x] Descartar el enrollador de cables, dispensador de bolsas y correa de extensiones por competencia local y margen insuficiente.
+- [x] Descartar el organizador de tapas y tablas de cocina por competencia local y entrega más rápida.
+- [x] Verificar en DSers la bolsa de compresión sin bomba para Colombia: coste US$5,91–9,90, stock 164 y no enviarla a Shopify por riesgo competitivo y de margen.
+- [ ] Si la bolsa de compresión no puede verificarse para Colombia, identificar un sustituto de hogar/organización que cumpla pedidos, calificación, coste y competencia local.
 - [ ] Verificar la variante 7-en-1 u 8-en-1, precio final y medidas del kit de limpieza antes de importarlo a Shopify.
 - [x] Descartar el kit de limpieza 7-en-1 como producto principal por competencia local y ventaja logística insuficiente.
 - [x] Medir demanda, competencia y rangos de precio de mandos de videojuegos en Colombia.

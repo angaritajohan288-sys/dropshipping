@@ -130,6 +130,8 @@ El siguiente candidato cumple mejor el objetivo de ser un producto de nicho y vi
 
 > **Recomendación actual:** priorizar este set de keycaps para cotización y muestra. Antes de importarlo, hay que validar la compatibilidad real: teclados mecánicos con stem MX y distribución soportada. No prometer compatibilidad universal.
 
+La documentación de productos equivalentes del mismo set de 124 teclas indica que está destinado a teclados mecánicos con switches tipo MX y formatos estándar 61/64/67/68/84/87/96/98/104/108, normalmente con barra espaciadora de 6,25u.[11] Esta condición se incluirá de manera visible en la ficha de Shopify, junto con la advertencia de que no sirve para teclados de membrana, teclados de portátil ni todos los layouts ISO.
+
 ## Referencias de keycaps
 
 [8] [AliExpress: Keycaps MAIMOOO blancas con diseño de gato, 124 piezas](https://es.aliexpress.com/item/1005007383994854.html)
@@ -137,6 +139,8 @@ El siguiente candidato cumple mejor el objetivo de ser un producto de nicho y vi
 [9] [Mercado Libre Colombia: Keycaps PBT](https://listado.mercadolibre.com.co/keycaps-pbt)
 
 [10] [Mercado Libre Colombia: Womier Keycaps Gato MOA PBT](https://www.mercadolibre.com.co/womier-keycaps-gato-moa-pbt-dye-sublimation/up/MCOU4605147674)
+
+[11] [YMDK: set equivalente de 124 keycaps Milk White Cat, compatibilidad MX](https://ymdkey.com/products/ymdk-124-keys-milky-white-cat-theme-keycap-moa-profile-pbt-dye-sublimation-keycaps-top-print-for-61-68-87-98-104-108-layout-mx-mechanical-keyboards)
 
 ## Referencias
 
