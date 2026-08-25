@@ -22,7 +22,7 @@ El producto elegido debe venderse completo desde una sola ficha, no usar baterí
 
 La ficha pública verificable muestra 3.000+ ventas, 4,9/5 con 409 valoraciones, entrega a Barranquilla del 13 al 22 de septiembre y coste público de COP 20.784 con envío gratis.[9] DSers creó 12 variantes con 41 unidades de inventario total. Los otros cuatro artículos de la lista temporal se descartan por exceder el coste máximo, stock crítico o un precio local que no permitiría una oferta defendible.[8]
 
-> **Límite operativo:** el borrador conserva el título y descripción técnicos del proveedor y no tiene precio de venta, título comercial, política de envío, colecciones ni publicación revisados. No se debe activar hasta redactar y verificar esos elementos.
+> **Estado operativo al 25 de agosto de 2026:** el borrador tiene título comercial, descripción en español, condiciones de entrega transparente en la descripción y precio de referencia de **COP 69.900** aplicado a sus 12 variantes. La ficha continúa en **Borrador**, no está publicada en ninguna parte y no se activaron pagos, checkout, anuncios ni configuración general de tarifas. Antes de cualquier activación aún se deben comprobar la experiencia de compra, política de envío, variantes destacadas y coste/logística vigentes.
 
 | Alternativa temporal en DSers | Coste para CO | Stock | Resultado |
 |---|---:|---:|---|

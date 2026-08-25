@@ -74,7 +74,9 @@
 - [x] Comparar en DSers coste real, variantes, inventario y entrega a Colombia de los cinco candidatos autorizados y recomendar el organizador impermeable de cables como único finalista.
 - [x] Crear únicamente el borrador privado de Shopify del organizador impermeable de cables después de autorización explícita del usuario; no publicar ni activar pagos o anuncios.
 - [x] Verificar que el borrador de Shopify queda sin publicar y con datos de envío, precio y descripción aún pendientes de revisión.
-- [ ] Preparar título comercial, descripción en español, variantes útiles, precio, entrega transparente y activos de lanzamiento para el borrador, sin publicarlo.
+- [x] Preparar título comercial, descripción en español, variantes útiles, precio, entrega transparente y activos de lanzamiento para el borrador, sin publicarlo.
+- [x] Aplicar la oferta aprobada al borrador de Shopify y confirmar que conserva estado Borrador y cero canales publicados.
+- [ ] Revisar la experiencia de compra, tarifas/política general de envío, logística vigente por variante y contenidos de lanzamiento antes de activar o publicar el producto.
 - [x] Verificar en la ficha directa el set de cuatro cubos de compresión y descartarlo por 158 pedidos y límite de una unidad por compra.
 - [x] Verificar el desk pad doble cara y descartarlo por seis pedidos e inventario de una unidad en la variante revisada.
 - [x] Verificar el estuche de viaje para relojes y descartarlo por 14 pedidos, una unidad visible y variante comercial no verificable.
