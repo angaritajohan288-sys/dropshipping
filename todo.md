@@ -33,6 +33,8 @@
 - [x] Comparar la reputación de proveedores con el riesgo de entrega a Colombia.
 - [ ] Localizar enlaces concretos de referencia local y proveedor para bandejas organizadoras sin perforar.
 - [ ] Comparar medidas, material, envío y riesgo de marca antes de recomendar una oferta de prueba.
+- [x] Validar el soporte doble para mandos de AliExpress como posible producto inicial para Colombia.
+- [x] Contrastar precio, entrega, reseñas, competencia local y riesgo de marca antes de importar el soporte.
 - [x] Medir demanda, competencia y rangos de precio de mandos de videojuegos en Colombia.
 - [x] Comparar proveedores de mandos compatibles para Shopify y sus tiempos de entrega a Colombia.
 - [x] Evaluar riesgo de falsificación, garantía, batería, compatibilidad y devolución antes de vender mandos.
