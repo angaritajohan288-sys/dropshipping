@@ -71,3 +71,28 @@ Esta oferta ya no avanza: se conserva únicamente como referencia de por qué es
 [8] [Matriz de cinco candidatos y validación temporal en DSers](./LISTA_CORTA_5_PRODUCTOS_COLOMBIA.md)
 
 [9] [AliExpress: Organizador impermeable de cables y accesorios digitales](https://es.aliexpress.com/item/1005007805530746.html)
+
+## Evidencia de prueba de proveedor, pago y checkout
+
+El proveedor operativo seleccionado para la primera ficha es **DSers**, con el organizador de cables como finalista enviado a Shopify. La prueba operativa del producto en Shopify se completó el 25 de agosto de 2026: se configuró temporalmente el artículo en Tienda online, se vinculó Mercado Pago Tarjetas a una cuenta simulada de vendedor, se usó una cuenta simulada de comprador y se confirmó una orden de prueba por COP 69.900 con envío gratis. La tarjeta utilizada fue una tarjeta oficial de prueba; no se procesó dinero real.
+
+Inmediatamente después, el producto se devolvió a `DRAFT`. La consulta de Shopify confirmó `status: DRAFT`, el handle `organizador-cables-resistente-salpicaduras`, `isPublished: false` y `publishDate: null`. Mercado Pago permanece en **Modo de prueba**. Esta evidencia cierra la verificación operativa de integración, pero no demuestra demanda ni garantiza ventas.
+
+La investigación fuera de DSers conservó referencias de AliExpress, Mercado Libre y Éxito en la sección de referencias y en `LISTA_CORTA_5_PRODUCTOS_COLOMBIA.md`; DSers se utilizó después para comprobar coste, inventario y destino Colombia antes de crear el borrador.
+
+## Registro explícito de investigación externa e importación
+
+Antes de la validación en DSers se conservaron estas fuentes externas y se dejó indicada su ruta de importación potencial mediante DSers, que permite importar productos de AliExpress pegando la URL en la lista de importación y luego enviarlos a una tienda Shopify:[10] [11]
+
+| Candidato investigado fuera de DSers | URL externa conservada | Compatibilidad prevista | Resultado posterior |
+|---|---|---|---|
+| Keycaps PBT MAIMOOO, 124 teclas | [AliExpress](https://es.aliexpress.com/item/1005007383994854.html) | Fuente AliExpress; URL apta para intentar importación en DSers | Validado en DSers y descartado por coste real superior al límite. |
+| Kit de limpieza 7-en-1 | [AliExpress](https://www.aliexpress.com/item/1005007306727100.html) | Fuente AliExpress; URL apta para intentar importación en DSers | Descartado como principal por competencia y logística. |
+| Organizador de cables | [AliExpress](https://es.aliexpress.com/item/1005007805530746.html) | Fuente AliExpress; URL importada y validada en DSers antes de Shopify | Finalista y borrador privado creado en Shopify. |
+| Bolsa de compresión sin bomba | [AliExpress](https://es.aliexpress.com/item/1005007171121406.html) | Fuente AliExpress; URL apta para intentar importación en DSers | Cotizada en DSers y descartada por ventaja local. |
+
+La compatibilidad indicada significa que la URL puede iniciar el flujo de importación; no implica que cada variante, inventario, coste o envío esté disponible. Esos atributos siempre requieren comprobación posterior dentro de DSers. La guía oficial de DSers describe la importación desde AliExpress mediante URL y la aplicación de DSers para tiendas Shopify.[10] [11]
+
+[10] [Ayuda oficial de DSers: importar productos desde AliExpress](https://help.dsers.com/import-products-from-aliexpress-temu/)
+
+[11] [Shopify App Store: DSers](https://apps.shopify.com/dsers)

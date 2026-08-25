@@ -16,10 +16,10 @@
 - [x] Probar de forma específica el cálculo de la semana operativa.
 - [x] Verificar navegación básica por teclado y visualización móvil antes de la entrega.
 - [x] Guardar el checkpoint final y preparar la entrega del proyecto.
-- [ ] Registrar la evidencia operativa de “Definir mercado inicial”: Colombia, COP, español y entrega por validar con proveedor.
+- [x] Registrar la evidencia operativa de “Definir mercado inicial”: Colombia, COP, español y entrega por validar con proveedor.
 - [x] Recopilar señales actuales de categorías populares en AliExpress, Temu, Amazon, Alibaba y Mercado Libre.
 - [x] Evaluar categorías por demanda, margen, logística, regulación, saturación y riesgo para Colombia.
-- [ ] Seleccionar una categoría inicial y preparar criterios de validación de producto.
+- [x] Seleccionar una categoría inicial y preparar criterios de validación de producto.
 - [x] Definir requisitos mínimos para un proveedor Shopify con entrega verificable a Colombia.
 - [x] Comparar proveedores Shopify por integración, catálogo, coste, entrega, políticas y soporte.
 - [ ] Seleccionar un proveedor inicial y documentar una prueba de producto antes de publicar catálogo.
@@ -37,23 +37,23 @@
 - [x] Contrastar precio, entrega, reseñas, competencia local y riesgo de marca antes de importar el soporte.
 - [x] Definir condiciones visibles de entrega internacional para pruebas de producto en Shopify Colombia.
 - [x] Comparar proveedores Shopify locales e internacionales según margen, plazo, tracking y automatización.
-- [ ] Obtener una cotización real por SKU de producto, flete, plazo y tracking antes de calcular margen final o publicar.
-- [ ] Investigar candidatos de producto fuera de DSers y conservar enlaces compatibles con la importación a Shopify.
-- [ ] Validar candidatos externos frente a competencia, coste y entrega en Colombia antes de importarlos.
+- [x] Obtener una cotización real por SKU de producto, flete, plazo y tracking antes de calcular margen final o publicar.
+- [x] Investigar candidatos de producto fuera de DSers y conservar enlaces compatibles con la importación a Shopify.
+- [x] Validar candidatos externos frente a competencia, coste y entrega en Colombia antes de importarlos.
 - [x] Investigar candidatos directamente en DSers con destino Colombia y documentar filtros, demanda, precio y calificación.
 - [x] Seleccionar un candidato de DSers para cotización real y muestra antes de importarlo a Shopify.
 - [ ] Abrir la ficha del set de reposamuñecas en DSers y verificar variante, medidas, precio final y plazo antes de añadirlo a la lista de importación.
 - [x] Descartar reposamuñecas como primer lanzamiento al no encontrar un set completo con señales de demanda suficientes.
-- [ ] Investigar una nueva categoría de producto completo, no eléctrico y compatible con DSers para Colombia.
-- [ ] Configurar una tienda Shopify funcional con un producto de prueba sin iniciar publicidad pagada.
-- [ ] Verificar pagos, envíos, políticas y compra de prueba antes del lanzamiento comercial.
-- [ ] Seleccionar hoy un producto real importable mediante DSers antes de crear una ficha pública de Shopify.
+- [x] Investigar una nueva categoría de producto completo, no eléctrico y compatible con DSers para Colombia.
+- [x] Configurar una tienda Shopify funcional con un producto de prueba sin iniciar publicidad pagada.
+- [x] Verificar pagos, envíos, políticas y compra de prueba antes del lanzamiento comercial.
+- [x] Seleccionar hoy un producto real importable mediante DSers antes de crear una ficha pública de Shopify.
 - [x] Validar que el producto elegido sea completo, no eléctrico, diferenciado, competitivo y con entrega visible a Colombia.
 - [x] Descartar el set de keycaps MAIMOOO después de comprobar que su coste real en DSers excede el límite de margen.
 - [x] Investigar y puntuar candidatos finales gamer/tecnológicos para seleccionar un producto importable hoy.
 - [x] Redactar la oferta, mensajes publicitarios, contenido orgánico y presupuesto de prueba del producto elegido.
 - [x] Definir un presupuesto de prueba concreto y anuncios completos listos para adaptar al producto elegido.
-- [ ] Configurar la ficha del producto elegido en Shopify y verificar el checkout antes de activar publicidad.
+- [x] Configurar la ficha del producto elegido en Shopify y verificar el checkout antes de activar publicidad.
 - [ ] Investigar y puntuar candidatos de hogar y organización con coste real verificable en DSers para Colombia.
 - [ ] Seleccionar un producto de hogar y organización para cotización antes de importarlo a Shopify.
 - [ ] Contrastar el enrollador de cables de cocina, dispensador de bolsas y correa de extensiones con el mercado colombiano antes de importar.
@@ -76,12 +76,12 @@
 - [x] Verificar que el borrador de Shopify queda sin publicar y con datos de envío, precio y descripción aún pendientes de revisión.
 - [x] Preparar título comercial, descripción en español, variantes útiles, precio, entrega transparente y activos de lanzamiento para el borrador, sin publicarlo.
 - [x] Aplicar la oferta aprobada al borrador de Shopify y confirmar que conserva estado Borrador y cero canales publicados.
-- [ ] Revisar la experiencia de compra, tarifas/política general de envío, logística vigente por variante y contenidos de lanzamiento antes de activar o publicar el producto.
+- [x] Revisar la experiencia de compra, tarifas/política general de envío, logística vigente por variante y contenidos de lanzamiento antes de activar o publicar el producto.
 - [x] Verificar en la ficha directa el set de cuatro cubos de compresión y descartarlo por 158 pedidos y límite de una unidad por compra.
 - [x] Verificar el desk pad doble cara y descartarlo por seis pedidos e inventario de una unidad en la variante revisada.
 - [x] Verificar el estuche de viaje para relojes y descartarlo por 14 pedidos, una unidad visible y variante comercial no verificable.
-- [ ] Mantener las cinco fichas fuera de la Lista de importación de DSers hasta contar con autorización explícita posterior del usuario.
-- [ ] Validar en DSers el coste real hasta US$15, stock, entrega y competencia colombiana de un candidato diferenciado antes de importarlo.
+- [x] Mantener las cinco fichas fuera de la Lista de importación de DSers hasta contar con autorización explícita posterior del usuario.
+- [x] Validar en DSers el coste real hasta US$15, stock, entrega y competencia colombiana de un candidato diferenciado antes de importarlo.
 - [ ] Validar un candidato de accesorios para dueños de mascotas frente a coste, pedidos, stock, entrega y competencia colombiana antes de importarlo.
 - [ ] Validar un juguete de enriquecimiento con DSers, coste total, stock, entrega y oferta local antes de crear un borrador de Shopify.
 - [ ] Validar un único candidato de mascotas frente a coste total, pedidos, stock, entrega y competencia colombiana antes de crear un borrador en Shopify.
@@ -282,7 +282,7 @@
 - [x] Confirmar y resolver el flujo de vinculación de Mercado Pago cuando su correo difiere del correo administrador de Shopify, sin publicar el producto.
 - [x] Diagnosticar el error de vinculación de Mercado Pago con texto técnico incompleto (“undefined”) antes de reintentar la conexión.
 - [x] Resolver o escalar el fallo técnico posterior a permisos y reCAPTCHA de Mercado Pago, ya que la cuenta fue reconocida correctamente.
-- [ ] Ejecutar y verificar un checkout simulado con Mercado Pago en modo de prueba, usando cuentas de prueba separadas y sin publicar el producto.
-- [ ] Publicar temporalmente el organizador en Tienda online para una única prueba simulada y devolverlo a Borrador inmediatamente después.
-- [ ] Diagnosticar el rechazo de la tarjeta oficial de prueba de Mercado Pago Tarjetas antes de efectuar un único reintento simulado.
-- [ ] Reasignar Mercado Pago Tarjetas a la aplicación de vendedor de prueba antes de repetir el checkout simulado con el comprador de prueba.
+- [x] Ejecutar y verificar un checkout simulado con Mercado Pago en modo de prueba, usando cuentas de prueba separadas y sin publicar el producto.
+- [x] Publicar temporalmente el organizador en Tienda online para una única prueba simulada y devolverlo a Borrador inmediatamente después.
+- [x] Diagnosticar el rechazo de la tarjeta oficial de prueba de Mercado Pago Tarjetas antes de efectuar un único reintento simulado.
+- [x] Reasignar Mercado Pago Tarjetas a la aplicación de vendedor de prueba antes de repetir el checkout simulado con el comprador de prueba.

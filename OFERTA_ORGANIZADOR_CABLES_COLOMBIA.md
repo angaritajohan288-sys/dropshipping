@@ -129,3 +129,11 @@ Se guardaron en Shopify las políticas de envío, devoluciones y reembolsos, té
 [4] [Shopify: Mercado Pago como método de pago](https://www.shopify.com/es/blog/mercado-pago-metodos-de-pago)
 
 [5] [Mercado Pago Colombia: Probar pagos en Shopify](https://www.mercadopago.com.co/developers/es/docs/shopify/sales-processing/integration-test)
+
+## Resultado final de la prueba simulada
+
+Después de vincular Mercado Pago Tarjetas a la cuenta simulada de vendedor **Test**, el checkout se completó con el comprador simulado y una tarjeta oficial de prueba. Shopify mostró confirmación de pedido aprobada (“¡Gracias, APRO!”) para la variante Black S: subtotal COP 69.900, envío GRATIS y total COP 69.900. La orden fue simulada y no implicó dinero real, tarjeta real ni anuncios.
+
+La publicación temporal se cerró inmediatamente. Shopify confirmó después `status: DRAFT`, handle `organizador-cables-resistente-salpicaduras`, `isPublished: false` y `publishDate: null`. Mercado Pago conserva el **Modo de prueba**; no se activaron cobros productivos.
+
+La prueba valida el flujo técnico de carrito, envío, checkout y proveedor en sandbox, pero no valida demanda ni garantiza ventas. Antes de una venta real todavía se requiere activar y verificar un proveedor productivo, revisar costes e inventario por variante, crear contenido real y otorgar autorización separada para publicar.
