@@ -45,8 +45,23 @@ El producto compite con sets locales ya establecidos. En Mercado Libre Colombia,
 
 **Decisión provisional:** el reposamuñecas es el primer candidato de DSers que pasa el filtro de riesgo y demanda, pero **no se importa todavía**. Pasará a cotización solo si la variante exacta tiene coste suficiente para competir con un precio local de aproximadamente COP 48.900–60.990 sin depender de promesas de salud o de entrega rápida.
 
+## Ficha de proveedor localizada
+
+La búsqueda del título exacto permitió localizar la ficha pública del set de reposamuñecas. La página corresponde a **HRUEDA Store**, muestra envío gratis y una ventana de entrega estimada del **31 de agosto al 8 de septiembre** para la ubicación consultada; también indica que el 73,4 % de sus entregas se completa en once días o menos y ofrece reembolso por pérdida, daño o falta de entrega en 30 días.[3]
+
+| Punto validado | Resultado |
+|---|---|
+| Integración potencial | La ficha está en AliExpress y coincide con el producto mostrado en DSers, por lo que puede pasar al flujo de importación. |
+| Producto no eléctrico | Es un set de reposamuñecas/mouse pad de espuma y material tipo cuero; no se describe batería, USB, carga ni conectividad.[3] |
+| Entrega internacional | La ventana visible es mejor que la de 2–3 semanas, pero debe reconfirmarse dentro de DSers para la variante exacta antes de publicar.[3] |
+| Riesgo de copy | No se usarán las afirmaciones de “reducir dolor”, “mejorar postura” o similares de textos generados; la tienda describirá material, medidas, estabilidad y comodidad percibida sin promesas de salud. |
+
+> **Recomendación de cotización:** este es el primer candidato que vale abrir en DSers y revisar por variante. No se añade todavía a la lista de importación hasta comprobar el precio de la variante completa, las medidas y el plazo definitivo a Colombia.
+
 ## Referencias
 
 [1] [Mercado Libre Colombia: reposamuñecas para teclado](https://listado.mercadolibre.com.co/reposa-munecas-para-teclado)
 
 [2] [Éxito: Reposa Muñecas Teclado Mouse Memory Foam](https://www.exito.com/reposa-munecas-teclado-mouse-descansa-muneca-memory-foam-ful-104740214-mp/p)
+
+[3] [AliExpress: Angel Wing Memory Foam Keyboard Mouse Wrist Rest Set](https://a.aliexpress.com/_EuFRpiU)

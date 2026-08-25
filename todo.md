@@ -41,7 +41,8 @@
 - [ ] Investigar candidatos de producto fuera de DSers y conservar enlaces compatibles con la importación a Shopify.
 - [ ] Validar candidatos externos frente a competencia, coste y entrega en Colombia antes de importarlos.
 - [x] Investigar candidatos directamente en DSers con destino Colombia y documentar filtros, demanda, precio y calificación.
-- [ ] Seleccionar un candidato de DSers para cotización real y muestra antes de importarlo a Shopify.
+- [x] Seleccionar un candidato de DSers para cotización real y muestra antes de importarlo a Shopify.
+- [ ] Abrir la ficha del set de reposamuñecas en DSers y verificar variante, medidas, precio final y plazo antes de añadirlo a la lista de importación.
 - [x] Medir demanda, competencia y rangos de precio de mandos de videojuegos en Colombia.
 - [x] Comparar proveedores de mandos compatibles para Shopify y sus tiempos de entrega a Colombia.
 - [x] Evaluar riesgo de falsificación, garantía, batería, compatibilidad y devolución antes de vender mandos.
