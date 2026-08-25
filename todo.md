@@ -282,6 +282,7 @@
 - [x] Confirmar y resolver el flujo de vinculación de Mercado Pago cuando su correo difiere del correo administrador de Shopify, sin publicar el producto.
 - [x] Diagnosticar el error de vinculación de Mercado Pago con texto técnico incompleto (“undefined”) antes de reintentar la conexión.
 - [x] Resolver o escalar el fallo técnico posterior a permisos y reCAPTCHA de Mercado Pago, ya que la cuenta fue reconocida correctamente.
+- [x] Seleccionar DSers como proveedor inicial y documentar una prueba de checkout simulada en sandbox, usando cuentas de prueba separadas; el producto se publicó temporalmente y volvió a Borrador.
 - [x] Ejecutar y verificar un checkout simulado con Mercado Pago en modo de prueba, usando cuentas de prueba separadas y sin publicar el producto.
 - [x] Publicar temporalmente el organizador en Tienda online para una única prueba simulada y devolverlo a Borrador inmediatamente después.
 - [x] Diagnosticar el rechazo de la tarjeta oficial de prueba de Mercado Pago Tarjetas antes de efectuar un único reintento simulado.
