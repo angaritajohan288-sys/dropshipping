@@ -60,6 +60,8 @@ La importación creó 12 combinaciones: Black S, Grey M, Pink M, Black M, Grey D
 
 El material del proveedor permite tres demostraciones orgánicas que no usan reseñas ni promesas de resultados: mostrar accesorios sueltos sobre una mesa, agruparlos por tipo dentro del estuche y enseñar cómo cabe en una mochila. Cada pieza debe identificarlo como “organizador de accesorios” y mostrar claramente que los cables y dispositivos no están incluidos.
 
+Los guiones detallados, sus restricciones de representación y el checklist previo a cualquier uso comercial están disponibles en [Guiones orgánicos para Colombia](./GUIONES_ORGANICOS_ORGANIZADOR_CABLES_COLOMBIA.md).
+
 ## Referencias
 
 [1] [Matriz de cinco candidatos y validación temporal en DSers](./LISTA_CORTA_5_PRODUCTOS_COLOMBIA.md)

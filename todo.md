@@ -259,3 +259,5 @@
 - [x] Validar con teclado en la página publicada el foco, apertura y retorno desde Perfil.
 - [x] Añadir cobertura automatizada de accesibilidad del perfil: nombre accesible, foco por teclado, apertura y retorno.
 - [x] Registrar evidencia de que el perfil publicado expone únicamente los datos de la sesión activa.
+- [x] Preparar tres guiones orgánicos no pagados para el organizador de cables, con límites explícitos de claims, demostración y entrega.
+- [ ] Validar logística, experiencia de compra y cumplimiento del contenido antes de grabar, publicar o pautar los guiones del producto.
