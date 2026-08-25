@@ -66,6 +66,8 @@
 - [x] Contrastar cepillo autolimpiante y copa manual para mascotas con Colombia: ambos se descartan por competencia local o señal insuficiente.
 - [ ] Buscar un juguete de enriquecimiento para mascotas no eléctrico, sin tallas ni afirmaciones de salud, conservando el mínimo de 1.000 pedidos y 4,5/5.
 - [x] Evaluar la torre de tres niveles con pelotas contenidas para gatos y descartarla por competencia local y margen insuficiente.
+- [x] Mantener abierta la referencia de DSers configurada para Colombia y buscar un accesorio visual de viaje, orden o limpieza para dueños de mascotas; los dispensadores y pouches se descartaron por commodity o falta de evidencia.
+- [ ] Validar un candidato de accesorios para dueños de mascotas frente a coste, pedidos, stock, entrega y competencia colombiana antes de importarlo.
 - [ ] Validar un juguete de enriquecimiento con DSers, coste total, stock, entrega y oferta local antes de crear un borrador de Shopify.
 - [ ] Validar un único candidato de mascotas frente a coste total, pedidos, stock, entrega y competencia colombiana antes de crear un borrador en Shopify.
 - [ ] Verificar la variante 7-en-1 u 8-en-1, precio final y medidas del kit de limpieza antes de importarlo a Shopify.

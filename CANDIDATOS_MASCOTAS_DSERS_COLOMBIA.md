@@ -55,6 +55,16 @@ La torre manual de plástico es el primer juguete de enriquecimiento que superó
 
 > **Decisión:** no añadir a DSers. Aunque es el primer producto que pasa demanda y calificación, no deja un margen razonable frente al precio local ni una propuesta diferenciada para justificar 2–3 semanas de entrega. No se creó ningún producto en Shopify.
 
+## Accesorios para dueños de mascotas: primera comprobación
+
+La primera alternativa evaluada fue un dispensador colgante de bolsas de residuos para paseos. Una ficha pública muestra un modelo con cierre y gancho, 1.000+ ventas y 4,9/5 en el índice de AliExpress; otra ficha equivalente informa entrega rápida y gratuita, aunque la extracción no aportó un precio o ubicación colombiana verificables.[14] [15] En Colombia, Mercado Libre lista dispensadores desde **COP 8.999** y tiendas locales ofrecen referencias desde **COP 12.000**.[16] [17]
+
+> **Decisión:** descartar sin DSers. Es un commodity de precio bajo; el coste de importación, el plazo internacional y la publicidad no pueden competir contra la oferta local. Las riñoneras/pouches de paseo halladas tampoco pasan: no publican una señal verificable de pedidos y calificación, y varios modelos se anuncian para perro pequeño o con correa ajustable, introduciendo la complejidad de ajuste que el filtro excluye.[18] [19]
+
+## Resultado de la ronda de mascotas
+
+Tras cepillos, copas de limpieza, juguetes de enriquecimiento, dispensadores y pouches, no existe todavía un SKU de mascotas que satisfaga simultáneamente demanda, coste, entrega, diferenciación y competencia local para Colombia. Mantener los filtros evita construir una tienda sobre un producto que ya pierde por precio o entrega. DSers sigue abierto con Colombia configurado y no tiene productos importados.
+
 ## Conclusión operativa
 
 Los dos primeros accesorios de mascotas evaluados muestran el mismo patrón que hogar/organización: hay demanda, pero son **commodities** con competencia local amplia y barata. No se ha añadido ningún candidato de mascotas a DSers ni se ha creado ningún producto en Shopify. La siguiente búsqueda debe evitar productos de aseo genéricos y concentrarse, como máximo, en una necesidad visual más específica sin tallas ni promesas de salud.
@@ -86,3 +96,15 @@ Los dos primeros accesorios de mascotas evaluados muestran el mismo patrón que 
 [12] [Mercado Libre Colombia: Torre para gato de tres pisos con bolas](https://www.mercadolibre.com.co/juguete-interactivo-para-gato-torre-3-pisos-con-bolas/up/MCOU4474354022)
 
 [13] [Trendify Prime: Torre para gatos de tres niveles con pelotas](https://www.trendifyprime.com.co/products/juguete-para-gatos-torre-de-3-niveles-con-pelotas-giratorias)
+
+[14] [AliExpress: Dispensador colgante de bolsas para residuos](https://www.aliexpress.com/item/1005012283950179.html)
+
+[15] [AliExpress: Dispensador reflectante de bolsas para perros](https://www.aliexpress.com/item/1005008755279850.html)
+
+[16] [Mercado Libre Colombia: Dispensador de bolsas para perros](https://listado.mercadolibre.com.co/dispensador-de-bolsas-para-perros)
+
+[17] [Happy Pets: Dispensador de bolsa Mr. Poo](https://happypetsco.com/tienda/dispensador-bolsa-de-popo/)
+
+[18] [AliExpress: Riñonera de paseo y entrenamiento para mascota](https://www.aliexpress.com/item/1005012727721619.html)
+
+[19] [AliExpress: Bolsa de entrenamiento de mascota](https://www.aliexpress.com/item/1005012640533275.html)

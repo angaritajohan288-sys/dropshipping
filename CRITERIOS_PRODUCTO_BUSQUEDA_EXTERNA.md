@@ -28,6 +28,10 @@ La búsqueda actual se limita a accesorios para mascotas **no eléctricos**, vis
 
 Se aceptarán únicamente juguetes manuales, de una sola pieza o con piezas grandes integradas, sin electrónica, sin comida incluida, sin reclamos de salud, sin promesas de “mejorar la digestión” o “tratar la ansiedad” y sin compatibilidad por raza. Quedan fuera los juguetes con piezas pequeñas desprendibles, cuerdas finas, ventosas cuyo fallo pueda presentar un riesgo no verificable, dispensadores de fármacos y artículos que requieran supervisión especializada. La comunicación comercial se limitará al juego guiado y al uso según las instrucciones del fabricante; no se harán afirmaciones de bienestar, conducta ni salud.
 
+### Subcategoría activa: accesorios para dueños de mascotas
+
+La búsqueda autorizada pasa a viaje, orden y limpieza para el dueño. Se priorizarán soluciones visuales de una necesidad concreta —por ejemplo, trasladar objetos de la mascota sin desorden o mantener un espacio definido— siempre que sean ligeras, no frágiles y no dependan de talla, raza o seguridad vehicular. Se excluyen cobertores o cinturones de automóvil, transportadoras, productos que sujeten al animal, juguetes de aseo genéricos, dispensadores de comida, contenedores con potencial de fuga y artículos que reclamen eliminar olores, controlar parásitos o producir efectos sanitarios.
+
 ## Evidencia mínima por candidato
 
 Cada enlace propuesto debe incluir precio de una unidad, flete a Colombia, plazo, valoraciones, pedidos, variante exacta, defectos repetidos en reseñas y tres comparables locales. Sin esos datos el artículo no pasa a importación.
