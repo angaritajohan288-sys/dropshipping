@@ -16,11 +16,13 @@ El producto elegido debe venderse completo desde una sola ficha, no usar baterí
 | Bolsa de compresión extra grande sin bomba | Sí; reutilizable, sin batería ni compatibilidad técnica. | 10.000+ ventas y 4,9/5 con 3.524 valoraciones.[6] | Visual: liberar espacio sin bomba. | 12–21 de septiembre a Barranquilla.[6] | DSers: US$5,91–9,90 y stock 164; compite contra sets locales de cinco bolsas desde COP 24.948.[7] | Descartar como principal |
 | Organizador impermeable de cables y accesorios digitales | Sí; funda textil, sin batería ni compatibilidad de dispositivo. | 3.000+ ventas y 4,9/5 con 409 valoraciones.[9] | Media: orden visual de cargadores, cables y pequeños accesorios durante viajes. | 13–22 de septiembre a Barranquilla.[9] | DSers: US$6,69–10,15 y stock 41 para CO; el margen exige diferenciarlo de estuches básicos locales.[8] | Finalista condicional |
 
-## Producto finalista: pendiente de borrador Shopify
+## Producto finalista: borrador privado creado
 
-> **Organizador impermeable de cables y accesorios digitales.** Es el único candidato de la lista de cinco que superó simultáneamente la cotización de DSers para Colombia (US$6,69–10,15), el límite máximo de US$15 y un inventario visible razonable de 41 unidades.[8] Aún **no está seleccionado como producto publicado**: requiere autorización independiente del usuario para crear un borrador de Shopify.
+> **Organizador impermeable de cables y accesorios digitales.** Es el único candidato de la lista de cinco que superó simultáneamente la cotización de DSers para Colombia (US$6,69–10,15), el límite máximo de US$15 y un inventario visible razonable de 41 unidades.[8] El 25 de agosto de 2026 se creó **solo como borrador privado** en Shopify con autorización explícita del usuario. Su pantalla muestra estado **“Borrador”** y el mensaje “Este producto no está publicado en ninguna parte”.
 
-La ficha pública verificable muestra 3.000+ ventas, 4,9/5 con 409 valoraciones, entrega a Barranquilla del 13 al 22 de septiembre y coste público de COP 20.784 con envío gratis.[9] Los otros cuatro artículos de la lista temporal se descartan por exceder el coste máximo, stock crítico o un precio local que no permitiría una oferta defendible.[8]
+La ficha pública verificable muestra 3.000+ ventas, 4,9/5 con 409 valoraciones, entrega a Barranquilla del 13 al 22 de septiembre y coste público de COP 20.784 con envío gratis.[9] DSers creó 12 variantes con 41 unidades de inventario total. Los otros cuatro artículos de la lista temporal se descartan por exceder el coste máximo, stock crítico o un precio local que no permitiría una oferta defendible.[8]
+
+> **Límite operativo:** el borrador conserva el título y descripción técnicos del proveedor y no tiene precio de venta, título comercial, política de envío, colecciones ni publicación revisados. No se debe activar hasta redactar y verificar esos elementos.
 
 | Alternativa temporal en DSers | Coste para CO | Stock | Resultado |
 |---|---:|---:|---|
