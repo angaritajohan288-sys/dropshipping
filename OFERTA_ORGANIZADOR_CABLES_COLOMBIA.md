@@ -80,6 +80,8 @@ La categoría sugerida por Shopify fue aplicada y guardada como **“Bolsos de v
 
 Los datos de búsqueda del borrador se actualizaron con el título SEO **“Organizador para Cables Resistente a Salpicaduras”** (49 de 70 caracteres), la meta descripción **“Organiza cables, cargadores y accesorios pequeños en un estuche de tela Oxford resistente a salpicaduras. Envío incluido en Colombia.”** (133 de 160 caracteres) y la URL **`/products/organizador-cables-resistente-salpicaduras`**. Se habilitó un redireccionamiento desde la URL técnica anterior para conservar futuros enlaces. Estos cambios no publican el producto.
 
+También se añadieron y guardaron textos alternativos descriptivos a tres imágenes representativas: la imagen principal del estuche abierto, una imagen de la variante negra de doble capa y una imagen del estuche gris tamaño S. Los textos identifican el producto y aclaran que los accesorios visibles son de ejemplo y no están incluidos. Tras recargar la ficha se confirmaron las 12 variantes, el precio de COP 69.900, el estado **Borrador** y la ausencia de publicación.
+
 ## Activos de contenido sin anuncios pagados
 
 El material del proveedor permite tres demostraciones orgánicas que no usan reseñas ni promesas de resultados: mostrar accesorios sueltos sobre una mesa, agruparlos por tipo dentro del estuche y enseñar cómo cabe en una mochila. Cada pieza debe identificarlo como “organizador de accesorios” y mostrar claramente que los cables y dispositivos no están incluidos.
