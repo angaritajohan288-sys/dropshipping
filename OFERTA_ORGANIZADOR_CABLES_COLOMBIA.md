@@ -72,9 +72,11 @@ El 25 de agosto de 2026 se generó una nueva URL de previsualización privada. E
 
 La revisión informativa de **Configuración → Pagos** muestra a Mercado Pago Tarjetas y dLocal Go Credit Cards como proveedores recomendados, no como proveedores activados. PayPal aparece con estado **“Configuración incompleta”** y Shopify indica que se debe completar la cuenta para empezar a recibir pagos de PayPal. No se cambió ninguna configuración ni se probaron los botones de compra. El producto continúa como Borrador y no publicado; por ello, esta evidencia reduce el riesgo de una compra real, pero no sustituye una prueba de checkout controlada y autorizada antes de cualquier lanzamiento.
 
-### Comprobación inicial de envío
+### Comprobación de envío
 
-La revisión informativa de **Configuración → Envío y entrega** muestra un único perfil general que incluye todos los productos, dos sucursales y dos zonas. Las fechas de entrega estimadas están desactivadas, no hay cuentas de empresas de transporte conectadas y la entrega local o retiro en tienda están desactivados. No se creó ni modificó ninguna tarifa. Aún falta abrir y revisar las dos zonas y sus tarifas exactas para asegurar que el texto de entrega internacional del producto coincide con lo que verá el cliente al momento de compra.
+La revisión informativa de **Configuración → Envío y entrega** muestra un único perfil general que incluye todos los productos, dos sucursales y dos zonas. Las fechas de entrega estimadas están desactivadas, no hay cuentas de empresas de transporte conectadas y la entrega local o retiro en tienda están desactivados. No se creó ni modificó ninguna tarifa.
+
+Al abrir el perfil general se observó para **Colombia** una tarifa “Estándar”: envío gratis a partir de **COP 162.600**, plazo mostrado de **3 a 5 días hábiles** y coste de **COP 14.951** para pedidos bajo el umbral. La zona internacional lista 28 países/regiones, pero Shopify indica que se deben incluir en un mercado antes de empezar a vender; la tarifa mostrada allí es **COP 58.000**. Estas condiciones no están alineadas con la entrega internacional informada por el proveedor ni con el precio de referencia de COP 69.900. Antes de publicar, el titular debe definir una tarifa y una promesa de plazo que reflejen la logística real de DSers para Colombia.
 
 ### Comprobación de políticas
 

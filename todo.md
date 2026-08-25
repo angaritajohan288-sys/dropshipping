@@ -263,5 +263,6 @@
 - [ ] Validar logística, experiencia de compra y cumplimiento del contenido antes de grabar, publicar o pautar los guiones del producto.
 - [x] Generar y comprobar una nueva previsualización de tienda: la nueva vista privada muestra el título comercial, descripción en español, 12 variantes y COP 69.900; el producto se conserva sin publicación.
 - [ ] Confirmar que los botones de compra y PayPal visibles solo pertenecen a la previsualización privada y que no existe checkout o pago activo para clientes antes de cualquier publicación.
-- [ ] Abrir y revisar las dos zonas y tarifas exactas del perfil general de envío antes de publicar el organizador de cables.
+- [x] Abrir y revisar las dos zonas y tarifas exactas del perfil general de envío: Colombia muestra COP 14.951 bajo COP 162.600 y 3–5 días; la zona internacional requiere un mercado y muestra COP 58.000.
+- [ ] Definir, con autorización expresa, una tarifa y plazo de envío para Colombia que coincidan con la logística internacional real del proveedor antes de publicar el organizador de cables.
 - [ ] Definir y revisar con el titular las políticas de envío, devoluciones y reembolsos, términos del servicio, aviso legal e información de contacto antes de publicar.
