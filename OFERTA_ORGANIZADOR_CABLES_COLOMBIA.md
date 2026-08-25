@@ -49,6 +49,8 @@ El texto aplicado informa que el despacho es internacional y que la estimación 
 
 La importación creó 12 combinaciones: Black S, Grey M, Pink M, Black M, Grey Double layer-S, Black Double layer-S, Pink Double layer-S, Grey L, Black L, Pink L, Grey S y Pink S. Todas se conservaron y recibieron el mismo precio de referencia de COP 69.900; no se eliminó ninguna variante.
 
+Para evitar que el cliente interprete los códigos como solo color, el rótulo de la opción se actualizó y guardó como **“Color y tamaño”**. La ficha se recargó después del ajuste y conservó las 12 combinaciones, el inventario total de 41 unidades, el estado **Borrador** y la ausencia de canales publicados.
+
 | Prioridad | Variante para futura revisión comercial | Motivo |
 |---:|---|---|
 | 1 | Black S | Variante inicial visible, color neutro y 5 unidades disponibles al revisar Shopify. |
