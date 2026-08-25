@@ -10,7 +10,7 @@ DSers quedará como herramienta de importación y sincronización con Shopify. L
 | Marca e IP | Genérico, sin personajes, logotipos o réplicas de terceros. |
 | Valor percibido | Debe resolver una necesidad clara o tener un diseño/kit diferenciable; no ser un accesorio genérico sin propuesta. |
 | Demanda y calidad | Al menos 1.000 pedidos y calificación mínima de **4,5/5**. |
-| Coste de prueba | Coste total objetivo máximo de US$10 para Colombia; se confirma en la Lista de importación de DSers. |
+| Coste de prueba | Coste total objetivo máximo de **US$15** para Colombia; se confirma en la Lista de importación de DSers. El aumento solo se acepta para una solución con valor percibido y margen coherentes, no para un commodity. |
 | Logística | Ligero, no frágil y con envío a Colombia mostrado antes de importar. |
 | Shopify | Enlace importable con DSers o una ruta de proveedor con aplicación Shopify. |
 | Mercado colombiano | No debe perder por precio frente a un equivalente local de entrega rápida. |

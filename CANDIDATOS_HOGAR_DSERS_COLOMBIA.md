@@ -86,6 +86,14 @@ Después de retirar la bolsa de la Lista de importación, se realizaron tres con
 
 > **Punto de control:** con los requisitos actuales —producto completo, no eléctrico, al menos 1.000 pedidos, 4,7/5, coste total máximo US$10, entrega a Colombia y baja competencia local— no hay un sustituto serio de hogar/organización en estas subcategorías. Seguir acumulando búsquedas genéricas produciría productos de relleno, no una mejor tienda. La siguiente decisión debe ser ampliar la categoría o ajustar conscientemente un criterio, nunca inventar una oportunidad.
 
+## Candidato F: estante magnético de dos niveles para especias
+
+Tras autorizar un coste objetivo hasta US$15, se contrastó un estante magnético de dos niveles sin perforación. La ficha de AliExpress reúne **2.000+ ventas** y **4,9/5**, pero muestra **COP 83.318** para el paquete de dos estantes, equivalente a aproximadamente US$20–21 antes de cualquier variación de cambio.[12] Por tanto, rebasa el nuevo límite de coste autorizado. La ficha publicita entrega de 30 de junio a 6 de julio, dato que no corresponde a una comprobación actual de entrega para Colombia y tampoco es apto para una importación.
+
+El producto sí tiene mercado colombiano: Hogarizado vende un set local de cuatro repisas de acero imantadas por COP 69.900 con entrega de 2–5 días, mientras que una alternativa distinta de especieros con base de madera cuesta COP 43.110.[13] [14]
+
+> **Decisión:** descartar. La ficha internacional supera el coste objetivo y la oferta local tiene entrega más rápida y una propuesta de materiales mejor especificada. No se añadió a DSers ni a Shopify.
+
 ## Referencias
 
 [1] [Éxito: Organizador de cables adhesivo para electrodomésticos](https://www.exito.com/organizador-de-cables-adhesivo-para-electrodomesticos-104879200-mp/p)
@@ -109,3 +117,9 @@ Después de retirar la bolsa de la Lista de importación, se realizaron tres con
 [10] [Éxito: Set x5 bolsas al vacío con bomba manual](https://www.exito.com/set-x5-bolsas-al-vacio-para-ropa-y-cobijas-con-bomba-manual-104322670-mp/p)
 
 [11] [AliExpress: Bolsas de compresión al vacío extra grandes sin bomba](https://es.aliexpress.com/item/1005007171121406.html)
+
+[12] [AliExpress: Estantes magnéticos de dos niveles](https://es.aliexpress.com/item/1005012247778842.html)
+
+[13] [Hogarizado: Set de cuatro organizadores magnéticos para nevera](https://hogarizado.com.co/products/organizador-magnetico)
+
+[14] [Hogarizado: Especieros magnéticos con base de madera](https://hogarizado.com.co/products/almacenadores-magneticos)

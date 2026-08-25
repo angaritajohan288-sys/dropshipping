@@ -67,6 +67,14 @@
 - [ ] Buscar un juguete de enriquecimiento para mascotas no eléctrico, sin tallas ni afirmaciones de salud, conservando el mínimo de 1.000 pedidos y 4,5/5.
 - [x] Evaluar la torre de tres niveles con pelotas contenidas para gatos y descartarla por competencia local y margen insuficiente.
 - [x] Mantener abierta la referencia de DSers configurada para Colombia y buscar un accesorio visual de viaje, orden o limpieza para dueños de mascotas; los dispensadores y pouches se descartaron por commodity o falta de evidencia.
+- [ ] Aplicar el límite autorizado de coste total máximo US$15 y buscar un producto no eléctrico con mayor valor percibido para Colombia.
+- [x] Evaluar el estante magnético de dos niveles y descartarlo por coste superior a US$15 y ventaja de entrega local.
+- [x] Completar la lista corta de cinco candidatos con coste público estimado verificable, evidencia de entrega a Colombia y dos referencias locales claras antes de solicitar una única autorización para DSers.
+- [x] Verificar en la ficha directa el set de cuatro cubos de compresión y descartarlo por 158 pedidos y límite de una unidad por compra.
+- [x] Verificar el desk pad doble cara y descartarlo por seis pedidos e inventario de una unidad en la variante revisada.
+- [x] Verificar el estuche de viaje para relojes y descartarlo por 14 pedidos, una unidad visible y variante comercial no verificable.
+- [ ] Mantener las cinco fichas fuera de la Lista de importación de DSers hasta contar con autorización explícita posterior del usuario.
+- [ ] Validar en DSers el coste real hasta US$15, stock, entrega y competencia colombiana de un candidato diferenciado antes de importarlo.
 - [ ] Validar un candidato de accesorios para dueños de mascotas frente a coste, pedidos, stock, entrega y competencia colombiana antes de importarlo.
 - [ ] Validar un juguete de enriquecimiento con DSers, coste total, stock, entrega y oferta local antes de crear un borrador de Shopify.
 - [ ] Validar un único candidato de mascotas frente a coste total, pedidos, stock, entrega y competencia colombiana antes de crear un borrador en Shopify.
