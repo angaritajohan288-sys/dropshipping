@@ -276,3 +276,4 @@
 - [x] Retirar o sustituir la franja de beneficios “Eco-amigable”, “Resistente al agua” y “Compacto y funcional”, pues sus afirmaciones no están respaldadas por la oferta verificada.
 - [x] Sustituir en el borrador el término “Impermeable” del título por una formulación consistente con resistencia a salpicaduras y no inmersión.
 - [x] Generar y comprobar una nueva URL de previsualización después del cambio de título: muestra “Estuche Organizador Resistente a Salpicaduras para Cables y Accesorios” y COP 69.900.
+- [x] Optimizar el título SEO, la meta descripción y la URL de la ficha en borrador para que reflejen la oferta verificada sin publicar el producto: título de 49/70 caracteres, meta de 133/160 y URL organizador-cables-resistente-salpicaduras.

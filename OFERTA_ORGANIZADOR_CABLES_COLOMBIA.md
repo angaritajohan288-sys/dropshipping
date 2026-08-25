@@ -76,6 +76,8 @@ La importación creó 12 combinaciones: Black S, Grey M, Pink M, Black M, Grey D
 
 La categoría sugerida por Shopify fue aplicada y guardada como **“Bolsos de viaje en Accesorios de equipaje”**. Esta clasificación permite disponer de metacampos relacionados con color, tamaño de accesorio, cierre, transporte, cuidado, material y características de almacenamiento, sin cambiar la condición de Borrador ni publicar la ficha.
 
+Los datos de búsqueda del borrador se actualizaron con el título SEO **“Organizador para Cables Resistente a Salpicaduras”** (49 de 70 caracteres), la meta descripción **“Organiza cables, cargadores y accesorios pequeños en un estuche de tela Oxford resistente a salpicaduras. Envío incluido en Colombia.”** (133 de 160 caracteres) y la URL **`/products/organizador-cables-resistente-salpicaduras`**. Se habilitó un redireccionamiento desde la URL técnica anterior para conservar futuros enlaces. Estos cambios no publican el producto.
+
 ## Activos de contenido sin anuncios pagados
 
 El material del proveedor permite tres demostraciones orgánicas que no usan reseñas ni promesas de resultados: mostrar accesorios sueltos sobre una mesa, agruparlos por tipo dentro del estuche y enseñar cómo cabe en una mochila. Cada pieza debe identificarlo como “organizador de accesorios” y mostrar claramente que los cables y dispositivos no están incluidos.
