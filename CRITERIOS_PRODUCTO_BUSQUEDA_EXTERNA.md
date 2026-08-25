@@ -24,6 +24,10 @@ No se investigarán mandos completos, cargadores, artículos RGB/USB, auriculare
 
 La búsqueda actual se limita a accesorios para mascotas **no eléctricos**, visuales y genéricos. Se excluyen alimentos, suplementos, medicamentos, antiparasitarios, cosméticos de aplicación, productos con dosificación, artículos frágiles, collares o arneses con tallas complejas y cualquier artículo que prometa tratar una condición de salud. La preferencia es una solución demostrable en video que reduzca desorden, mejore un hábito cotidiano o aporte enriquecimiento simple sin hacer afirmaciones médicas.
 
+### Subcategoría activa: juguetes de enriquecimiento
+
+Se aceptarán únicamente juguetes manuales, de una sola pieza o con piezas grandes integradas, sin electrónica, sin comida incluida, sin reclamos de salud, sin promesas de “mejorar la digestión” o “tratar la ansiedad” y sin compatibilidad por raza. Quedan fuera los juguetes con piezas pequeñas desprendibles, cuerdas finas, ventosas cuyo fallo pueda presentar un riesgo no verificable, dispensadores de fármacos y artículos que requieran supervisión especializada. La comunicación comercial se limitará al juego guiado y al uso según las instrucciones del fabricante; no se harán afirmaciones de bienestar, conducta ni salud.
+
 ## Evidencia mínima por candidato
 
 Cada enlace propuesto debe incluir precio de una unidad, flete a Colombia, plazo, valoraciones, pedidos, variante exacta, defectos repetidos en reseñas y tres comparables locales. Sin esos datos el artículo no pasa a importación.

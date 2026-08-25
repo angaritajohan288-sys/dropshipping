@@ -64,6 +64,9 @@
 - [ ] Si la bolsa de compresión no puede verificarse para Colombia, identificar un sustituto de hogar/organización que cumpla pedidos, calificación, coste y competencia local.
 - [ ] Actualizar el filtro de selección a calificación mínima 4,5 y buscar un accesorio visual para mascotas, no eléctrico, con destino Colombia en DSers.
 - [x] Contrastar cepillo autolimpiante y copa manual para mascotas con Colombia: ambos se descartan por competencia local o señal insuficiente.
+- [ ] Buscar un juguete de enriquecimiento para mascotas no eléctrico, sin tallas ni afirmaciones de salud, conservando el mínimo de 1.000 pedidos y 4,5/5.
+- [x] Evaluar la torre de tres niveles con pelotas contenidas para gatos y descartarla por competencia local y margen insuficiente.
+- [ ] Validar un juguete de enriquecimiento con DSers, coste total, stock, entrega y oferta local antes de crear un borrador de Shopify.
 - [ ] Validar un único candidato de mascotas frente a coste total, pedidos, stock, entrega y competencia colombiana antes de crear un borrador en Shopify.
 - [ ] Verificar la variante 7-en-1 u 8-en-1, precio final y medidas del kit de limpieza antes de importarlo a Shopify.
 - [x] Descartar el kit de limpieza 7-en-1 como producto principal por competencia local y ventaja logística insuficiente.

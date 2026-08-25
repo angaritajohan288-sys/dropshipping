@@ -42,6 +42,19 @@ La ficha localizada declara que no es un dispositivo inteligente, está fabricad
 
 > **Decisión:** descartar antes de DSers. No se debe rebajar el umbral de pedidos ni convertir beneficios de alimentación lenta o “mejor digestión” en promesas de la tienda. No se importó ni se añadió a Shopify.
 
+## Candidato 5: torre de tres niveles con pelotas contenidas para gatos
+
+La torre manual de plástico es el primer juguete de enriquecimiento que superó el filtro inicial: para Barranquilla, AliExpress muestra **1.000+ ventas**, **4,8/5 con 148 valoraciones**, precio **COP 36.705**, envío gratis, entrega del **13 al 22 de septiembre** y siete unidades de la variante XXXL.[11] Las valoraciones visibles indican que las pelotas permanecen contenidas en las pistas, por lo que no requiere batería ni incorpora piezas sueltas de uso independiente.
+
+| Criterio | Resultado | Veredicto |
+|---|---|---|
+| Seguridad de filtro | Sin batería, plástico y pelotas contenidas en pistas. | Pasa el filtro inicial; la comunicación deberá recomendar uso supervisado y revisión de integridad. |
+| Señal inicial | 1.000+ ventas, 4,8/5, 148 valoraciones. | Pasa. |
+| Coste/entrega pública | COP 36.705, envío gratis; 13–22 de septiembre. | Pasa como señal inicial, no como cotización DSers. |
+| Competencia colombiana | Mercado Libre muestra la misma torre disponible por COP 38.162.[12] Trendify ofrece la misma solución por COP 50.000 con despacho nacional de 24–48 h y entrega de 2–5 días.[13] | **Descartar:** el competidor más barato está solo COP 1.457 por encima del coste de origen y tiene ventaja de entrega. |
+
+> **Decisión:** no añadir a DSers. Aunque es el primer producto que pasa demanda y calificación, no deja un margen razonable frente al precio local ni una propuesta diferenciada para justificar 2–3 semanas de entrega. No se creó ningún producto en Shopify.
+
 ## Conclusión operativa
 
 Los dos primeros accesorios de mascotas evaluados muestran el mismo patrón que hogar/organización: hay demanda, pero son **commodities** con competencia local amplia y barata. No se ha añadido ningún candidato de mascotas a DSers ni se ha creado ningún producto en Shopify. La siguiente búsqueda debe evitar productos de aseo genéricos y concentrarse, como máximo, en una necesidad visual más específica sin tallas ni promesas de salud.
@@ -67,3 +80,9 @@ Los dos primeros accesorios de mascotas evaluados muestran el mismo patrón que 
 [9] [Mercado Libre Colombia: Cepillo rascador esquinero para gato](https://www.mercadolibre.com.co/cepillo-rascador-gato-silicona-esquina-autoaseo-corporal/up/MCOU4162816976)
 
 [10] [AliExpress: Juguete rompecabezas alimentador para perros y gatos](https://es.aliexpress.com/item/1005007535772073.html)
+
+[11] [AliExpress: Torre interactiva de tres niveles para gatos](https://es.aliexpress.com/item/1005007144026951.html)
+
+[12] [Mercado Libre Colombia: Torre para gato de tres pisos con bolas](https://www.mercadolibre.com.co/juguete-interactivo-para-gato-torre-3-pisos-con-bolas/up/MCOU4474354022)
+
+[13] [Trendify Prime: Torre para gatos de tres niveles con pelotas](https://www.trendifyprime.com.co/products/juguete-para-gatos-torre-de-3-niveles-con-pelotas-giratorias)
