@@ -1,6 +1,6 @@
 # Oferta de borrador — organizador de cables y accesorios digitales
 
-**Estado:** oferta aplicada el 25 de agosto de 2026 a un borrador privado de Shopify. El producto continúa en estado **Borrador** y no está publicado en ningún canal. Se configuraron envío y políticas operativas; no se activaron pagos, checkout público ni anuncios.
+**Estado:** oferta aplicada el 25 de agosto de 2026 a Shopify. Para una prueba técnica autorizada, el producto fue activado y publicado temporalmente solo en **Tienda online**, que se mantiene protegida por contraseña. El checkout de Mercado Pago sigue exclusivamente en **Modo de prueba**; no hay cobros reales ni anuncios. Al cerrar la validación debe volver a estado **Borrador** y retirarse de todos los canales.
 
 ## Posicionamiento y título
 
@@ -97,6 +97,16 @@ Una URL de previsualización privada anterior conservaba título y descripción 
 Se instaló y vinculó **Mercado Pago Tarjetas** como proveedor para COP. El flujo inicial falló después de la autorización con un texto técnico incompleto (“undefined”), pero un reintento posterior reconoció la cuenta elegida, completó la vinculación y abrió el panel de gestión de Mercado Pago. La diferencia entre el correo de Shopify y el de la cuenta Mercado Pago no fue la causa del bloqueo. [3] [4]
 
 Mercado Pago Tarjetas se activó exclusivamente en **Modo de prueba**. Shopify confirma que las transacciones son simuladas y que no se pueden realizar compras reales mediante este proveedor. PayPal permanece con estado **“Configuración incompleta”**. No se realizaron cobros ni se probó checkout; el producto continúa como Borrador y no publicado. La prueba controlada pendiente debe usar el modo de prueba y cuentas de prueba separadas de vendedor y comprador, según la documentación de Mercado Pago. [5]
+
+La sesión del titular accedió al panel de desarrollador de Mercado Pago y a la aplicación de Shopify. En **Credenciales de prueba** se mostraron credenciales de sandbox, pero sus valores no se copiaron ni almacenaron en la documentación. El siguiente requisito operativo es activar o localizar las cuentas de prueba de vendedor y comprador desde **Cuentas de prueba**, sin usar la cuenta productiva para la compra simulada. [5]
+
+Se creó una cuenta de prueba de tipo **Comprador** para Colombia, con saldo simulado. Mercado Pago confirmó que quedan 14 cuentas de prueba disponibles. Las credenciales de esa cuenta (usuario, contraseña y código de verificación) se mantuvieron únicamente en el panel del proveedor y no se transcriben en este proyecto.
+
+Se creó además una cuenta de prueba de tipo **Vendedor** para Colombia. Ambas cuentas pertenecen al mismo país y quedan separadas para la simulación de la orden; Mercado Pago confirmó 13 cuentas de prueba disponibles después de la creación. Sus credenciales se mantienen únicamente en el panel del proveedor y no se almacenan aquí.
+
+La publicación temporal permitió cargar el checkout, con la variante Black S, precio de COP 69.900 y la tarifa de envío incluida. El primer intento con tarjeta oficial de prueba fue rechazado, sin usar dinero real. La documentación oficial aclaró la causa: para Mercado Pago Tarjetas, Shopify debe vincularse a una aplicación creada desde la **cuenta de prueba de vendedor**, mientras que el checkout usa el correo y teléfono de la **cuenta de prueba de comprador**, además de seleccionar **OTRO** como documento e ingresar nueve dígitos. La configuración existente está vinculada a la cuenta productiva, por lo que no debe repetirse el pago hasta completar esa vinculación simulada correcta. [5]
+
+La cuenta simulada de vendedor creó una aplicación nueva para Shopify con el entorno marcado explícitamente como **cuenta de prueba**. No se registran en el proyecto su identificador, credenciales ni claves. Falta abrir **Administrar cuenta** de Mercado Pago Tarjetas en Shopify desde esa misma sesión de vendedor simulada para sustituir la vinculación de la cuenta productiva antes de reintentar el checkout.
 
 ### Comprobación de envío
 
