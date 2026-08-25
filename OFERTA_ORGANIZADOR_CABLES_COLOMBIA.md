@@ -6,11 +6,11 @@
 
 El producto se presenta como una solución compacta para reunir cables, cargadores, audífonos y adaptadores en viajes, mochila u oficina. No se ofrece como accesorio para un dispositivo o marca específica y no incluye componentes electrónicos.
 
-> **Título propuesto:** Estuche Organizador Impermeable para Cables y Accesorios
+> **Título aplicado:** Estuche Organizador Resistente a Salpicaduras para Cables y Accesorios
 
-**Aplicación confirmada:** el 25 de agosto de 2026 se confirmó el título en la ficha de Shopify. Al cierre de esta preparación, la página principal muestra además estado **Borrador** y el mensaje “Este producto no está publicado en ninguna parte”.
+**Aplicación confirmada:** el 25 de agosto de 2026 se confirmó el título preciso en la ficha de Shopify. Al cierre de esta preparación, la página principal muestra además estado **Borrador** y el mensaje “Este producto no está publicado en ninguna parte”.
 
-La palabra “impermeable” se conserva porque forma parte de la ficha del proveedor; en la descripción se aclara que el uso previsto es resistir salpicaduras y no sumergirlo en agua. El producto es una funda de Oxford con compartimentos, no un dispositivo electrónico.[2]
+El título evita afirmar impermeabilidad total. El uso previsto es resistir salpicaduras, no sumergir el estuche en agua. El producto es una funda de Oxford con compartimentos, no un dispositivo electrónico.[2]
 
 ## Precio de referencia y margen de comprobación
 
@@ -84,7 +84,7 @@ Los guiones detallados, sus restricciones de representación y el checklist prev
 
 ## Previsualización verificada y controles pendientes
 
-Una URL de previsualización privada anterior conservaba título y descripción técnicos. El 25 de agosto de 2026 se generó una nueva URL que sí muestra el título comercial, la descripción en español, las 12 variantes y el precio de COP 69.900. La plantilla también renderiza botones “Agregar al carrito” y “Pagar con PayPal”. Se intentó añadir Black S y el carrito permaneció vacío; no se abrió checkout ni se inició cobro alguno. Esta es la conducta esperada mientras el producto se mantiene en Borrador y no publicado. La tarifa de envío deberá validarse nuevamente en carrito cuando exista un entorno de prueba autorizado con un producto publicable.
+Una URL de previsualización privada anterior conservaba título y descripción técnicos. La nueva vista generada tras actualizar el título muestra **“Estuche Organizador Resistente a Salpicaduras para Cables y Accesorios”**, la descripción en español, las 12 variantes y el precio de COP 69.900. Los beneficios no verificados de la plantilla fueron sustituidos por “Organización práctica”, “Resistente a salpicaduras” y “Diseño compacto”, acompañados de textos verificables. La cita destacada se convirtió en una nota neutral del producto, no en una reseña. La plantilla aún renderiza botones “Agregar al carrito” y “Pagar con PayPal”; no se interactuó con ellos. Se intentó anteriormente añadir Black S y el carrito permaneció vacío; no se abrió checkout ni se inició cobro alguno. Esta es la conducta esperada mientras el producto se mantiene en Borrador y no publicado. La tarifa de envío deberá validarse nuevamente en carrito cuando exista un entorno de prueba autorizado con un producto publicable.
 
 ### Comprobación de pagos
 

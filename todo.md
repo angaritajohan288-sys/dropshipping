@@ -271,3 +271,8 @@
 - [x] Obtener y cargar el nombre o razón social, identificación aplicable, correo de atención y dirección de devoluciones antes de completar el aviso legal y publicar la tienda.
 - [x] Cargar en Shopify el aviso legal y la información de contacto con los datos comerciales proporcionados por Johan Eduardo Angarita García.
 - [x] Definir la categoría y los datos de descubrimiento orgánico del organizador de cables dentro del borrador, sin publicar el producto: categoría “Bolsos de viaje en Accesorios de equipaje” aplicada y guardada.
+- [x] Revisar y corregir los bloques de plantilla que muestran afirmaciones no verificadas o texto en inglés en la previsualización privada del organizador de cables.
+- [x] Identificar los bloques internos de texto e íconos de la plantilla del producto cuando el editor no expone campos directos de título y descripción.
+- [x] Retirar o sustituir la franja de beneficios “Eco-amigable”, “Resistente al agua” y “Compacto y funcional”, pues sus afirmaciones no están respaldadas por la oferta verificada.
+- [x] Sustituir en el borrador el término “Impermeable” del título por una formulación consistente con resistencia a salpicaduras y no inmersión.
+- [x] Generar y comprobar una nueva URL de previsualización después del cambio de título: muestra “Estuche Organizador Resistente a Salpicaduras para Cables y Accesorios” y COP 69.900.
