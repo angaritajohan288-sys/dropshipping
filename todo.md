@@ -43,6 +43,15 @@
 - [x] Investigar candidatos directamente en DSers con destino Colombia y documentar filtros, demanda, precio y calificación.
 - [x] Seleccionar un candidato de DSers para cotización real y muestra antes de importarlo a Shopify.
 - [ ] Abrir la ficha del set de reposamuñecas en DSers y verificar variante, medidas, precio final y plazo antes de añadirlo a la lista de importación.
+- [x] Descartar reposamuñecas como primer lanzamiento al no encontrar un set completo con señales de demanda suficientes.
+- [ ] Investigar una nueva categoría de producto completo, no eléctrico y compatible con DSers para Colombia.
+- [ ] Configurar una tienda Shopify funcional con un producto de prueba sin iniciar publicidad pagada.
+- [ ] Verificar pagos, envíos, políticas y compra de prueba antes del lanzamiento comercial.
+- [ ] Seleccionar hoy un producto real importable mediante DSers antes de crear una ficha pública de Shopify.
+- [ ] Validar que el producto elegido sea completo, no eléctrico, diferenciado, competitivo y con entrega visible a Colombia.
+- [ ] Validar la compatibilidad MX, layout y variante concreta del set de keycaps MAIMOOO antes de importarlo con DSers.
+- [ ] Verificar la variante 7-en-1 u 8-en-1, precio final y medidas del kit de limpieza antes de importarlo a Shopify.
+- [x] Descartar el kit de limpieza 7-en-1 como producto principal por competencia local y ventaja logística insuficiente.
 - [x] Medir demanda, competencia y rangos de precio de mandos de videojuegos en Colombia.
 - [x] Comparar proveedores de mandos compatibles para Shopify y sus tiempos de entrega a Colombia.
 - [x] Evaluar riesgo de falsificación, garantía, batería, compatibilidad y devolución antes de vender mandos.
