@@ -72,6 +72,14 @@ El 25 de agosto de 2026 se generó una nueva URL de previsualización privada. E
 
 La revisión informativa de **Configuración → Pagos** muestra a Mercado Pago Tarjetas y dLocal Go Credit Cards como proveedores recomendados, no como proveedores activados. PayPal aparece con estado **“Configuración incompleta”** y Shopify indica que se debe completar la cuenta para empezar a recibir pagos de PayPal. No se cambió ninguna configuración ni se probaron los botones de compra. El producto continúa como Borrador y no publicado; por ello, esta evidencia reduce el riesgo de una compra real, pero no sustituye una prueba de checkout controlada y autorizada antes de cualquier lanzamiento.
 
+### Comprobación inicial de envío
+
+La revisión informativa de **Configuración → Envío y entrega** muestra un único perfil general que incluye todos los productos, dos sucursales y dos zonas. Las fechas de entrega estimadas están desactivadas, no hay cuentas de empresas de transporte conectadas y la entrega local o retiro en tienda están desactivados. No se creó ni modificó ninguna tarifa. Aún falta abrir y revisar las dos zonas y sus tarifas exactas para asegurar que el texto de entrega internacional del producto coincide con lo que verá el cliente al momento de compra.
+
+### Comprobación de políticas
+
+La revisión informativa de **Configuración → Políticas** muestra que no existen reglas predeterminadas de devolución o cancelación. Tampoco están establecidas las políticas escritas de devoluciones y reembolsos, términos del servicio, envío ni aviso legal. La política de privacidad está automatizada y la información de contacto aparece como obligatoria. No se generó ni se modificó texto legal. Estas políticas son un bloqueo previo a publicar, pues deben adecuarse al modelo de entrega internacional y ser revisadas por el titular de la tienda.
+
 ## Referencias
 
 [1] [Matriz de cinco candidatos y validación temporal en DSers](./LISTA_CORTA_5_PRODUCTOS_COLOMBIA.md)
