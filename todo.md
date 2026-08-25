@@ -261,4 +261,5 @@
 - [x] Registrar evidencia de que el perfil publicado expone únicamente los datos de la sesión activa.
 - [x] Preparar tres guiones orgánicos no pagados para el organizador de cables, con límites explícitos de claims, demostración y entrega.
 - [ ] Validar logística, experiencia de compra y cumplimiento del contenido antes de grabar, publicar o pautar los guiones del producto.
-- [ ] Generar y comprobar una nueva previsualización de tienda antes de publicar: el enlace privado existente es anterior a la edición y muestra título/descripción técnicos, aunque la ficha administrativa y la vista contextual para Colombia ya reflejan la oferta en español y siguen sin publicación.
+- [x] Generar y comprobar una nueva previsualización de tienda: la nueva vista privada muestra el título comercial, descripción en español, 12 variantes y COP 69.900; el producto se conserva sin publicación.
+- [ ] Confirmar que los botones de compra y PayPal visibles solo pertenecen a la previsualización privada y que no existe checkout o pago activo para clientes antes de cualquier publicación.

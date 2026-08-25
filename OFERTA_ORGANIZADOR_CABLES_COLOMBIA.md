@@ -66,6 +66,12 @@ Los guiones detallados, sus restricciones de representación y el checklist prev
 
 La URL de previsualización privada existente, generada antes de la edición, muestra el precio de COP 69.900 pero todavía carga el título y la descripción técnica anteriores. En cambio, la ficha administrativa y la vista contextual de Shopify para Colombia muestran el título comercial, la descripción en español, el precio de COP 69.900 y el estado “No publicado en el canal”. No se debe usar el enlace de previsualización antiguo como prueba final ni publicar o distribuir contenido comercial hasta generar y comprobar una nueva vista de tienda.
 
+El 25 de agosto de 2026 se generó una nueva URL de previsualización privada. Esta sí muestra el título comercial, la descripción en español, las 12 variantes y el precio de COP 69.900. La plantilla también renderiza botones “Agregar al carrito” y “Pagar con PayPal”; no se interactuó con ellos. Antes de publicar se debe confirmar que esos controles no habilitan un checkout o un pago real para clientes mientras el producto siga en Borrador.
+
+### Comprobación de pagos
+
+La revisión informativa de **Configuración → Pagos** muestra a Mercado Pago Tarjetas y dLocal Go Credit Cards como proveedores recomendados, no como proveedores activados. PayPal aparece con estado **“Configuración incompleta”** y Shopify indica que se debe completar la cuenta para empezar a recibir pagos de PayPal. No se cambió ninguna configuración ni se probaron los botones de compra. El producto continúa como Borrador y no publicado; por ello, esta evidencia reduce el riesgo de una compra real, pero no sustituye una prueba de checkout controlada y autorizada antes de cualquier lanzamiento.
+
 ## Referencias
 
 [1] [Matriz de cinco candidatos y validación temporal en DSers](./LISTA_CORTA_5_PRODUCTOS_COLOMBIA.md)
