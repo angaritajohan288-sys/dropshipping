@@ -60,6 +60,7 @@
 - [x] Descartar el enrollador de cables, dispensador de bolsas y correa de extensiones por competencia local y margen insuficiente.
 - [x] Descartar el organizador de tapas y tablas de cocina por competencia local y entrega más rápida.
 - [x] Verificar en DSers la bolsa de compresión sin bomba para Colombia: coste US$5,91–9,90, stock 164 y no enviarla a Shopify por riesgo competitivo y de margen.
+- [x] Retirar de la Lista de importación de DSers la bolsa de compresión no recomendada, con autorización del usuario y sin afectar Shopify.
 - [ ] Si la bolsa de compresión no puede verificarse para Colombia, identificar un sustituto de hogar/organización que cumpla pedidos, calificación, coste y competencia local.
 - [ ] Verificar la variante 7-en-1 u 8-en-1, precio final y medidas del kit de limpieza antes de importarlo a Shopify.
 - [x] Descartar el kit de limpieza 7-en-1 como producto principal por competencia local y ventaja logística insuficiente.

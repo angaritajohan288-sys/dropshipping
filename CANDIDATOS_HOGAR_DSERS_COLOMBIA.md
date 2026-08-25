@@ -74,6 +74,18 @@ Con autorización del usuario, el 24 de agosto de 2026 se añadió **solo de for
 
 > **Veredicto de lanzamiento:** el SKU es válido técnicamente y su coste/stock en DSers pasan el filtro. Sin embargo, **no lo recomiendo como primer producto de tienda**: la competencia local de sets de bolsas, con entrega más rápida y un precio de referencia muy bajo, limita demasiado el margen para anuncios y devoluciones. La señal global de ventas no compensa ese riesgo en Colombia. Mantenerlo temporalmente en DSers solo si se desea comprobar un paquete/variante diferencial; no enviar a Shopify como producto público.
 
+## Búsqueda acotada de sustituto tras el descarte
+
+Después de retirar la bolsa de la Lista de importación, se realizaron tres consultas disciplinadas con **Ship to: Colombia**. No se añadió ningún resultado nuevo a DSers.
+
+| Consulta | Mejor señal observada | Motivo de no avance |
+|---|---|---|
+| `closet organizer` | Organizador de cajón de 1.000 pedidos, US$4,62–5,62 + US$1,99, pero 4,6/5. Otro modelo con 3.000 pedidos y 4,8/5 costaba US$10,48–11,10 + US$1,99. | Uno falla calificación y el otro excede el límite de coste total. |
+| `bed sheet organizer` | Bolsas/organizadores de sábanas con 0–16 pedidos; un elevador de colchón alcanzó 282 pedidos con 4,4/5. | No existe señal de demanda/calidad suficiente. |
+| `water bottle organizer` | Los resultados visibles tenían 0–14 pedidos o costes desde US$20,99/US$34,88. | Falla demanda o coste; no se debe continuar con esta subcategoría. |
+
+> **Punto de control:** con los requisitos actuales —producto completo, no eléctrico, al menos 1.000 pedidos, 4,7/5, coste total máximo US$10, entrega a Colombia y baja competencia local— no hay un sustituto serio de hogar/organización en estas subcategorías. Seguir acumulando búsquedas genéricas produciría productos de relleno, no una mejor tienda. La siguiente decisión debe ser ampliar la categoría o ajustar conscientemente un criterio, nunca inventar una oportunidad.
+
 ## Referencias
 
 [1] [Éxito: Organizador de cables adhesivo para electrodomésticos](https://www.exito.com/organizador-de-cables-adhesivo-para-electrodomesticos-104879200-mp/p)
