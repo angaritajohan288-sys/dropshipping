@@ -56,9 +56,13 @@ Si la propuesta de valor, fotos y entrega permitieran un precio de COP 75.000, e
 
 La búsqueda más específica “soporte doble controles” mostró **325 resultados** en Mercado Libre Colombia.[3] Aparecen alternativas locales con entrega al día siguiente y productos equivalentes de bajo precio: un “soporte doble controles universal” por COP 25.650, una base para dos controles por COP 27.732 y una base doble por COP 35.000, además de modelos con extras o diseño diferente en rangos más altos.[3]
 
-Esto modifica la evaluación: con un coste de producto de COP 30.850, este modelo **no puede competir en precio** contra las alternativas genéricas locales, incluso antes de sumar pagos, publicidad o devoluciones. La espera de la ficha de AliExpress (12–21 de septiembre) también es mucho menos competitiva que las ofertas locales de entrega rápida.[1] [3]
+Esto modifica la evaluación: con un coste de producto de COP 30.850, este modelo **no puede competir en precio** contra las alternativas genéricas locales, incluso antes de sumar pagos, publicidad o devoluciones. La ficha muestra además una espera de 12–21 de septiembre, mientras existen ofertas locales de entrega rápida.[1] [3]
 
-> **Conclusión comercial provisional:** el soporte pasa el filtro técnico y de producto, pero no el de viabilidad como artículo genérico de entrega directa desde AliExpress. Solo justificaría una prueba si se obtiene un proveedor local, un coste notablemente menor o una diferenciación material verificable (por ejemplo, un diseño exclusivo autorizado, un kit real o una personalización propia).
+> **Conclusión comercial provisional:** el soporte pasa el filtro técnico y de producto, pero no el de viabilidad como artículo genérico de entrega directa desde AliExpress. El problema decisivo es el coste frente a alternativas locales; el plazo internacional, por sí solo, puede probarse si se comunica con transparencia antes de pagar.
+
+## Condición para una prueba de entrega internacional
+
+La tienda puede probar productos con una ventana internacional de dos a tres semanas siempre que la página del producto, el carrito y el correo de confirmación muestren la estimación real de entrega, que exista tracking y que la política de reembolso sea accesible. Esa ruta solo se evaluará para productos que no tengan un equivalente local más barato o de entrega inmediata y que conserven margen suficiente después de pagos, publicidad y atención al cliente.
 
 ## Fuente
 

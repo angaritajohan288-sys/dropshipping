@@ -35,6 +35,9 @@
 - [ ] Comparar medidas, material, envío y riesgo de marca antes de recomendar una oferta de prueba.
 - [x] Validar el soporte doble para mandos de AliExpress como posible producto inicial para Colombia.
 - [x] Contrastar precio, entrega, reseñas, competencia local y riesgo de marca antes de importar el soporte.
+- [x] Definir condiciones visibles de entrega internacional para pruebas de producto en Shopify Colombia.
+- [x] Comparar proveedores Shopify locales e internacionales según margen, plazo, tracking y automatización.
+- [ ] Obtener una cotización real por SKU de producto, flete, plazo y tracking antes de calcular margen final o publicar.
 - [x] Medir demanda, competencia y rangos de precio de mandos de videojuegos en Colombia.
 - [x] Comparar proveedores de mandos compatibles para Shopify y sus tiempos de entrega a Colombia.
 - [x] Evaluar riesgo de falsificación, garantía, batería, compatibilidad y devolución antes de vender mandos.
