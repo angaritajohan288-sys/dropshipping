@@ -291,3 +291,4 @@
 - [ ] Obtener del titular fotos o video reales del estuche para revisar y adaptar el contenido orgánico antes de distribuirlo.
 - [x] Revisar las siete imágenes existentes de Shopify para detectar marcas, textos del proveedor, medidas por variante y accesorios ilustrativos antes de adaptar contenido orgánico.
 - [x] Adaptar los guiones y preparar un carrusel orgánico basado en producto real, manteniendo las imágenes de proveedor solo como referencia interna.
+- [x] Preparar un marco de presupuesto de prueba y límite de pérdida, sin crear campañas ni gastar dinero.
