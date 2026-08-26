@@ -297,3 +297,5 @@
 - [x] Comparar proveedores de respaldo para el estuche organizador con envío a Colombia, sin sustituir el proveedor actual ni importar productos.
 - [x] Crear una plantilla interna de control de pedidos y soporte para el organizador, sin activar ventas ni almacenar datos de clientes reales.
 - [x] Mejorar el formato visual de la plantilla interna de control de pedidos sin cambiar su lógica ni datos.
+- [x] Mejorar el diseño del tema y la ficha privada del organizador sin publicar el producto ni activar cobros o campañas.
+- [x] Corregir la jerarquía visual de la descripción del organizador y verificar la ficha privada sin publicar ni activar cobros, anuncios o compras.

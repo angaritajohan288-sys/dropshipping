@@ -1,0 +1,9 @@
+{
+  "query": "mutation ($product: ProductUpdateInput!) { productUpdate(product: $product) { product { id title status descriptionHtml } userErrors { field message } } }",
+  "variables": {
+    "product": {
+      "id": "gid://shopify/Product/8702275387584",
+      "descriptionHtml": "<h3>Organiza tus accesorios en un solo lugar</h3>\n<p>Este estuche compacto ayuda a reunir cables, cargadores, audífonos y adaptadores pequeños en un solo lugar para viaje, trabajo o estudio.</p>\n<ul>\n<li>Compartimentos para separar accesorios pequeños.</li>\n<li>Exterior de tela Oxford, plegable y resistente a salpicaduras.</li>\n<li>Ideal para llevar en mochila, maleta o escritorio.</li>\n</ul>\n<p><strong>Antes de comprar:</strong> elige la combinación de tamaño y color disponible. No incluye cables, cargadores, audífonos ni dispositivos electrónicos. Es un organizador para accesorios pequeños; revisa las medidas de la variante antes de elegir.</p>\n<p><strong>Entrega:</strong> el despacho es internacional y la estimación exacta depende de la variante, el destino y el transportista. Confirma la ventana de entrega antes de finalizar tu pedido.</p>"
+    }
+  }
+}
