@@ -35,4 +35,4 @@ Los ajustes deben conservar la afirmación **resistente a salpicaduras**, no “
 
 ## Nota de verificación
 
-La URL privada de previsualización previamente creada continuó mostrando el encabezado histórico después de la actualización. La ficha administrativa y la respuesta de Shopify confirman la descripción nueva. Debe generarse una previsualización privada nueva antes de una revisión visual final, sin activar el producto ni el canal de Tienda online.
+La URL privada de previsualización previamente creada continuó mostrando el encabezado histórico después de la actualización. La ficha administrativa y la respuesta de Shopify confirman la descripción nueva y el estado `DRAFT`. La apertura de “Previsualizar” desde la ficha administrativa no generó una URL nueva durante esta sesión; por ello, la validación final se basa en la ficha administrativa y la consulta de Shopify. Cuando el administrador exponga una URL privada renovada, debe revisarse visualmente antes de una futura publicación, sin activar el producto ni el canal de Tienda online.
