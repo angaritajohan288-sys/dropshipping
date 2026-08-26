@@ -293,3 +293,4 @@
 - [x] Adaptar los guiones y preparar un carrusel orgánico basado en producto real, manteniendo las imágenes de proveedor solo como referencia interna.
 - [x] Preparar un marco de presupuesto de prueba y límite de pérdida, sin crear campañas ni gastar dinero.
 - [x] Revalidar en DSers la variante Grey Double layer-S para Colombia: coste, inventario y plazo, sin importar ni modificar productos.
+- [x] Preparar el flujo operativo de pedidos y atención al cliente para el organizador, sin activar la tienda ni los pagos productivos.
