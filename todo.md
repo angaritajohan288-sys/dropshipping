@@ -296,3 +296,4 @@
 - [x] Preparar el flujo operativo de pedidos y atención al cliente para el organizador, sin activar la tienda ni los pagos productivos.
 - [x] Comparar proveedores de respaldo para el estuche organizador con envío a Colombia, sin sustituir el proveedor actual ni importar productos.
 - [x] Crear una plantilla interna de control de pedidos y soporte para el organizador, sin activar ventas ni almacenar datos de clientes reales.
+- [x] Mejorar el formato visual de la plantilla interna de control de pedidos sin cambiar su lógica ni datos.
