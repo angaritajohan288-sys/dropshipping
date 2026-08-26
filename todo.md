@@ -287,3 +287,7 @@
 - [x] Publicar temporalmente el organizador en Tienda online para una única prueba simulada y devolverlo a Borrador inmediatamente después.
 - [x] Diagnosticar el rechazo de la tarjeta oficial de prueba de Mercado Pago Tarjetas antes de efectuar un único reintento simulado.
 - [x] Reasignar Mercado Pago Tarjetas a la aplicación de vendedor de prueba antes de repetir el checkout simulado con el comprador de prueba.
+- [x] Preparar un brief de grabación real para los tres guiones del organizador, con planos, textos obligatorios y criterios de veracidad.
+- [ ] Obtener del titular fotos o video reales del estuche para revisar y adaptar el contenido orgánico antes de distribuirlo.
+- [x] Revisar las siete imágenes existentes de Shopify para detectar marcas, textos del proveedor, medidas por variante y accesorios ilustrativos antes de adaptar contenido orgánico.
+- [x] Adaptar los guiones y preparar un carrusel orgánico basado en producto real, manteniendo las imágenes de proveedor solo como referencia interna.

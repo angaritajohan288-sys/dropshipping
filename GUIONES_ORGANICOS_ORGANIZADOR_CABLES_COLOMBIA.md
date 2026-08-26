@@ -1,6 +1,8 @@
-# Guiones orgánicos — Estuche Organizador Impermeable para Cables y Accesorios
+# Guiones orgánicos — Estuche Organizador Resistente a Salpicaduras para Cables y Accesorios
 
 **Estado:** preparación interna de contenido. Estos guiones no se han publicado ni se han usado en anuncios. El producto relacionado continúa como **Borrador** y no está publicado en ningún canal.
+
+**Uso del material visual:** la auditoría de la galería del proveedor determinó que sus siete imágenes contienen accesorios de demostración, textos en inglés, medidas por variante y/o marcas de terceros. Por tanto, estos guiones se deben ejecutar solamente con el estuche físico real y recursos propios, no con esas imágenes tal cual.
 
 ## Principios de ejecución
 
