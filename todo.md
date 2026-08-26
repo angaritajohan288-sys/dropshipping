@@ -295,3 +295,4 @@
 - [x] Revalidar en DSers la variante Grey Double layer-S para Colombia: coste, inventario y plazo, sin importar ni modificar productos.
 - [x] Preparar el flujo operativo de pedidos y atención al cliente para el organizador, sin activar la tienda ni los pagos productivos.
 - [x] Comparar proveedores de respaldo para el estuche organizador con envío a Colombia, sin sustituir el proveedor actual ni importar productos.
+- [x] Crear una plantilla interna de control de pedidos y soporte para el organizador, sin activar ventas ni almacenar datos de clientes reales.
