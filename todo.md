@@ -302,5 +302,5 @@
 - [ ] Rediseñar la portada privada para eliminar texto, imágenes y productos de plantilla que no correspondan al organizador, sin publicar la tienda.
 - [ ] Retirar desde el editor visual los bloques de plantilla irrelevantes de la portada privada, preservando la ficha y galería del organizador.
 - [ ] Restaurar en la portada privada una sección de producto enlazada al organizador en borrador, corrigiendo la retirada del bloque destacado sin publicar la tienda.
-- [ ] Reconstruir la portada privada del borrador con una estructura mínima coherente para el organizador, preservando el producto, sus variantes y el estado DRAFT.
+- [x] Reconstruir la portada privada del borrador con una estructura mínima coherente para el organizador, preservando el producto, sus variantes y el estado DRAFT.
 - [ ] Retirar o sustituir el bloque de suscripción genérico del pie de página y el enlace Catálogo vacío antes de una revisión final de portada.
