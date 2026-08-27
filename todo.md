@@ -299,3 +299,8 @@
 - [x] Mejorar el formato visual de la plantilla interna de control de pedidos sin cambiar su lógica ni datos.
 - [x] Mejorar el diseño del tema y la ficha privada del organizador sin publicar el producto ni activar cobros o campañas.
 - [x] Corregir la jerarquía visual de la descripción del organizador y verificar la ficha privada sin publicar ni activar cobros, anuncios o compras.
+- [ ] Rediseñar la portada privada para eliminar texto, imágenes y productos de plantilla que no correspondan al organizador, sin publicar la tienda.
+- [ ] Retirar desde el editor visual los bloques de plantilla irrelevantes de la portada privada, preservando la ficha y galería del organizador.
+- [ ] Restaurar en la portada privada una sección de producto enlazada al organizador en borrador, corrigiendo la retirada del bloque destacado sin publicar la tienda.
+- [ ] Reconstruir la portada privada del borrador con una estructura mínima coherente para el organizador, preservando el producto, sus variantes y el estado DRAFT.
+- [ ] Retirar o sustituir el bloque de suscripción genérico del pie de página y el enlace Catálogo vacío antes de una revisión final de portada.
